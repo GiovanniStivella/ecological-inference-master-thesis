@@ -1,0 +1,31 @@
+In this section I will show a synthetic example that helps explaining why the problem is relevant and why the solution adopted by \citet{mccartan2025identificationsemiparametricestimationconditional} helps us in solving it better than naive methods.
+
+In the synthetic example we are the ones who generate the data and therefore we know the exact model of the reality.
+We show that, if we generate the data and then we try to estimate with different methods we obtain different results and the naive methods do not work well.
+
+\vspace{1em}
+
+In particular, we can exploit the constitutional referendum in Italy to show a possible way in which the naive estimators could not work and therefore we can generate a dataset that encompasses the problem.
+
+The problem is the following: we want to estimate how did voters with different levels of income vote.
+
+If we look at data at regional level, we would be tempted to say that richest people voted more in favour of the government proposal. In fact, the three regions where the votes in favor were more than the votes in contrast (Lombardy, Veneto and Friuli-Venezia Giulia) are among the richest regions in Italy. On the contrary, the regions were No got more than 60\% are among the poorest regions of Italy (Basilicata, Campania, Sicily).
+
+However, once we look at data at municipal level, we find that, within the regions, the relationship is nearly inverse: No votes were more frequent in urban areas and other municipalities where income is relatively higher.
+
+That divergence makes us think that if we were able to observe results at individual level, we could find even different relationships between income and voting behavior.
+
+Therefore, we can now generate a synthetic dataset that presents a structure that resembles some stylized facts that we observe in the constitutional referendum results and other notions that we have about electoral behaviors in Italy.
+
+Our synthetic experiment is constructed as follows.
+
+We assume that election takes place in a Country which has three different regions: North, Centre and South.
+
+Each Country is divided in 100 precincts, so that in the end we observe 300 precincts: 100 precincts in the North region, 100 in the Centre region, 100 in the South region.
+
+For each electoral precinct, we observe the percentage of high-income and low-income voters and the electoral results.
+
+Within each income category, there is high variability in their electoral behaviour.
+
+In particular, we impose that high-income people in the North and South precincts have a high propensity of voting in favor of the reform, while in the Centre this percentage is much lower. As for low-income people, we impose that in North they have high propensity of voting in favor, while in the Centre and in the South this propensity is much lower.
+

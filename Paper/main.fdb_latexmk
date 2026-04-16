@@ -1,26 +1,26 @@
 # Fdb version 4
-["biber /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main"] 1776332701.68783 "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bcf" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main" 1776332704.66942 0
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bcf" 1776332704.58353 108854 ea7965b755594adc67986f19a1a189f1 "pdflatex"
+["biber /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main"] 1776341298.97964 "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bcf" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main" 1776343278.0731 0
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bcf" 1776343277.98242 108970 c54599ce9668629003f7c641099327d9 "pdflatex"
   "ecological_inference_us_election.bib" 1776332225.88533 725 f111cbb0ce27772c0aaf7a16d355bc08 ""
   (generated)
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl"
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.blg"
   (rewritten before read)
-["pdflatex"] 1776332703.39267 "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" "main" 1776332704.66966 0
+["pdflatex"] 1776343276.54507 "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex" "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" "main" 1776343278.07334 0
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Copertina.tex" 1776332255.53128 1003 e5f0b8561add82b31c0e9aa810677876 ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf" 1776331694.33 67453 e91f99e42ab0f90e5ad0f9086d59d0fd ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf" 1776331763.34334 40009 6a2c8a71f63b64facce1a4dd3973c3bf ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps" 1776331763.34703 259277 326b2c72a6633bf6164fa5ee0d9c2ea6 ""
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex" 1776343276.32361 2819 db1cb7fa6380b660e979422eb92ab179 ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex" 1776331328.87905 25 47141d3d3996277e29b2c11213d3f2bd ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex" 1776331333.43302 11 b651e8a99c4375feb982b7c2cad376e9 ""
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex" 1776332228.59851 149 28641daf0b41c53dde2d436eb9e2f1c0 ""
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex" 1776341297.46765 2326 8c584c4f2fc8c73fcdec136ac9ea0adc ""
   "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex" 1776331339.88563 14 4a76ba7a8ee5742f9f53fe3ae2a11f4b ""
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/The problem of ecological inference.tex" 1776331314.14844 35 93c36c9e81ede8c6bbd57208d926b324 ""
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux" 1776332704.58171 2438 b6a49c5f2322c0d36f2c291530bb6f28 "pdflatex"
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl" 1776332703.37881 3996 5fe18406b81f2f29c36f7ac27109d455 "biber /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main"
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out" 1776332704.58282 820 0a6a6340ce5745e544ee886cb409a341 "pdflatex"
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.run.xml" 1776332704.58422 2367 9a591f352caaec3befd0c9ae0fdf34e3 "pdflatex"
-  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex" 1776332700.16248 3889 f5119d53297a8ad83bb8f24238f01c4f ""
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux" 1776343277.98057 2573 d6b7c051d800df464e7654b587672576 "pdflatex"
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl" 1776341300.41476 3996 5fe18406b81f2f29c36f7ac27109d455 "biber /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main"
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out" 1776343277.98164 734 399e15a12e4c6da852e7f0f79dda12c2 "pdflatex"
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.run.xml" 1776343277.98294 2367 9a591f352caaec3befd0c9ae0fdf34e3 "pdflatex"
+  "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex" 1776335272.27277 3841 9fa34a57b4d2817971c0f00bdb01c645 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
