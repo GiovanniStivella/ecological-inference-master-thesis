@@ -8,7 +8,7 @@ library(seine)
 
 data(elec_1968)
 
-spec = ei_spec(
+spec <- ei_spec(
   elec_1968, 
   predictors = vap_white:vap_other,
   outcome = pres_dem_hum:pres_ind_wal, 
@@ -19,8 +19,8 @@ spec = ei_spec(
 
 print(spec)
 
-m = ei_ridge(spec)
-rr = ei_riesz(spec, penalty = m$penalty)
+m <- ei_ridge(spec)
+rr <- ei_riesz(spec, penalty = m$penalty)
 
 ei_est(regr = m, riesz = rr, data = spec, conf_level = 0.95)
 
