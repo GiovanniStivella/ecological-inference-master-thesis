@@ -1,0 +1,111 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{kuriwaki2026roleconfounderslinearityecological}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b0b3d9fe0996dd122388736734eaaa3a}{%
+           family={Kuriwaki},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43c370e6d4dec6aba0830fcc55c7082d}{%
+           family={McCartan},
+           familyi={M\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{fullhash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{fullhashraw}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{bibnamehash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{authorbibnamehash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{authornamehash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{authorfullhash}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \strng{authorfullhashraw}{ff72fc8516f08abeeecdae5c4a1b905d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.AP}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Role of Confounders and Linearity in Ecological Inference: A Reassessment}
+      \field{year}{2026}
+      \verb{eprint}
+      \verb 2601.07668
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2601.07668
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2601.07668
+      \endverb
+    \endentry
+    \entry{mccartan2025identificationsemiparametricestimationconditional}{misc}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=43c370e6d4dec6aba0830fcc55c7082d}{%
+           family={McCartan},
+           familyi={M\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b0b3d9fe0996dd122388736734eaaa3a}{%
+           family={Kuriwaki},
+           familyi={K\bibinitperiod},
+           given={Shiro},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{fullhash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{fullhashraw}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{bibnamehash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{authorbibnamehash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{authornamehash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{authorfullhash}{6e180f51a70605ab3c758ad2677fbe62}
+      \strng{authorfullhashraw}{6e180f51a70605ab3c758ad2677fbe62}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Identification and Semiparametric Estimation of Conditional Means from Aggregate Data}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2509.20194
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2509.20194
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2509.20194
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

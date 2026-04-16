@@ -1,0 +1,140 @@
+\documentclass[11pt]{paper} 
+\linespread{1.5}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}                		
+\usepackage[english]{babel}
+\usepackage{eurosym}             		
+\usepackage[parfill]{parskip}   
+\usepackage{lipsum}
+\usepackage{epsfig}
+\usepackage{hhline}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tocloft}
+\usepackage{ragged2e}
+\usepackage{pgfplots}
+\usepackage[absolute]{textpos}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+\usepackage{microtype}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+\usepackage{amsfonts} 
+\usepackage{forloop}
+\usepackage{amsmath}
+\usepackage{color,soul}
+\usetikzlibrary{patterns}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+\usepackage{etoolbox}
+\usepackage{comment}
+\usepgfplotslibrary{fillbetween}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{quoting}
+\usepackage{subcaption}
+\usepackage[flushleft]{threeparttable}
+\usepackage[colorlinks]{hyperref}						
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\usepackage[babel]{csquotes}
+\usepackage[style=authoryear, backend=biber, maxbibnames=99, natbib=true]{biblatex} 
+\addbibresource{ecological_inference_us_election.bib}
+\hypersetup{hidelinks}
+\usetikzlibrary {arrows.meta,bending,positioning}
+\usepackage{blindtext}
+\usepackage{subfiles}
+\usetikzlibrary{calc}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{53}}
+\usepackage{geometry}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+ 
+\geometry{a4paper,top=3.5cm,bottom=3.5cm,left=3.5cm,right=3.5cm, heightrounded}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand\captionfont{\footnotesize} 
+\renewcommand\captionlabelfont{\bfseries}
+
+\addto{\captionsbabel}{\renewcommand{\abstractname{Abstract}}}
+\renewcommand*{\newunitpunct}{\addcomma\addspace} 
+\DeclareNameAlias{author}{last-first}
+\renewbibmacro{volume+number+eid}{
+	\setunit{\addcomma\space}
+	\printfield{volume}
+	\setunit{\addcomma\space}
+	\printfield{number}
+	\setunit{\addcomma\space}}
+\DeclareFieldFormat[article]{volume}{\bibstring{volume}~#1}
+\DeclareFieldFormat[article]{number}{\bibstring{number}~#1}
+\renewbibmacro{in:}{}
+
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{tikz/#1.tikz}%
+}
+\renewcommand*{\thepage}{\footnotesize{\sffamily{\arabic{page}}}}
+\setlength{\cftsecindent}{0em}
+\setlength{\cftsubsecindent}{2em}
+\setlength{\cftsubsubsecindent}{4em}
+\renewcommand{\cfttoctitlefont}{\huge \bfseries \sffamily}
+\renewcommand{\cftsecdotsep}{\cftdotsep}    
+\renewcommand{\cftsecfont}{\sffamily \bfseries}
+\renewcommand{\cftsubsecfont}{\sffamily}
+\renewcommand{\cftsecpagefont}{\sffamily \bfseries}
+\renewcommand{\cftsubsecpagefont}{\sffamily}
+\renewcommand{\cftsubsubsecpagefont}{\sffamily}
+
+\sectionfont{\bfseries \sffamily \huge}
+\subsectionfont{\bfseries \sffamily \Large}
+\subsubsectionfont{\bfseries \sffamily \large}
+
+
+\title{Tesi Magistrale}
+\author{Giovanni Stivella}
+\date{15 Luglio 2026}
+
+\pgfplotsset{compat=1.18}
+\begin{document}
+
+\input{Copertina.tex}
+
+\newpage
+\section{Introduction} \label{sec:introduction}
+\input{Sections/Introduction}
+
+\newpage
+\section{The problem of ecological inference} \label{sec:The problem of ecological inference}
+\input{Sections/The problem of ecological inference.tex}
+
+\newpage
+\section{An application to US data} \label{sec:An application to US data}
+\input{Sections/An application to US data.tex}
+
+\newpage
+\section{Other Comments} \label{sec:Other comments}
+\input{Sections/Other comments.tex}
+
+\newpage
+\section{Conclusions} \label{sec:conclusions}
+\input{Sections/Conclusions.tex} 
+
+
+\newpage
+\section{References}
+\nocite{*}
+
+\printbibliography
+
+\end{document}
+
