@@ -1,6 +1,9 @@
 #remotes::install_github("CoryMcCartan/seine")
 
 library(seine)
+
+#Here there is the experiment that seine runs with default data
+
 data(elec_1968)
 
 spec = ei_spec(
@@ -18,3 +21,7 @@ m = ei_ridge(spec)
 rr = ei_riesz(spec, penalty = m$penalty)
 
 ei_est(regr = m, riesz = rr, data = spec, conf_level = 0.95)
+
+
+#Now I try and have a look at how the results vary once we consider a synthetic dataset
+
