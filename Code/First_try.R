@@ -27,18 +27,21 @@ ei_est(regr = m, riesz = rr, data = spec, conf_level = 0.95)
 
 #Now I try and have a look at how the results vary once we consider a synthetic dataset
 
-z <- rbind(
-  matrix(c(1,0), nrow = 100, ncol = 2, byrow = TRUE),
-  matrix(c(0,1), nrow = 100, ncol = 2, byrow = TRUE),
-  matrix(c(0,0), nrow = 100, ncol = 2, byrow = TRUE)
-)
-
 high_income_North <- matrix(rnorm(100, mean = 0.7, sd = 0.1))
 
 high_income_Centre <- matrix(rnorm(100, mean = 0.5, sd = 0.1))
 
 high_income_South <- matrix(rnorm(100, mean = 0.3, sd = 0.1))
 
-high_income <- rbind(high_income_North, high_income_Centre, high_income_South)
+high_income <- as.data.frame(rbind(high_income_North, high_income_Centre, high_income_South))
 
-ei_synthetic(x = high_income, z = z, r2_xz = 0.5, r2_bz = 0.5)
+#I firstly try without covariates
+
+synthetic_dataset_no_covariates <- ei_synthetic(n=300, n_x = 1, x = high_income)
+
+naive_no_covariates <- lm(y ~ x1, data = synthetic_dataset_no_covariates)
+
+summary(naive_no_covariates)
+
+#I would like to add covariates
+
