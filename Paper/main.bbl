@@ -105,6 +105,117 @@
       \verb https://arxiv.org/abs/2509.20194
       \endverb
     \endentry
+    \entry{t._kenny2021}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=915997750087c9af786f0fe8bd4a233d}{%
+           family={T.\bibnamedelimi Kenny},
+           familyi={T\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43c370e6d4dec6aba0830fcc55c7082d}{%
+           family={McCartan},
+           familyi={M\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{fullhash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{fullhashraw}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{bibnamehash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{authorbibnamehash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{authornamehash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{authorfullhash}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \strng{authorfullhashraw}{9ff39e8d8ccc33fe85f43dc2c32c98b1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{10}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{title}{2020 {Redistricting} {Data} {Files}}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://alarm-redist.github.io/posts/2021-08-10-census-2020/
+      \endverb
+      \verb{url}
+      \verb https://alarm-redist.github.io/posts/2021-08-10-census-2020/
+      \endverb
+    \endentry
+    \entry{uscensus2020}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb461c0c6976b357452502c0cb338c70}{%
+           family={{U.S. Census Bureau}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{fullhashraw}{fb461c0c6976b357452502c0cb338c70}
+      \strng{bibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorbibnamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authornamehash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhash}{fb461c0c6976b357452502c0cb338c70}
+      \strng{authorfullhashraw}{fb461c0c6976b357452502c0cb338c70}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.census.gov/programs-surveys/decennial-census/decade/2020.html}}
+      \field{title}{2020 United States Census}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{DVN/K7760H_2020}{data}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b6fb89142b836f54bb0062e2bdce2e49}{%
+           family={Voting},
+           familyi={V\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=3df19fdd10046bb9782aa0f6afc17a31}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={Election\bibnamedelima Science},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Harvard Dataverse}%
+      }
+      \strng{namehash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{fullhash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{fullhashraw}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{bibnamehash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{authorbibnamehash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{authornamehash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{authorfullhash}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \strng{authorfullhashraw}{df1f1ec973447ad673fe77bcacb6e5cc}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{2020 Precinct-Level Election Results}}
+      \field{version}{V48}
+      \field{year}{2020}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.7910/DVN/K7760H
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.7910/DVN/K7760H
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.7910/DVN/K7760H
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

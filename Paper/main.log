@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  16 APR 2026 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  17 APR 2026 11:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1394,6 +1394,10 @@ Overfull \hbox (1.23001pt too wide) in paragraph at lines 138--138
  []
 
 
+Package biblatex Warning: No driver for 'data'.
+(biblatex)                Using fallback driver on input line 137.
+
+
 
 [7] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux)
  ***********
@@ -1407,18 +1411,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52936 strings out of 473190
- 1252879 string characters out of 5715799
- 2253167 words of memory out of 5000000
- 75216 multiletter control sequences out of 15000+600000
- 632977 words of font info for 147 fonts, out of 8000000 for 9000
+ 52960 strings out of 473190
+ 1253518 string characters out of 5715799
+ 2254281 words of memory out of 5000000
+ 75235 multiletter control sequences out of 15000+600000
+ 633078 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,8n,106p,1113b,1793s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" (8 pages, 278355 bytes).
+Output written on "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" (8 pages, 283872 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  41543 words of extra memory for PDF output out of 42996 (max. 10000000)
 
