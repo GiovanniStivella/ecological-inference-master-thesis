@@ -1,6 +1,6 @@
 #remotes::install_github("CoryMcCartan/seine")
 
-set.seed(1234)
+set.seed(123)
 
 library(seine)
 
@@ -44,4 +44,15 @@ naive_no_covariates <- lm(y ~ x1, data = synthetic_dataset_no_covariates)
 summary(naive_no_covariates)
 
 #I would like to add covariates
+area_yes <- matrix(1,100)
+area_no <- matrix(0,100)
 
+area_North <- rbind(area_yes, area_no, area_no)
+area_Centre <- rbind(area_no, area_yes, area_no)
+area_South <- rbind(area_no, area_no, area_yes)
+
+area <- cbind(area_North, area_Centre, area_South)
+
+covariates <- cbind(high_income, area)
+
+synthetic_dataset <- ei_synthetic(n=300, x = covariates)
