@@ -55,4 +55,8 @@ area <- cbind(area_North, area_Centre, area_South)
 
 covariates <- cbind(high_income, area)
 
-synthetic_dataset <- ei_synthetic(n=300, x = covariates)
+x <- as.matrix(cbind(high_income = covariates[, 1], low_income = 1 - covariates[, 1]))
+
+z <- as.matrix(covariates[, 2:3, drop = FALSE])
+
+synthetic_dataset <- ei_synthetic(x = x, z = z)
