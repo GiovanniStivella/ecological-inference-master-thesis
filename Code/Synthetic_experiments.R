@@ -4,29 +4,6 @@ set.seed(123)
 
 library(seine)
 
-#Here there is the experiment that seine runs with default data
-
-data(elec_1968)
-
-spec <- ei_spec(
-  elec_1968, 
-  predictors = vap_white:vap_other,
-  outcome = pres_dem_hum:pres_ind_wal, 
-  total = pres_total,
-  covariates = c(state, pop_city:pop_rural, farm:educ_coll, 
-                 inc_00_03k:inc_25_99k)
-)
-
-print(spec)
-
-m <- ei_ridge(spec)
-rr <- ei_riesz(spec, penalty = m$penalty)
-
-ei_est(regr = m, riesz = rr, data = spec, conf_level = 0.95)
-
-
-#Now I try and have a look at how the results vary once we consider a synthetic dataset
-
 high_income_North <- matrix(rnorm(100, mean = 0.7, sd = 0.1))
 
 high_income_Centre <- matrix(rnorm(100, mean = 0.5, sd = 0.1))
@@ -60,3 +37,31 @@ x <- as.matrix(cbind(high_income = covariates[, 1], low_income = 1 - covariates[
 z <- as.matrix(covariates[, 2:3, drop = FALSE])
 
 synthetic_dataset <- ei_synthetic(x = x, z = z)
+synthetic_dataset[, c("z1", "z2")] <- z
+total <- matrix(100,300)
+synthetic_dataset <- cbind(synthetic_dataset, total)
+
+#I try and run the regressions on our synthetic dataset
+
+#The first idea is to run a linear regression
+
+naive <- lm(y~x1, data = synthetic_dataset)
+
+summary(naive)
+
+#Then I move to McCartan and Kuriwaki methodology
+
+synthspec <- ei_spec(
+  synthetic_dataset, 
+  predictors = x1:x2,
+  outcome = y,
+  total = total,
+  covariates = c(z1,z2)
+)
+
+print(synthspec)
+
+synthm <- ei_ridge(synthspec)
+synthrr <- ei_riesz(synthspec, penalty = m$penalty)
+
+ei_est(regr = synthm, riesz = synthrr, data = synthspec, conf_level = 0.95)
