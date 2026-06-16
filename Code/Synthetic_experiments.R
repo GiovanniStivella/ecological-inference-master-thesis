@@ -1,24 +1,27 @@
 #remotes::install_github("CoryMcCartan/seine")
-
+#install.packages("truncnorm")
 set.seed(123)
 
+library(truncnorm)
 library(seine)
 
-high_income_North <- matrix(rnorm(100, mean = 0.7, sd = 0.1))
+high_income_North <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.7, sd = 0.2))
 
-high_income_Centre <- matrix(rnorm(100, mean = 0.5, sd = 0.1))
+high_income_Centre <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.5, sd = 0.2))
 
-high_income_South <- matrix(rnorm(100, mean = 0.3, sd = 0.1))
+high_income_South <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.3, sd = 0.2))
 
 high_income <- as.data.frame(rbind(high_income_North, high_income_Centre, high_income_South))
 
+x <- as.matrix(cbind(high_income = high_income, low_income = 1-high_income))
+
 #I firstly try without covariates
 
-synthetic_dataset_no_covariates <- ei_synthetic(n=300, n_x = 1, x = high_income)
+#synthetic_dataset_no_covariates <- ei_synthetic(n=300, n_x = 1, x = high_income)
 
-naive_no_covariates <- lm(y ~ x1, data = synthetic_dataset_no_covariates)
+#naive_no_covariates <- lm(y ~ x1, data = synthetic_dataset_no_covariates)
 
-summary(naive_no_covariates)
+#summary(naive_no_covariates)
 
 #I would like to add covariates
 area_yes <- matrix(1,100)
@@ -26,11 +29,11 @@ area_no <- matrix(0,100)
 
 area_North <- rbind(area_yes, area_no, area_no)
 area_Centre <- rbind(area_no, area_yes, area_no)
-area_South <- rbind(area_no, area_no, area_yes)
+#area_South <- rbind(area_no, area_no, area_yes)
 
-area <- cbind(area_North, area_Centre, area_South)
+area <- cbind(area_North, area_Centre)
 
-covariates <- cbind(high_income, area)
+covariates <- as.matrix(cbind(x, area))
 
 x <- as.matrix(cbind(high_income = covariates[, 1], low_income = 1 - covariates[, 1]))
 
