@@ -1,9 +1,8 @@
-#Trying to get US data
 
 library(tidyr)
 library(dplyr)
 
-# Load the Pennsylvania 2020 VTD data
+# Load 2020 VTD data from ALARM
 texas <- read.table("https://raw.githubusercontent.com/alarm-redist/census-2020/main/census-vest-2020/tx_2020_vtd.csv",
                            header = TRUE,    # first row of file contains variable names
                            sep = ",",        # need to specify that the file is comma-separator
