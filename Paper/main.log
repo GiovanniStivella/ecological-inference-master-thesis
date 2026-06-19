@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  17 APR 2026 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  19 JUN 2026 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1359,9 +1359,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex)
+ (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+
+LaTeX Warning: Citation 'kuriwaki2026roleconfounderslinearityecological' on page 1 undefined on input line 1.
+
+
+LaTeX Warning: Citation 'mccartan2025identificationsemiparametricestimationconditional' on page 1 undefined on input line 1.
+
+
+Overfull \hbox (8.22505pt too wide) in paragraph at lines 1--2
+[]\T1/lmr/m/n/12 (-20) . 
+ []
+
+)
 
 [1] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+
+LaTeX Warning: Citation 'mccartan2025identificationsemiparametricestimationconditional' on page 2 undefined on input line 1.
+
+
+Overfull \hbox (236.32024pt too wide) in paragraph at lines 1--2
+\T1/lmr/m/n/12 (-20) prob-lem is rel-e-vant and why the so-lu-tion adopted by []
+ []
+
+
 
 [2])
 
@@ -1373,29 +1394,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [6]
 
-Package biblatex Warning: Name format 'last-first' deprecated.
-(biblatex)                Please use 'family-given' instead.
-(biblatex)                Using 'family-given' now.
-
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 137.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/12'.
-(microtype)             Ignoring protrusion settings for this character.
-
-Overfull \hbox (1.23001pt too wide) in paragraph at lines 138--138
-\T1/lmr/m/it/12 (-20) ear-ity in Eco-log-i-cal In-fer-ence: A Re-assess-ment\T1/lmr/m/n/12 (-20) , arXiv: []$\T1/lmtt/m/n/12 2601 . 07668$ [stat.AP][]\T1/lmr/m/n/12 (-20) ,
- []
-
-
-Package biblatex Warning: No driver for 'data'.
-(biblatex)                Using fallback driver on input line 137.
+LaTeX Warning: Empty bibliography on input line 137.
 
 
 
@@ -1404,25 +1403,34 @@ Package biblatex Warning: No driver for 'data'.
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 399E15A12E4C6DA852E7F0F79DDA12C2;734.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52960 strings out of 473190
- 1253518 string characters out of 5715799
- 2254281 words of memory out of 5000000
- 75235 multiletter control sequences out of 15000+600000
- 633078 words of font info for 148 fonts, out of 8000000 for 9000
+ 52831 strings out of 473190
+ 1250554 string characters out of 5715799
+ 2253077 words of memory out of 5000000
+ 75130 multiletter control sequences out of 15000+600000
+ 625013 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,8n,106p,1113b,1793s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" (8 pages, 283872 bytes).
+ 103i,8n,106p,1113b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" (8 pages, 217736 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 41543 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 36935 words of extra memory for PDF output out of 42996 (max. 10000000)
 

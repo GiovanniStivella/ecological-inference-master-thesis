@@ -14,52 +14,67 @@ library(ggplot2)
 library(tidycensus)
 library(tidyverse)
 
-help("get_acs")
+#census_api_key("4c7376779d3541cf0bac0eff12edea2ad63d4bb1", install = TRUE)
 
 c <- load_variables(2020, "pl")   #P1_001N is a total
 
-help("get_decennial")
+acs_variables <- load_variables(2020, "acs5")
 
-# Use state FIPS or USPS abbreviation for get_decennial.
-# "Texas" can return an HTML error.
+#Using get_decennial to have population at census block level (I have to check why I had not used get_acs, which would be more coherent)
 weights <- get_decennial(
   geography = "block",
   state = "TX",
   variables = "P1_001N",
   year = 2020
 )
-#I have verified that, at least when I sum blocks into block groups, the number coincides with the one presented here (https://www.arcgis.com/apps/mapviewer/index.html?layers=2f5e592494d243b0aa5c253e75e792a4)
 
+#There are 219672 blocks without people 
+
+#(https://www.arcgis.com/apps/mapviewer/index.html?layers=2f5e592494d243b0aa5c253e75e792a4)
+
+#Educational attainment for people over 25
 prova <- get_acs(geography = "cbg",
                  state = "Texas",
                  table = "B15003",
                  year = 2020)
 
-block_codes <- read.table('/Users/giovannistivella/Documents/Università/SSSUP/PSU/Data/Pennsylvania (first try)/BlockAssign_ST42_PA_VTD.txt',              # TXT data file indicated as string or full path to the file
-                          header = TRUE,    # Whether to display the header (TRUE) or not (FALSE)
-                          sep = "|")        # Separator of the columns of the file
+#There are 465950 observations (instead of 668757), of which 238758 where estimate is equal to 0
+
+block_codes <- read.table("BlockAssign_ST48_TX_VTD.txt",
+                          header = TRUE,
+                          sep = "|")
+#The number of block_codes coincide with the number in weights, which is a good check
 
 block_codes <- block_codes%>%mutate(BLOCKID = as.character(BLOCKID))
-block_codes <- block_codes %>%
-  mutate(VTDST20GEOID = paste0("42", sprintf("%03s", COUNTYFP), DISTRICT))
 
+#This is to consider how each census block is encoded into an electoral precinct
+block_codes <- block_codes %>%
+  mutate(VTDST20GEOID = paste0("48", sprintf("%03s", COUNTYFP), DISTRICT))
+
+#That is to consider how each census block is encoded into a block group
 block_codes <- block_codes%>%mutate(block_group = substr(as.character(BLOCKID), 1, 12))
 
-block_codes <- block_codes%>%
+#Joining codes with population
+block_codes_with_population <- block_codes%>%
   left_join(weights, by=c("BLOCKID"="GEOID"))
 
+#Count how many blocks are there in each block group
 block_groups <- block_codes %>%
   group_by(block_group) %>%
-  summarise(n_rows = n(), .groups = "drop") #how many blocks are there in each block group
+  summarise(n_rows = n(), .groups = "drop")
 
+#Count how many blocks of a certain block group are there in each VTD
 block_vtds_pair <- block_codes %>%
   group_by(block_group, VTDST20GEOID) %>%
-  summarise(n_rows = n(), .groups = "drop") #how many blocks of a certain block group are there in each VTD
+  summarise(n_rows = n(), .groups = "drop")
 
+#Collect all the block_groups which are not entirely in a VTD
 differences <- block_groups%>%
   left_join(block_vtds_pair, by=c("block_group"="block_group"))%>%
   filter(n_rows.x != n_rows.y)
 
+#Take every block that is not in a block group that coincides with a VTD (filter)
+#For each block consider both which is its VTD and which is its block_group (information contained in block_codes)
 differences_and_weights <- block_codes %>%
   filter(block_group %in% differences$block_group)
 
@@ -82,6 +97,17 @@ auto_easy <- easy_groups %>%
       filter(GEOID %in% df$block_group) %>%
       group_by(variable) %>%
       summarise(easy_estimate = sum(estimate, na.rm = TRUE)) %>%
+      mutate(VTDST20GEOID = unique(df$VTDST20GEOID))
+  }) %>%
+  bind_rows()
+
+auto_easy <- easy_groups %>%
+  split(.$VTDST20GEOID)%>%
+  lapply(function(df) {
+    prova %>%
+      filter(GEOID %in% df$block_group) %>%
+      group_by(variable) %>%
+      #summarise(easy_estimate = sum(estimate, na.rm = TRUE)) %>%
       mutate(VTDST20GEOID = unique(df$VTDST20GEOID))
   }) %>%
   bind_rows()
