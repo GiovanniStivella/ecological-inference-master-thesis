@@ -73,3 +73,9 @@ m <- ei_ridge(synthspec)
 rr <- ei_riesz(synthspec, penalty = m$penalty)
 
 ei_est(regr = m, riesz = rr, data = synthspec, conf_level = 0.95)
+
+#I compare with "true" values
+
+high <- sum(synthetic_dataset$high_income*synthetic_dataset$beta_high)/sum(synthetic_dataset$high_income)
+
+low <- sum(synthetic_dataset$low_income*synthetic_dataset$beta_low)/sum(synthetic_dataset$low_income)
