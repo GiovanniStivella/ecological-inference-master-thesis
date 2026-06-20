@@ -21,7 +21,7 @@ c <- load_variables(2020, "pl")   #P1_001N is a total
 
 acs_variables <- load_variables(2020, "acs5") #B02001_001 should be a total
 
-#Using get_decennial to have population at census block level (I have to check why I had not used get_acs, which would be more coherent)
+#Using get_decennial to have population at census block level (block data are not available in the ACS)
 weights <- get_decennial(
   geography = "block",
   state = "TX",
@@ -149,4 +149,8 @@ final <- auto_easy %>%
 final_wide <- final %>%
   pivot_wider(names_from = variable, values_from = total_estimate)
 
-write.csv(final_wide, "final_wide.csv")
+merging <- final_wide%>%
+  left_join(texas, by = c("VTDST20GEOID"="GEOID20"))
+
+saveRDS(final_wide, "final_wide_tx.rds")
+saveRDS(merging, "merging.rds")

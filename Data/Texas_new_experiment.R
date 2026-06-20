@@ -18,9 +18,109 @@ library(tidyverse)
 
 acs_variables <- load_variables(2020, "acs5") #B02001_001 should be a total
 
-weights <- get_acs(
+weights <- get_decennial(
   geography = "block",
   state = "TX",
   table = "B02001",
   year = 2020
 )
+
+#(https://www.arcgis.com/apps/mapviewer/index.html?layers=2f5e592494d243b0aa5c253e75e792a4)
+
+#Educational attainment for people over 25
+prova <- get_acs(geography = "cbg", #it returns estimates with moe (margin of error)
+                 state = "Texas",
+                 table = "B15003",
+                 year = 2020)
+
+#There are 465950/25=18638 block groups, which make for an average of 36 blocks per block group
+
+#Now we open the table that links blocks and VTDs
+block_codes <- read.table("BlockAssign_ST48_TX_VTD.txt",
+                          header = TRUE,
+                          sep = "|")
+#The number of observations in block_codes coincide with the number of observations in weights 
+#That is a good check of the total number of blocks
+
+block_codes <- block_codes%>%mutate(BLOCKID = as.character(BLOCKID))
+
+#Using COUNTYFP and DISTRICT I can recover the code of each VTD
+#Then I can link each census block to its VTD
+block_codes <- block_codes %>%
+  mutate(VTDST20GEOID = paste0("48", sprintf("%03s", COUNTYFP), DISTRICT))
+
+#Using the first 12 characters I can link each census block to its census block group
+block_codes <- block_codes%>%mutate(block_group = substr(as.character(BLOCKID), 1, 12))
+
+#Joining codes with population
+block_codes_with_population <- block_codes%>%
+  left_join(weights, by=c("BLOCKID"="GEOID"))
+
+#Count how many blocks are there in each block group
+block_groups <- block_codes %>%
+  group_by(block_group) %>%
+  summarise(n_rows = n(), .groups = "drop")
+
+#Count how many blocks of a certain block group are there in each VTD
+block_vtds_pair <- block_codes %>%
+  group_by(block_group, VTDST20GEOID) %>%
+  summarise(n_rows = n(), .groups = "drop")
+
+#Collect all the block_groups which are not entirely in a VTD
+differences <- block_groups%>%
+  left_join(block_vtds_pair, by=c("block_group"="block_group"))%>%
+  filter(n_rows.x != n_rows.y)
+
+#Take every block that is not in a block group that coincides with a VTD (filter)
+#For each block I consider its VTD, its block_group and its population (in block_codes_with_population)
+differences_and_weights <- block_codes_with_population %>%
+  filter(block_group %in% differences$block_group)
+
+#Compute the population of each couple of VTD and block_group
+differences_weighted <- differences_and_weights %>%
+  group_by(VTDST20GEOID, block_group) %>%
+  summarise(pop = sum(value))
+#And then compute the population of each block_group
+differences_weighted <- differences_weighted %>%
+  group_by(block_group) %>%
+  mutate(group_pop = sum(pop)) %>%
+  ungroup()
+
+#Now consider the block census groups which are contained in VTDs
+easy_groups <- block_groups%>%
+  left_join(block_vtds_pair, by=c("block_group"="block_group"))%>%
+  filter(n_rows.x == n_rows.y)
+
+#For those block census groups and VTDs I take data in the first request of get_acs (prova)
+auto_easy <- easy_groups %>%
+  split(.$VTDST20GEOID)%>%
+  lapply(function(df) {
+    prova %>%
+      filter(GEOID %in% df$block_group) %>%
+      group_by(variable) %>%
+      summarise(easy_estimate = sum(estimate, na.rm = TRUE)) %>%
+      mutate(VTDST20GEOID = unique(df$VTDST20GEOID))
+  }) %>%
+  bind_rows()
+
+#Now I can consider block groups which are not entirely contained in VTDs
+auto_tedious <- differences_weighted %>%
+  split(.$VTDST20GEOID)%>%
+  lapply(function(df) {
+    prova %>%
+      filter(GEOID %in% df$block_group) %>%
+      group_by(variable) %>%
+      summarise(tedious_estimate = sum(estimate*(df$pop/df$group_pop), na.rm = TRUE)) %>%
+      mutate(VTDST20GEOID = unique(df$VTDST20GEOID))
+  }) %>%
+  bind_rows()
+
+final <- auto_easy %>%
+  full_join(auto_tedious, by = c("variable"="variable", "VTDST20GEOID"="VTDST20GEOID"))%>%
+  mutate(total_estimate = coalesce(easy_estimate, 0) + coalesce(tedious_estimate, 0))%>%
+  select("VTDST20GEOID", "variable", "total_estimate")
+
+final_wide <- final %>%
+  pivot_wider(names_from = variable, values_from = total_estimate)
+
+saveRDS(final_wide, "final_wide_tx.rds")
