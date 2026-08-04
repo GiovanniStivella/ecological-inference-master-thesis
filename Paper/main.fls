@@ -1,9 +1,9 @@
-PWD /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper
+PWD /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.log
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.tex
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/paper/paper.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/paper/paper.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
@@ -286,7 +286,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/atveryend/atveryend.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzexternalshared.code.tex
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.auxlock
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.auxlock
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/forloop/forloop.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/forloop/forloop.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
@@ -467,10 +467,10 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -485,37 +485,37 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-bas
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bcf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bcf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541.eps
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -562,10 +562,10 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
@@ -595,32 +595,32 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmss10.tfm
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out
-INPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.run.xml
-OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.run.xml
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.run.xml
+OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.run.xml
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb

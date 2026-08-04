@@ -134,7 +134,7 @@ education <- auto_easy %>%
 education_wide <- education %>%
   pivot_wider(names_from = variable, values_from = total_estimate)
 
-merging <- final_wide%>%
+merging <- education_wide%>%
   left_join(texas, by = c("VTDST20GEOID"="GEOID20"))
 
 #Sex by age
@@ -259,9 +259,11 @@ race <- race_easy %>%
 race_wide <- race %>%
   pivot_wider(names_from = variable, values_from = total_estimate)
 
+merging <- race_wide%>%
+  left_join(texas, by = c("VTDST20GEOID"="GEOID20"))
 
 
 
 
-#saveRDS(final_wide, "final_wide_tx.rds")
-#saveRDS(merging, "merging.rds")
+saveRDS(race_wide, "final_wide_tx.rds")
+saveRDS(merging, "merging.rds")

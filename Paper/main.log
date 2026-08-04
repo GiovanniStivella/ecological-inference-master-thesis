@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  19 JUN 2026 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  3 AUG 2026 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex"
-(/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.tex
+**/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.tex
+(/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/paper/paper.cls
@@ -1156,7 +1156,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@definition=\count522
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux)
+ (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
@@ -1228,7 +1228,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 108.
- (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out) (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.out)
+ (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1244,7 +1244,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.bbl)
+ (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl)
 Package biblatex Info: Reference section=0 on input line 108.
 Package biblatex Info: Reference segment=0 on input line 108.
 
@@ -1282,7 +1282,7 @@ Package biblatex Info: Reference segment=0 on input line 108.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
+(/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Copertina.tex
 Package epstopdf Info: Source file: <Images/cherubino_pant541.eps>
 (epstopdf)                    date: 2026-04-16 11:29:23
 (epstopdf)                    size: 259277 bytes
@@ -1350,7 +1350,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 [0
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} </Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf> </Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf>])
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc} </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/cherubino_pant541-eps-converted-to.pdf> </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Sant'anna_cerchio_NEG_COL_ITA.pdf>])
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 113.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1359,7 +1359,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
+ (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Introduction.tex
 
 LaTeX Warning: Citation 'kuriwaki2026roleconfounderslinearityecological' on page 1 undefined on input line 1.
 
@@ -1373,7 +1373,7 @@ Overfull \hbox (8.22505pt too wide) in paragraph at lines 1--2
 
 )
 
-[1] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+[1] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
 
 LaTeX Warning: Citation 'mccartan2025identificationsemiparametricestimationconditional' on page 2 undefined on input line 1.
 
@@ -1386,11 +1386,11 @@ Overfull \hbox (236.32024pt too wide) in paragraph at lines 1--2
 
 [2])
 
-[3] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex)
+[3] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex)
 
-[4] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex)
+[4] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex)
 
-[5] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
+[5] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
 
 [6]
 
@@ -1398,7 +1398,7 @@ LaTeX Warning: Empty bibliography on input line 137.
 
 
 
-[7] (/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.aux)
+[7] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1420,14 +1420,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  52831 strings out of 473190
- 1250554 string characters out of 5715799
+ 1250382 string characters out of 5715799
  2253077 words of memory out of 5000000
  75130 multiletter control sequences out of 15000+600000
  625013 words of font info for 139 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,8n,106p,1113b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,8n,106p,1105b,1795s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on "/Users/giovannistivella/Documents/Università/UniPi/Corsi magistrale/ecological-inference-master-thesis/Paper/main.pdf" (8 pages, 217736 bytes).
+Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (8 pages, 217720 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
