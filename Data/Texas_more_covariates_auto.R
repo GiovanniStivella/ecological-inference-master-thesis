@@ -79,6 +79,9 @@ merge_with_texas <- function(vtd_table) {
     left_join(texas, by = c("VTDST20GEOID" = "GEOID20"))
 }
 
+#Here we can look at which variables to use, bearing in mind that we can only use variables collected at census block group level
+acs_variables <- load_variables(2020, "acs5")
+
 acs_tables <- list(
   education = get_acs(
     geography = "cbg",
@@ -94,31 +97,90 @@ acs_tables <- list(
     cache_table = TRUE,
     year = 2020
   ),
-  race = get_acs(
+  mobilitymetro = get_acs(
     geography = "cbg",
     state = "Texas",
-    table = "B02001",
+    table = "B07201",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  mobilitymicro = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B07202",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  mobilityother = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B07203",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  householdtype = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B09019",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  language = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B16004",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  householdincome = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B19001", #should we use household income or family income (B19101)? B19001 is the sum of family and nonfamily, which means that each household is categorised either as family or as nonfamily
+    cache_table = TRUE,
+    year = 2020
+  ),
+  averageincome = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B19301", #we can even have this estimate based on ethnicity
+    cache_table = TRUE,
+    year = 2020
+  ),
+  employmentstatus = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B23025",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  agevap = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B29001",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  educationvap = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B29002",
+    cache_table = TRUE,
+    year = 2020
+  ),
+  povertyvap = get_acs(
+    geography = "cbg",
+    state = "Texas",
+    table = "B29003",
     cache_table = TRUE,
     year = 2020
   )
 )
 
+
+
+
 vtd_tables <- lapply(acs_tables, build_vtd_table)
-merged_tables <- lapply(vtd_tables, merge_with_texas)
+merged_tables <- reduce(vtd_tables, ~ left_join(.x, .y, by = "VTDST20GEOID"))
+merged_with_texas <- merge_with_texas(merged_tables)
 
-education_wide <- vtd_tables$education
-sexage_wide <- vtd_tables$sexage
-race_wide <- vtd_tables$race
-
-education_merging <- merged_tables$education
-sexage_merging <- merged_tables$sexage
-race_merging <- merged_tables$race
-
-saveRDS(education_wide, "education_wide_tx.rds")
-saveRDS(sexage_wide, "sexage_wide_tx.rds")
-saveRDS(race_wide, "race_wide_tx.rds")
-saveRDS(education_merging, "education_merging_tx.rds")
-saveRDS(sexage_merging, "sexage_merging_tx.rds")
-saveRDS(race_merging, "race_merging_tx.rds")
-
-look <- readRDS("merging.rds")
+saveRDS(merged_with_texas, "texas_with_covariates.rds")
