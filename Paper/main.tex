@@ -45,7 +45,7 @@
 \usepackage[colorlinks]{hyperref}						
 \newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
 \usepackage[babel]{csquotes}
-\usepackage[style=authoryear, backend=biber, maxbibnames=99, natbib=true]{biblatex} 
+\usepackage[style=authoryear, backend=bibtex, maxbibnames=99, natbib=true]{biblatex} 
 \addbibresource{ecological_inference_us_election.bib}
 \hypersetup{hidelinks}
 \usetikzlibrary {arrows.meta,bending,positioning}
@@ -112,6 +112,10 @@
 \newpage
 \section{Introduction} \label{sec:introduction}
 \input{Sections/Introduction}
+
+\newpage
+\section{A model for ecological inference: presenting seine} \label{sec:model}
+\input{Sections/Model.tex}
 
 \newpage
 \section{A synthetic example} \label{sec:A synthetic example}

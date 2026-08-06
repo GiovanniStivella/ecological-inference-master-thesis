@@ -1,0 +1,9 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{\footnotesize {\sffamily {3}}}{section.1}%
+\contentsline {section}{\numberline {2}A model for ecological inference: presenting seine}{\footnotesize {\sffamily {6}}}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The notation for the problem confronted by seine}{\footnotesize {\sffamily {7}}}{subsection.2.1}%
+\contentsline {section}{\numberline {3}A synthetic example}{\footnotesize {\sffamily {8}}}{section.3}%
+\contentsline {section}{\numberline {4}An application to US data}{\footnotesize {\sffamily {10}}}{section.4}%
+\contentsline {section}{\numberline {5}Other Comments}{\footnotesize {\sffamily {11}}}{section.5}%
+\contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {12}}}{section.6}%
+\contentsline {section}{\numberline {7}References}{\footnotesize {\sffamily {13}}}{section.7}%

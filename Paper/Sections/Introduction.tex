@@ -1,20 +1,63 @@
-Introduction: \citet{kuriwaki2026roleconfounderslinearityecological}, but also \citet{mccartan2025identificationsemiparametricestimationconditional}.
+%I will structure the introduction as follows:
+
+Ecological inference fallacy is the problem that arises when we are interested in relationships between variables at the individual level but we only observe data at the aggregate level.
+
+This problem is relevant in all situations in which data are reported at the aggregate level, but we are interested in relationships at the individual level.
+
+A famous example of that problem is the one presented by \citet{Robinson1950} for the relationship between illiteracy and race, and illiteracy and migration in the United States. In that case, the author observed that areas with higher proportion of Black population, as well as areas with higher proportion of migrants, had lower illiteracy rates. However, when looking at the individual level, Black people and migrants were more likely to be illiterate than White and non-migrant people. The explanation of this apparent paradox is that Black and migrant people were more likely to live or move to areas with lower illiteracy rates, and therefore the aggregate data masked the individual-level relationship.
+
+We can think also at economic examples.
+% (waiting for an idea that satisfies me)
+% (often times, these problems are overcome by including covariates, fixed effects or instrumental variables, but these solutions are not always apt to solve problems of ecological inference, where the problem is that we do not observe individual-level data, and therefore we cannot control for individual-level confounders)
+
+In any case, the most obvious case of ecological inference is in electoral behavior, where we are interested in the relationship between individual-level characteristics and individual voting behavior, but obviously (and luckily!) we are not able to observe individual-level voting behavior, and sometimes we are not able to observe individual-level characteristics either. In these cases, we are forced to rely on aggregate data, possibly choosing the most granular level of aggregation possible.
+Even choosing the most granular level of aggregation possible, individual-level relationships may be highly masked.
+That, of course, is higly relevant for political economists, who often times deal with the relationships between demographic characteristics, electoral results and public policies.
+
+\citet{kuriwaki2026roleconfounderslinearityecological} present a particularly convincing example of that problem, citing 1968 US presidential elections, where, in addition to the Republican and Democratic candidates Richard Nixon and Hubert Humphrey, there was also a relevant third-party candidate, George Wallace, who lead the segregationist American Independent Party.
+%George Wallace had his strongest results in the Southern States, where the proportion of Black population was generally higher than in the rest of the nation. Therefore, a very naive analysis of the aggregate data would suggest that Black people were more likely to vote for George Wallace, whose platform was segregationist and overtly racist.
+\citet{kuriwaki2026roleconfounderslinearityecological} go on to show that, even at more granular levels of aggregation, such as the county level, the relationship between proportion of Black population and proportion of votes for George Wallace would still be positive considering all counties in the nation; not only that, but even restricting the analysis to some specific States, such as North Carolina, we would still observe a positive relationship: the higher the proportion of Black population, the higher the proportion of votes for George Wallace.
+
+The key here is that, while Black people were a quite homogenous group in terms of voting behavior (generally favoring the Democratic candidate and certainly not voting for George Wallace), White people were a much more heterogeneous group, and in particular, White people with segregationist views were also more likely to live in areas with higher proportion of Black population.
 
 
-I should say something about the more general importance of estimating correctly when we do not observe individual-level data.
+\citet{Robinson1950} came to the conclusion that ecological fallacy would constitute an inextricable problem and he concluded his paper telling that he was 
+\begin{quotation} ... aware that this conclusion has serious consequences, and that its effect appears wholly negative because it throws serious doubt upon the validity of a number of important studies made in recent years. The purpose of this paper will have been accomplished, however, if it prevents the future computation of meaningless correlations and stimulates the study of similar problems with the use of meaningful correlations between the properties of individuals.
+\end{quotation}
 
-I should say that sometimes we do not observe individual-level data and we might be tempted to infere something based on highly granular data. But these inferences may be wrong.
+Econometrics in 1950, however, had considerably fewer instruments than it has now and we might think that some of these techniques could be successfully deployed in confronting ecological inference fallacy.
 
-That could be relevant for economists in various applications and analyses and it is not solely a nuisance for econometricians.
+%In particular, the inclusion of covariates or fixed effects or instrumental variables
 
-In fact, data are usually reported by official bureau of statistics even at highly granular level but not at individual level and some relationships become masked.
+%These techniques in any case can possibly work well when we apply them to individual-level data, while they are not apt to confront aggregate data.
+%Think again of the previous examples (eh ci devo pensare anche io)
+
+%I might also consider BLP
+
+%It is therefore useful to introduce a new notation for the problem of composition
 
 
-Subsequently, I should present the problem with appropriate notation.
 
-And probably I should also mark the difference between this problem and others problem of aggregation such as the one discussed in BLP model.
 
-In any case, I will later decide how to structure the dissertation and where to put the complete explanation of the method: in principle, I would put it into the introduction and later I would present the syntethic example just referring to what I have already written here.
+
+
+%Introduction: \citet{kuriwaki2026roleconfounderslinearityecological}, but also \citet{mccartan2025identificationsemiparametricestimationconditional}.
+
+
+%I should say something about the more general importance of estimating correctly when we do not observe individual-level data.
+
+%I should say that sometimes we do not observe individual-level data and we might be tempted to infere something based on highly granular data. But these inferences may be wrong.
+
+%That could be relevant for economists in various applications and analyses and it is not solely a nuisance for econometricians.
+
+%In fact, data are usually reported by official bureau of statistics even at highly granular level but not at individual level and some relationships become masked.
+
+
+%Subsequently, I should present the problem with appropriate notation.
+
+%And probably I should also mark the difference between this problem and others problem of aggregation such as the one discussed in BLP model.
+
+%In any case, I will later decide how to structure the dissertation and where to put the complete explanation of the method: in principle, I would put it into the introduction and later I would present the syntethic example just referring to what I have already written here.
 
 
 %In particolare, quali sono le differenze fra questo metodo e gli altri?

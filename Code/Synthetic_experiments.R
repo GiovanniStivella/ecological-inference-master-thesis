@@ -79,3 +79,7 @@ ei_est(regr = m, riesz = rr, data = synthspec, conf_level = 0.95)
 high <- sum(synthetic_dataset$high_income*synthetic_dataset$beta_high)/sum(synthetic_dataset$high_income)
 
 low <- sum(synthetic_dataset$low_income*synthetic_dataset$beta_low)/sum(synthetic_dataset$low_income)
+
+
+
+#Qua una cosa da fare sarebbe replicare l'esperimento e vedere se i risultati sono dentro l'intervallo di confidenza con la frequenza attesa
