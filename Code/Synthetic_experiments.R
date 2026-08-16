@@ -83,3 +83,5 @@ low <- sum(synthetic_dataset$low_income*synthetic_dataset$beta_low)/sum(syntheti
 
 
 #Qua una cosa da fare sarebbe replicare l'esperimento e vedere se i risultati sono dentro l'intervallo di confidenza con la frequenza attesa
+
+#Un'altra cosa da fare è una regressione con covariate

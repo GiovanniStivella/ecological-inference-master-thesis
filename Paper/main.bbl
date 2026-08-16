@@ -17,6 +17,41 @@
 \endgroup
 
 \datalist[entry]{nyt/global//global/global/global}
+  \entry{Goodman1953}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=GLA}{%
+         family={Goodman},
+         familyi={G\bibinitperiod},
+         given={Leo\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {[American Sociological Association, Sage Publications, Inc.]}%
+    }
+    \strng{namehash}{GLA1}
+    \strng{fullhash}{GLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1953}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{issn}{00031224}
+    \field{number}{6}
+    \field{pages}{663\bibrangedash 664}
+    \field{title}{Ecological Regressions and Behavior of Individuals}
+    \verb{url}
+    \verb http://www.jstor.org/stable/2088121
+    \endverb
+    \field{volume}{18}
+    \field{journaltitle}{American Sociological Review}
+    \field{year}{1953}
+    \field{urlday}{16}
+    \field{urlmonth}{08}
+    \field{urlyear}{2026}
+  \endentry
+
   \entry{kuriwaki2026roleconfounderslinearityecological}{misc}{}{}
     \name{author}{2}{}{%
       {{hash=KS}{%

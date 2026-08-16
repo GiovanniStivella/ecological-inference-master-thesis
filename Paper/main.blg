@@ -22,44 +22,44 @@ Database file #2: ecological_inference_us_election.bib
 Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 8 entries,
+You've used 9 entries,
             6402 wiz_defined-function locations,
-            1254 strings with 10368 characters,
-and the built_in function-call counts, 50641 in all, are:
-= -- 3383
-> -- 1659
-< -- 316
-+ -- 1871
-- -- 1017
-* -- 3347
-:= -- 5633
+            1265 strings with 10522 characters,
+and the built_in function-call counts, 59565 in all, are:
+= -- 4006
+> -- 2061
+< -- 409
++ -- 2260
+- -- 1276
+* -- 3836
+:= -- 6484
 add.period$ -- 0
-call.type$ -- 8
-change.case$ -- 145
-chr.to.int$ -- 116
-cite$ -- 14
-duplicate$ -- 4954
-empty$ -- 4334
-format.name$ -- 429
-if$ -- 9995
+call.type$ -- 9
+change.case$ -- 212
+chr.to.int$ -- 140
+cite$ -- 16
+duplicate$ -- 5734
+empty$ -- 5066
+format.name$ -- 477
+if$ -- 11771
 int.to.chr$ -- 0
-int.to.str$ -- 16
+int.to.str$ -- 19
 missing$ -- 0
-newline$ -- 244
-num.names$ -- 365
-pop$ -- 2465
+newline$ -- 279
+num.names$ -- 464
+pop$ -- 2787
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 243
 quote$ -- 0
-skip$ -- 1566
+skip$ -- 1914
 stack$ -- 0
-substring$ -- 5989
-swap$ -- 1202
-text.length$ -- 253
-text.prefix$ -- 7
+substring$ -- 7076
+swap$ -- 1451
+text.length$ -- 286
+text.prefix$ -- 8
 top$ -- 1
-type$ -- 260
+type$ -- 294
 warning$ -- 0
-while$ -- 640
+while$ -- 714
 width$ -- 0
-write$ -- 237
+write$ -- 271

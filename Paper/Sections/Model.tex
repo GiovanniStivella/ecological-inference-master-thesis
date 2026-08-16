@@ -1,27 +1,7 @@
+Here we introduce the model in which Y is a binary variable and therefore we can convert it into a one-dimensional variable that takes 1 or 0 for each individual, and shares in geographies.
 
-Individuals are from $1$ to $n$; $i \in [1,N]$.
+Then X is the previously presented categorical variable and Z is a set of geographical covariates.
 
-Then, we introduce the concept of geography, which is a partition of the whole population: each individual belongs to one and only one geography.
+We assume that the relationship is as presented in the previous section.
 
-We indicate geographies by $g$; $g \in [1,G]$.
-
-We indicate geography of individual $i$ as $G_i$.
-
-Therefore, for each geography $g$, we have population $N_g = \sum_{i:G_i=g}$.
-Then, $\overline{Y}_g = \frac{\sum_{i:G_i=g}Y_i}{N_g}$.
-
-Now, we consider the categorical variable over which we want to perform inference.
-That variable, too, has to be a partition of the population: each individual has to belong to one and only one of the classes encoded by the categorical variable.
-We indicate by $d$ the number of possible values that the categorical variable can adopt. For example, if the partition is based on race, we might have $d=5$ (White, Black, Hispanic, Asian, Other).
-
-Therefore, we can indicate the categorical variable for individual $i$ as $X_i \in \{0,1\}^d$, where $X_i$ is a vector of length $d$ with all entries equal to $0$ except for the entry corresponding to the value of the categorical variable for individual $i$, which is equal to $1$.
-
-Finally, for each geography $g$, we have $\overline{Y}_g = \frac{\sum_{i:G_i=g} Y_i}{N_g}$ and $\overline{X}_g = \frac{\sum_{i:G_i=g} X_i}{N_g}$.
-
-%
-
-\subsection{The notation for the problem confronted by seine}
-
-Even the X are partitions.
-
-
+Finally, we briefly present how seine works under the hood, as far as I can understand it.
