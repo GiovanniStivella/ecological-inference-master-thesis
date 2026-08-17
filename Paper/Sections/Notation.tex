@@ -45,7 +45,7 @@ These definitions allow us to derive two accounting identitities.
 
 The first one links global estimand to local estimands: $\beta = \frac{\sum_{g=1}^{G} \beta_g*N_g}{N}$, i.e. the global estimand is the weighted average of local estimands, weighted by the population of each geography.
 
-Therefore, this identity suggests a strategy that starts from local estimands, which however can be of interest on their own, to recover the global estimand.
+Therefore, this identity suggests a strategy that starts from local estimands, which can also be of interest on their own, to recover the global estimand.
 
 The second accounting identity is at geographical level: $\overline{Y}_g = \beta_g'\overline{X}_g$.
 
@@ -71,7 +71,7 @@ As underlined by \citet{kuriwaki2026roleconfounderslinearityecological}, that is
 
 This assumption is called Coarsening Completely At Random, as it is equivalent to think that the way in which individuals are divided into geographies is independent of other characteristics of the geography: literate and illiterate White people, cheaper and more expensive older consumers are randomly assigned to counties and retail stores.
 
-Equivelantely to linear regression,CCAR would allow the following identification: $\beta = E[\overline{X}\overline{X}']^{-1}E[\overline{X}'\overline{Y}]$.
+Equivalently to linear regression,CCAR would allow the following identification: $\beta = E[\overline{X}\overline{X}']^{-1}E[\overline{X}'\overline{Y}]$.
 
 In any case, when performing ecological regression, it is hardly the case that this assumption holds true: in the examples presented in the Introduction, that would mean that White and non-migrants people shared the same average illiteracy rates independently on the percentage of Black and migrant people in their county, that older consumers shared spending habits independently on the share of young people in their areas and that White shared the same voting behaviors independently on the percentage of Black people in their precinct.
 
@@ -81,5 +81,25 @@ In any case, when performing ecological regression, it is hardly the case that t
     In this case, CCAR means that the preference of White voters for Wallace is unrelated to the proportion of Black voters in a county or the population of the county. For instance, this means that all of the following groups support Wallace to the same extent in North Carolina in expectation: White voters in rural lowland counties with a higher proportion of Black voters,White voters in urban counties,and White voters in mountainous counties with few racial minorities. CCAR is implausible in this setting, and is incompatible with the social scientist’s interest in how different individuals sort into different coarsened geographies.
 \end{quotation}
 
-\subsubsection{Adding covariates}
+\subsubsection{Adding covariates: CAR assumption}
 
+What we have not discussed so far is the possibility of adding covariates to the model, which would allow to relax the CCAR assumption.
+
+We shall now introduce a set of covariates $Z_g$ at geography level. As geographies are our units of observation, covariates can either derive from aggregation of individual characteristics or be characteristics of the geography itself: this distinction is not relevant for our purposes, and we will later see examples of both types. A consequence on notation is that we denote covariates as $Z_g$ without the overline, as they are not necessarily averages of individual characteristics.
+
+%Io ancora non ho capito perché CAR comprenda la popolazione, forse dovrei mettercela per non errare
+Thanks to covariates, we are now able to relax the CCAR assumption and considers the following assumption instead: $E[\beta_g|\overline{X}_g, Z_g] = E[\beta_g|Z_g]$.
+
+This assumption is called Coarsening At Random (CAR) and it is equivalent to think that the way in which individuals are divided into geographies is independent of other characteristics of the geography, conditional on covariates: literate and illiterate White people, cheaper and more expensive older consumers are randomly assigned to counties and retail stores, conditional on covariates.
+
+As a consequence, geographies may have different $\beta_g$ and, contrary to CCAR, $\overline{X}_g$ can affect $\beta_g$, but we assume that there exist covariates $Z_g$ which are able to capture the effect of $\overline{X}_g$ on $\beta_g$.
+
+Therefore, we are able to write $\beta_g$ as a function of the covariates: $\beta_g = E[\beta_g|\overline{X}_g, Z_g] + \epsilon_g = E[\beta_g|Z_g] + \epsilon_g$ with $E[\epsilon_g|\overline{X}_g] = 0$.
+
+Without loss of generality, we can express $E[\beta_g|Z_g]$ with a functional form: $E[\beta_g|Z_g] = f(Z_g)$.
+
+Then, thanks to the second accounting identity, we have a model that links $\overline{Y}_g$ to $\overline{X}_g$ and $Z_g$: $\overline{Y}_g = \beta_g' \overline{X}_g = f(Z_g)'\overline{X}_g + \epsilon_g'\overline{X}_g$.
+
+Taking the conditional expectations on both sides, we have $E[\overline{Y}_G|\overline{X}_g, Z_g] = f(Z_g)'\overline{X_g}$.
+
+%That allows to perform semiparametric estimation

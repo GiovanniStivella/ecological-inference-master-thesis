@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {2.1}Global and local estimands}{\footnotesize {\sffamily {9}}}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Different assumptions, different strategies}{\footnotesize {\sffamily {10}}}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}CCAR assumption}{\footnotesize {\sffamily {10}}}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Adding covariates}{\footnotesize {\sffamily {12}}}{subsubsection.2.2.2}%
-\contentsline {section}{\numberline {3}A model for ecological inference: presenting seine}{\footnotesize {\sffamily {13}}}{section.3}%
-\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {14}}}{section.4}%
-\contentsline {section}{\numberline {5}An application to US data}{\footnotesize {\sffamily {16}}}{section.5}%
-\contentsline {section}{\numberline {6}Other Comments}{\footnotesize {\sffamily {17}}}{section.6}%
-\contentsline {section}{\numberline {7}Conclusions}{\footnotesize {\sffamily {18}}}{section.7}%
-\contentsline {section}{\numberline {8}References}{\footnotesize {\sffamily {19}}}{section.8}%
+\contentsline {subsubsection}{\numberline {2.2.2}Adding covariates: CAR assumption}{\footnotesize {\sffamily {12}}}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}A model for ecological inference: presenting seine}{\footnotesize {\sffamily {14}}}{section.3}%
+\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {15}}}{section.4}%
+\contentsline {section}{\numberline {5}An application to US data}{\footnotesize {\sffamily {17}}}{section.5}%
+\contentsline {section}{\numberline {6}Other Comments}{\footnotesize {\sffamily {18}}}{section.6}%
+\contentsline {section}{\numberline {7}Conclusions}{\footnotesize {\sffamily {19}}}{section.7}%
+\contentsline {section}{\numberline {8}References}{\footnotesize {\sffamily {20}}}{section.8}%
