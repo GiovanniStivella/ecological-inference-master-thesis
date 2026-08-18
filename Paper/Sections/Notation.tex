@@ -27,9 +27,9 @@ $\overline{X}_g$, instead, is a vector of shares $\overline{X}_g \in [0,1]^d$.
 
 In general, we are interested in the average of $Y_i$ conditional on the belonging to category $k \in [1,d]$.
 
-We shall denote this quantity by $B_k = \frac{\sum_i \{Y_i|i \in I_k\}}{N_k}$, where $I_k$ is the subset of people belonging to category $k$, while $N_k$ is the cardinality of $I_k$.
+We shall denote this quantity by $\beta_k = \frac{\sum_i \{Y_i|i \in I_k\}}{N_k}$, where $I_k$ is the subset of people belonging to category $k$, while $N_k$ is the cardinality of $I_k$.
 
-As before, $B_k$ is a scalar if the response variable is quantitative and a vector of shares if the response variable is categorical.
+As before, $\beta_k$ is a scalar if the response variable is quantitative and a vector of shares if the response variable is categorical.
 
 When we consider all different categories $k \in [1,d]$ we end up either with a vector $\beta \in \mathbb{R}^d$ or a matrix $\beta \in [0,1]^{p\times d}$.
 
@@ -37,13 +37,13 @@ We shall call $\beta$ the global estimand.
 
 However, as always, we do not observe individuals and therefore it is useful to recover quantities and definitions at geographical level.
 
-The local estimand for category $k$ and geography $g$ is defined as $B_{gk} = \frac{\sum_i \{Y_i|i \in I_{gk}\}}{N_{gk}}$, where $I_{gk}$ is the subset of people belonging to category $k$ and geography $g$ and $N_{gk}$ is its cardinality.
+The local estimand for category $k$ and geography $g$ is defined as $\beta_{gk} = \frac{\sum_i \{Y_i|i \in I_{gk}\}}{N_{gk}}$, where $I_{gk}$ is the subset of people belonging to category $k$ and geography $g$ and $N_{gk}$ is its cardinality.
 
-Analogously, we can collect all $B_{gk}$ pertaining to the same geography $g$ but to different categories $k$ within $\beta_g$ of dimension $d$ or $p \times d$.
+Analogously, we can collect all $\beta_{gk}$ pertaining to the same geography $g$ but to different categories $k$ within $\beta_g$ of dimension $d$ or $p \times d$.
 
 These definitions allow us to derive two accounting identitities.
 
-The first one links global estimand to local estimands: $\beta = \frac{\sum_{g=1}^{G} \beta_g*N_g}{N}$, i.e. the global estimand is the weighted average of local estimands, weighted by the population of each geography.
+The first one links global estimand to local estimands: $\beta_k = \frac{\sum_{g=1}^{G} \beta_{gk}*N_{gk}}{N_k}$, i.e. the global estimand is the weighted average of local estimands, weighted by the population of each geography.
 
 Therefore, this identity suggests a strategy that starts from local estimands, which can also be of interest on their own, to recover the global estimand.
 

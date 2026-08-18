@@ -105,8 +105,37 @@ In our case, $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = z_g ]  = \beta_g$ is just sl
 
 \subsection{Comparison of results}
 
+As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
+
+In our case, we have that $\beta_H = 0.503$ and $\beta_L = 0.343$.
+
+The naive OLS specification, implicitly assuming CCAR, would rely on the following regression: $\overline{Y_g} = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L+\epsilon_g$.
+As $\overline{X}_g^H$ and $\overline{X_g^L}$ are perfectly collinear($\overline{X}_g^H + \overline{X}_g^L = 1$), we use $\overline{X}_g^L$ as reference category and we estimate the following regression: 
+\begin{align*}
+\overline{Y_g} & = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L+\epsilon_g 
+\\& = \beta_H*\overline{X}_g^H + \beta_L*(1-\overline{X}_g^H)+\epsilon_g
+\\& = \beta_L + (\beta_H - \beta_L)*\overline{X}_g^H + \epsilon_g.
+\end{align*}
+
+Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta_L$ is estimated to be 0.21, while $\beta_H$ is estimated to be 0.21+0.42 = 0.63.
+
 \input{Images/naive_regression_summary.tex}
+
+That means that the naive OLS regression overestimates the propensity of high-income voters to vote in favour of the reform and underestimates the propensity of low-income voters to vote in favour of the reform, showing a more polarized distribution of votes conditional on income. 
+
+That can be explained by the fact that the naive OLS attributes higher percentages of votes in favour in Northern precincts only to their higher share of high-income voters, while in reality the higher percentages of votes in favour are also driven by the fact that low-income voters in Northern precincts have a higher propensity to vote in favour of the reform than low-income voters in other regions.
+
+%Another estimate can be obtained by including the region of each precinct as a covariate in the regression, therefore allowing for different intercepts across regions. In this case, we estimate the following regression.
+
+%In that case, we can use Southern low-income voters as reference category and we estimate the following regression:
+%\begin{align*}
+%\overline{Y_g} & = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L + \gamma_{North}*Z_{g}^{North} + \gamma_{Centre}*Z_{g}^{Centre} + \epsilon_g.
+%\end{align*}
+
+%\input{Images/covariate_regression_summary.tex}
+
+
 
 \input{Images/ei_estimates_summary.tex}
 
-\input{Images/covariate_regression_summary.tex}
+
