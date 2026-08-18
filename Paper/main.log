@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  17 AUG 2026 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  18 AUG 2026 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -692,7 +692,15 @@ File: pgflibrarydatavisualization.formats.functions.code.tex 2023-01-15 v3.1.10 
 \CommentStream=\write4
  Excluding comment 'comment') (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.fillbetween.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibraryfillbetween.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryintersections.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
 \pgf@intersect@solutions=\count351
-)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/tikzlibrarydecorations.softclip.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count352
+\FV@InFile=\read4
+\FV@TabBox=\box83
+\c@FancyVerbLine=\count353
+\FV@StepNumber=\count354
+\FV@OutFile=\write5
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -710,28 +718,28 @@ Package caption Info: thesis document class detected.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-thesis.sto
 File: caption-thesis.sto 2020/08/22 v2.0 Adaption of the caption package to the thesis document class (AR)
 ))
-\c@caption@flags=\count352
-\c@continuedfloat=\count353
+\c@caption@flags=\count355
+\c@continuedfloat=\count356
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count354
+\c@subfigure=\count357
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count355
+\c@subtable=\count358
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count356
+\c@float@type=\count359
 \float@exts=\toks55
-\float@box=\box83
+\float@box=\box84
 \@float@everytoks=\toks56
-\@floatcapt=\box84
+\@floatcapt=\box85
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/quoting/quoting.sty
 Package: quoting 2014/01/28 v0.1c Consolidated environment for displayed text
 \quo@toppartop=\skip107
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box85
+\@tempboxb=\box86
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (/usr/local/texlive/2025/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
@@ -747,13 +755,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count360
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen322
-\Hy@linkcounter=\count358
-\Hy@pagecounter=\count359
+\Hy@linkcounter=\count361
+\Hy@pagecounter=\count362
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -761,7 +769,7 @@ Now handling font encoding PD1 ...
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count360
+\Hy@SavedSpaceFactor=\count363
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -775,7 +783,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count361
+\c@Hy@tempcnt=\count364
  (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -787,7 +795,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count362
+\Fld@menulength=\count365
 \Field@Width=\dimen324
 \Fld@charsize=\dimen325
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -801,15 +809,15 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count363
-\c@Item=\count364
-\c@Hfootnote=\count365
+\Hy@abspage=\count366
+\c@Item=\count367
+\c@Hfootnote=\count368
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-\Fld@listcount=\count366
-\c@bookmark@seq@number=\count367
+\Fld@listcount=\count369
+\c@bookmark@seq@number=\count370
  (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -820,12 +828,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip108
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count368
-\csq@gtype=\count369
-\csq@glevel=\count370
-\csq@qlevel=\count371
-\csq@maxlvl=\count372
-\csq@tshold=\count373
+\csq@reset=\count371
+\csq@gtype=\count372
+\csq@glevel=\count373
+\csq@qlevel=\count374
+\csq@maxlvl=\count375
+\csq@tshold=\count376
 \csq@ltx@everypar=\toks57
  (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -842,53 +850,53 @@ Package csquotes Info: Enabling multilingual quotes.
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count374
+\lrq@indent=\count377
  (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count375
-\c@listtotal=\count376
-\c@listcount=\count377
-\c@liststart=\count378
-\c@liststop=\count379
-\c@citecount=\count380
-\c@citetotal=\count381
-\c@multicitecount=\count382
-\c@multicitetotal=\count383
-\c@instcount=\count384
-\c@maxnames=\count385
-\c@minnames=\count386
-\c@maxitems=\count387
-\c@minitems=\count388
-\c@citecounter=\count389
-\c@maxcitecounter=\count390
-\c@savedcitecounter=\count391
-\c@uniquelist=\count392
-\c@uniquename=\count393
-\c@refsection=\count394
-\c@refsegment=\count395
-\c@maxextratitle=\count396
-\c@maxextratitleyear=\count397
-\c@maxextraname=\count398
-\c@maxextradate=\count399
-\c@maxextraalpha=\count400
-\c@abbrvpenalty=\count401
-\c@highnamepenalty=\count402
-\c@lownamepenalty=\count403
-\c@maxparens=\count404
-\c@parenlevel=\count405
-\blx@tempcnta=\count406
-\blx@tempcntb=\count407
-\blx@tempcntc=\count408
-\c@blx@maxsection=\count409
-\blx@maxsegment@0=\count410
-\blx@notetype=\count411
-\blx@parenlevel@text=\count412
-\blx@parenlevel@foot=\count413
-\blx@sectionciteorder@0=\count414
-\blx@sectionciteorderinternal@0=\count415
-\blx@entrysetcounter=\count416
-\blx@biblioinstance=\count417
+\c@tabx@nest=\count378
+\c@listtotal=\count379
+\c@listcount=\count380
+\c@liststart=\count381
+\c@liststop=\count382
+\c@citecount=\count383
+\c@citetotal=\count384
+\c@multicitecount=\count385
+\c@multicitetotal=\count386
+\c@instcount=\count387
+\c@maxnames=\count388
+\c@minnames=\count389
+\c@maxitems=\count390
+\c@minitems=\count391
+\c@citecounter=\count392
+\c@maxcitecounter=\count393
+\c@savedcitecounter=\count394
+\c@uniquelist=\count395
+\c@uniquename=\count396
+\c@refsection=\count397
+\c@refsegment=\count398
+\c@maxextratitle=\count399
+\c@maxextratitleyear=\count400
+\c@maxextraname=\count401
+\c@maxextradate=\count402
+\c@maxextraalpha=\count403
+\c@abbrvpenalty=\count404
+\c@highnamepenalty=\count405
+\c@lownamepenalty=\count406
+\c@maxparens=\count407
+\c@parenlevel=\count408
+\blx@tempcnta=\count409
+\blx@tempcntb=\count410
+\blx@tempcntc=\count411
+\c@blx@maxsection=\count412
+\blx@maxsegment@0=\count413
+\blx@notetype=\count414
+\blx@parenlevel@text=\count415
+\blx@parenlevel@foot=\count416
+\blx@sectionciteorder@0=\count417
+\blx@sectionciteorderinternal@0=\count418
+\blx@entrysetcounter=\count419
+\blx@biblioinstance=\count420
 \labelnumberwidth=\skip109
 \labelalphawidth=\skip110
 \biblabelsep=\skip111
@@ -897,12 +905,12 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \bibinitsep=\skip114
 \bibparsep=\skip115
 \bibhang=\skip116
-\blx@bcfin=\read4
-\blx@bcfout=\write5
+\blx@bcfin=\read5
+\blx@bcfout=\write6
 \blx@langwohyphens=\language91
-\c@mincomprange=\count418
-\c@maxcomprange=\count419
-\c@mincompwidth=\count420
+\c@mincomprange=\count421
+\c@maxcomprange=\count422
+\c@mincompwidth=\count423
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -912,74 +920,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count421
-\c@savedafterword=\count422
-\c@annotator=\count423
-\c@savedannotator=\count424
-\c@author=\count425
-\c@savedauthor=\count426
-\c@bookauthor=\count427
-\c@savedbookauthor=\count428
-\c@commentator=\count429
-\c@savedcommentator=\count430
-\c@editor=\count431
-\c@savededitor=\count432
-\c@editora=\count433
-\c@savededitora=\count434
-\c@editorb=\count435
-\c@savededitorb=\count436
-\c@editorc=\count437
-\c@savededitorc=\count438
-\c@foreword=\count439
-\c@savedforeword=\count440
-\c@holder=\count441
-\c@savedholder=\count442
-\c@introduction=\count443
-\c@savedintroduction=\count444
-\c@namea=\count445
-\c@savednamea=\count446
-\c@nameb=\count447
-\c@savednameb=\count448
-\c@namec=\count449
-\c@savednamec=\count450
-\c@translator=\count451
-\c@savedtranslator=\count452
-\c@shortauthor=\count453
-\c@savedshortauthor=\count454
-\c@shorteditor=\count455
-\c@savedshorteditor=\count456
-\c@labelname=\count457
-\c@savedlabelname=\count458
-\c@institution=\count459
-\c@savedinstitution=\count460
-\c@lista=\count461
-\c@savedlista=\count462
-\c@listb=\count463
-\c@savedlistb=\count464
-\c@listc=\count465
-\c@savedlistc=\count466
-\c@listd=\count467
-\c@savedlistd=\count468
-\c@liste=\count469
-\c@savedliste=\count470
-\c@listf=\count471
-\c@savedlistf=\count472
-\c@location=\count473
-\c@savedlocation=\count474
-\c@organization=\count475
-\c@savedorganization=\count476
-\c@origlocation=\count477
-\c@savedoriglocation=\count478
-\c@origpublisher=\count479
-\c@savedorigpublisher=\count480
-\c@publisher=\count481
-\c@savedpublisher=\count482
-\c@language=\count483
-\c@savedlanguage=\count484
-\c@origlanguage=\count485
-\c@savedoriglanguage=\count486
-\c@pageref=\count487
-\c@savedpageref=\count488
+\c@afterword=\count424
+\c@savedafterword=\count425
+\c@annotator=\count426
+\c@savedannotator=\count427
+\c@author=\count428
+\c@savedauthor=\count429
+\c@bookauthor=\count430
+\c@savedbookauthor=\count431
+\c@commentator=\count432
+\c@savedcommentator=\count433
+\c@editor=\count434
+\c@savededitor=\count435
+\c@editora=\count436
+\c@savededitora=\count437
+\c@editorb=\count438
+\c@savededitorb=\count439
+\c@editorc=\count440
+\c@savededitorc=\count441
+\c@foreword=\count442
+\c@savedforeword=\count443
+\c@holder=\count444
+\c@savedholder=\count445
+\c@introduction=\count446
+\c@savedintroduction=\count447
+\c@namea=\count448
+\c@savednamea=\count449
+\c@nameb=\count450
+\c@savednameb=\count451
+\c@namec=\count452
+\c@savednamec=\count453
+\c@translator=\count454
+\c@savedtranslator=\count455
+\c@shortauthor=\count456
+\c@savedshortauthor=\count457
+\c@shorteditor=\count458
+\c@savedshorteditor=\count459
+\c@labelname=\count460
+\c@savedlabelname=\count461
+\c@institution=\count462
+\c@savedinstitution=\count463
+\c@lista=\count464
+\c@savedlista=\count465
+\c@listb=\count466
+\c@savedlistb=\count467
+\c@listc=\count468
+\c@savedlistc=\count469
+\c@listd=\count470
+\c@savedlistd=\count471
+\c@liste=\count472
+\c@savedliste=\count473
+\c@listf=\count474
+\c@savedlistf=\count475
+\c@location=\count476
+\c@savedlocation=\count477
+\c@organization=\count478
+\c@savedorganization=\count479
+\c@origlocation=\count480
+\c@savedoriglocation=\count481
+\c@origpublisher=\count482
+\c@savedorigpublisher=\count483
+\c@publisher=\count484
+\c@savedpublisher=\count485
+\c@language=\count486
+\c@savedlanguage=\count487
+\c@origlanguage=\count488
+\c@savedoriglanguage=\count489
+\c@pageref=\count490
+\c@savedpageref=\count491
 \shorthandwidth=\skip117
 \shortjournalwidth=\skip118
 \shortserieswidth=\skip119
@@ -1013,19 +1021,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count489
-\c@textcitetotal=\count490
-\c@textcitemaxnames=\count491
-\c@biburlbigbreakpenalty=\count492
-\c@biburlbreakpenalty=\count493
-\c@biburlnumpenalty=\count494
-\c@biburlucpenalty=\count495
-\c@biburllcpenalty=\count496
+\c@textcitecount=\count492
+\c@textcitetotal=\count493
+\c@textcitemaxnames=\count494
+\c@biburlbigbreakpenalty=\count495
+\c@biburlbreakpenalty=\count496
+\c@biburlnumpenalty=\count497
+\c@biburlucpenalty=\count498
+\c@biburllcpenalty=\count499
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count497
+\c@smartand=\count500
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -1041,8 +1049,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count498
-\c@bbx:relatedtotal=\count499
+\c@bbx:relatedcount=\count501
+\c@bbx:relatedtotal=\count502
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
@@ -1100,24 +1108,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count500
-\c@Blindtext=\count501
-\c@blind@countparstart=\count502
-\blind@countxx=\count503
-\blindtext@numBlindtext=\count504
-\blind@countyy=\count505
-\c@blindlist=\count506
-\c@blindlistlevel=\count507
-\c@blindlist@level=\count508
-\blind@listitem=\count509
-\c@blind@listcount=\count510
-\c@blind@levelcount=\count511
-\blind@mathformula=\count512
-\blind@Mathformula=\count513
-\c@blind@randomcount=\count514
-\c@blind@randommax=\count515
-\c@blind@pangramcount=\count516
-\c@blind@pangrammax=\count517
+\c@blindtext=\count503
+\c@Blindtext=\count504
+\c@blind@countparstart=\count505
+\blind@countxx=\count506
+\blindtext@numBlindtext=\count507
+\blind@countyy=\count508
+\c@blindlist=\count509
+\c@blindlistlevel=\count510
+\c@blindlist@level=\count511
+\blind@listitem=\count512
+\c@blind@listcount=\count513
+\c@blind@levelcount=\count514
+\blind@mathformula=\count515
+\blind@Mathformula=\count516
+\c@blind@randomcount=\count517
+\c@blind@randommax=\count518
+\c@blind@pangramcount=\count519
+\c@blind@pangrammax=\count520
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/import/import.sty
@@ -1138,9 +1146,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count518
-\Gm@cntv=\count519
-\c@Gm@tempcnt=\count520
+\Gm@cnth=\count521
+\Gm@cntv=\count522
+\c@Gm@tempcnt=\count523
 \Gm@bindingoffset=\dimen337
 \Gm@wd@mp=\dimen338
 \Gm@odd@mp=\dimen339
@@ -1162,43 +1170,43 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip133
 \dth@everypar=\toks64
 )
-\c@theorem=\count521
-\c@definition=\count522
+\c@theorem=\count524
+\c@definition=\count525
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
-LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
+LaTeX Font Info:    ... okay on input line 110.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count523
+\scratchcounter=\count526
 \scratchdimen=\dimen345
-\scratchbox=\box86
-\nofMPsegments=\count524
-\nofMParguments=\count525
+\scratchbox=\box87
+\nofMPsegments=\count527
+\nofMParguments=\count528
 \everyMPshowfont=\toks65
-\MPscratchCnt=\count526
+\MPscratchCnt=\count529
 \MPscratchDim=\dimen346
-\MPnumerator=\count527
-\makeMPintoPDFobject=\count528
+\MPnumerator=\count530
+\makeMPintoPDFobject=\count531
 \everyMPtoPDFconversion=\toks66
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1208,24 +1216,24 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 108.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 110.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Info: Redefining \microtypecontext on input line 108.
-Package microtype Info: Applying patch `item' on input line 108.
-Package microtype Info: Applying patch `toc' on input line 108.
-Package microtype Info: Applying patch `eqnum' on input line 108.
-Package microtype Info: Applying patch `footnote' on input line 108.
-Package microtype Info: Applying patch `verbatim' on input line 108.
-LaTeX Info: Redefining \microtypesetup on input line 108.
+LaTeX Info: Redefining \microtypecontext on input line 110.
+Package microtype Info: Applying patch `item' on input line 110.
+Package microtype Info: Applying patch `toc' on input line 110.
+Package microtype Info: Applying patch `eqnum' on input line 110.
+Package microtype Info: Applying patch `footnote' on input line 110.
+Package microtype Info: Applying patch `verbatim' on input line 110.
+LaTeX Info: Redefining \microtypesetup on input line 110.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 108.
+LaTeX Info: Redefining \showhyphens on input line 110.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1237,10 +1245,10 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 108.
+Package hyperref Info: Link coloring OFF on input line 110.
  (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1253,13 +1261,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout5 = `main-blx.bib'.
+\openout6 = `main-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.bbl)
-Package biblatex Info: Reference section=0 on input line 108.
-Package biblatex Info: Reference segment=0 on input line 108.
+Package biblatex Info: Reference section=0 on input line 110.
+Package biblatex Info: Reference segment=0 on input line 110.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1305,7 +1313,7 @@ Package epstopdf Info: Source file: <Images/cherubino_pant541.eps>
 (epstopdf)             Command: <repstopdf --outfile=Images/cherubino_pant541-eps-converted-to.pdf Images/cherubino_pant541.eps>
 (epstopdf)             \includegraphics on input line 19.
 Package epstopdf Info: Output file is already uptodate.
-<Images/cherubino_pant541-eps-converted-to.pdf, id=55, 288.07625pt x 294.09875pt>
+<Images/cherubino_pant541-eps-converted-to.pdf, id=79, 288.07625pt x 294.09875pt>
 File: Images/cherubino_pant541-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/cherubino_pant541-eps-converted-to.pdf>
 Package pdftex.def Info: Images/cherubino_pant541-eps-converted-to.pdf  used on input line 19.
@@ -1348,7 +1356,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<Images/Sant'anna_cerchio_NEG_COL_ITA.pdf, id=56, 326.21875pt x 326.21875pt>
+<Images/Sant'anna_cerchio_NEG_COL_ITA.pdf, id=80, 326.21875pt x 326.21875pt>
 File: Images/Sant'anna_cerchio_NEG_COL_ITA.pdf Graphic file (type pdf)
 <use Images/Sant'anna_cerchio_NEG_COL_ITA.pdf>
 Package pdftex.def Info: Images/Sant'anna_cerchio_NEG_COL_ITA.pdf  used on input line 24.
@@ -1375,8 +1383,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 [1] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.toc)
-\tf@toc=\write7
-\openout7 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
 
 
@@ -1400,21 +1408,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [11]
 
-[12])
+[12]
 
-[13] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Model.tex)
+[13])
 
-[14] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+[14] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Model.tex
 
-[15])
+[15]
 
-[16] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex)
+[16])
 
-[17] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex)
+[17] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-[18] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
+
+[18]
 
 [19]
+
+[20]
+
+[21] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/covariate_regression_summary.tex))
+
+[22] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex)
+
+[23] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Other comments.tex)
+
+[24] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
+
+[25]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1423,45 +1452,39 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 146.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
 
-Overfull \hbox (1.23001pt too wide) in paragraph at lines 147--147
+Overfull \hbox (1.23001pt too wide) in paragraph at lines 149--149
 \T1/lmr/m/it/12 (-20) ear-ity in Eco-log-i-cal In-fer-ence: A Re-assess-ment\T1/lmr/m/n/12 (-20) , arXiv: []$\T1/lmtt/m/n/12 2601 . 07668$ [stat.AP][]\T1/lmr/m/n/12 (-20) ,
  []
 
 
 
-[20] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
+[26]
+
+[27] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C9F84AE81D66583C962F2CC19B673E6D;2128.
+(rerunfilecheck)             Checksum: DB0668DFDE57C5883272493D640D7A40;3319.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53218 strings out of 473190
- 1258322 string characters out of 5715799
- 2047528 words of memory out of 5000000
- 75366 multiletter control sequences out of 15000+600000
- 659916 words of font info for 198 fonts, out of 8000000 for 9000
+ 53723 strings out of 473190
+ 1267487 string characters out of 5715799
+ 2056426 words of memory out of 5000000
+ 75801 multiletter control sequences out of 15000+600000
+ 670461 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,9n,106p,2007b,1951s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (21 pages, 440418 bytes).
+ 103i,11n,106p,2007b,2048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (28 pages, 499691 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 256 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 57975 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 64167 words of extra memory for PDF output out of 74296 (max. 10000000)
 

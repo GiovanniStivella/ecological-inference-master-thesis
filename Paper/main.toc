@@ -5,9 +5,15 @@
 \contentsline {subsection}{\numberline {2.2}Different assumptions, different strategies}{\footnotesize {\sffamily {10}}}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}CCAR assumption}{\footnotesize {\sffamily {10}}}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Adding covariates: CAR assumption}{\footnotesize {\sffamily {12}}}{subsubsection.2.2.2}%
-\contentsline {section}{\numberline {3}A model for ecological inference: presenting seine}{\footnotesize {\sffamily {14}}}{section.3}%
-\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {15}}}{section.4}%
-\contentsline {section}{\numberline {5}An application to US data}{\footnotesize {\sffamily {17}}}{section.5}%
-\contentsline {section}{\numberline {6}Other Comments}{\footnotesize {\sffamily {18}}}{section.6}%
-\contentsline {section}{\numberline {7}Conclusions}{\footnotesize {\sffamily {19}}}{section.7}%
-\contentsline {section}{\numberline {8}References}{\footnotesize {\sffamily {20}}}{section.8}%
+\contentsline {section}{\numberline {3}A model for electoral competitions}{\footnotesize {\sffamily {15}}}{section.3}%
+\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {18}}}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Italian constitutional referendum: a motivating example}{\footnotesize {\sffamily {18}}}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The synthetic experiment}{\footnotesize {\sffamily {19}}}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Data generating process}{\footnotesize {\sffamily {20}}}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}From DGP to the model}{\footnotesize {\sffamily {21}}}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison of results}{\footnotesize {\sffamily {22}}}{subsection.4.3}%
+\contentsline {section}{\numberline {5}An application to US data}{\footnotesize {\sffamily {23}}}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Construction of the dataset}{\footnotesize {\sffamily {23}}}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Other Comments}{\footnotesize {\sffamily {24}}}{section.6}%
+\contentsline {section}{\numberline {7}Conclusions}{\footnotesize {\sffamily {25}}}{section.7}%
+\contentsline {section}{\numberline {8}References}{\footnotesize {\sffamily {26}}}{section.8}%

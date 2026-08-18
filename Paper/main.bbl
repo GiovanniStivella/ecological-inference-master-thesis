@@ -106,7 +106,8 @@
     \strng{fullhash}{MCKS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2025}
+    \field{labelyear}{2026}
+    \field{extradate}{1}
     \field{labeldatesource}{}
     \field{sortinit}{M}
     \field{sortinithash}{M}
@@ -119,7 +120,39 @@
     \endverb
     \field{eprinttype}{arXiv}
     \field{eprintclass}{stat.ME}
-    \field{year}{2025}
+    \field{year}{2026}
+  \endentry
+
+  \entry{seine}{manual}{}{}
+    \name{author}{2}{}{%
+      {{hash=MC}{%
+         family={McCartan},
+         familyi={M\bibinitperiod},
+         given={Cory},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kuriwaki},
+         familyi={K\bibinitperiod},
+         given={Shiro},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MCKS1}
+    \strng{fullhash}{MCKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2026}
+    \field{extradate}{2}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{note}{R package version 0.1.2}
+    \field{title}{seine: Semiparametric Ecological Inference}
+    \verb{url}
+    \verb https://corymccartan.com/seine/
+    \endverb
+    \field{year}{2026}
   \endentry
 
   \entry{Robinson1950}{article}{}{}

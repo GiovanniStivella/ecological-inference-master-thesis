@@ -330,6 +330,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibr
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfcontrib/pgflibraryfillbetween.code.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
@@ -632,6 +634,22 @@ INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/A synthetic example.tex
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/covariate_regression_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/covariate_regression_summary.tex
+INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/covariate_regression_summary.tex
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
@@ -643,15 +661,12 @@ INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.out
 INPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.run.xml
 OUTPUT /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.run.xml
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb
@@ -667,6 +682,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
