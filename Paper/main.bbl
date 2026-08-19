@@ -243,24 +243,18 @@
     \field{year}{2020}
   \endentry
 
-  \entry{HarvardVotingData}{misc}{}{}
-    \name{author}{2}{}{%
+  \entry{vest2020precinct}{misc}{}{}
+    \name{author}{1}{}{%
       {{hash=V}{%
-         family={Voting},
+         family={{Voting and Election Science Team}},
          familyi={V\bibinitperiod},
-      }}%
-      {{hash=TES}{%
-         family={Team},
-         familyi={T\bibinitperiod},
-         given={Election\bibnamedelima Science},
-         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
       {Harvard Dataverse}%
     }
-    \strng{namehash}{VTES1}
-    \strng{fullhash}{VTES1}
+    \strng{namehash}{V1}
+    \strng{fullhash}{V1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{labelyear}{2020}
@@ -270,11 +264,11 @@
     \verb{doi}
     \verb 10.7910/DVN/K7760H
     \endverb
-    \field{title}{{2020 Precinct-Level Election Results}}
+    \field{title}{2020 {P}recinct-{L}evel {E}lection {R}esults}
     \verb{url}
     \verb https://doi.org/10.7910/DVN/K7760H
     \endverb
-    \field{version}{V48}
+    \field{version}{V40}
     \field{year}{2020}
   \endentry
 

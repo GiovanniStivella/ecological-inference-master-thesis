@@ -6,49 +6,25 @@ library(truncnorm)
 library(seine)
 library(xtable)
 
-high_income_North <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.7, sd = 0.2))
+high_income <- matrix(rtruncnorm(300, a=0, b=1, mean = 0.5, sd = 0.2))
 
-high_income_Centre <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.5, sd = 0.2))
+zeta <- matrix(rtruncnorm(300, a=0, b=1, mean = 1-high_income, sd = 0.2))
 
-high_income_South <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.3, sd = 0.2))
+eta_high <- 10^(zeta-1)
+eta_low <- exp(zeta-1)
 
-high_income <- as.data.frame(rbind(high_income_North, high_income_Centre, high_income_South))
+beta_high <- matrix(rtruncnorm(300, a=0, b=1, mean = eta_high, sd = 0.05))
+beta_low <- matrix(rtruncnorm(300, a=0, b=1, mean = eta_low, sd = 0.05))
 
-x <- as.matrix(cbind(high_income = high_income, low_income = 1-high_income))
-colnames(x) <- c("high_income", "low_income")
 
-#As the only covariate, I use geographical location
-area_yes <- matrix(1,100)
-area_no <- matrix(0,100)
+x <- as.matrix(cbind(high_income = high_income, low_income = 1-high_income, zeta = zeta, eta_high = eta_high, eta_low = eta_low, beta_high = beta_high, beta_low = beta_low))
+colnames(x) <- c("high_income", "low_income", "zeta", "eta_high", "eta_low", "beta_high", "beta_low")
 
-area_North <- rbind(area_yes, area_no, area_no)
-area_Centre <- rbind(area_no, area_yes, area_no)
-
-area <- cbind(area_North, area_Centre)
-colnames(area) <- c("area_North", "area_Centre")
-
-covariates <- as.matrix(cbind(x, area))
-
-diff <- c(0,0.5,-0.3,0.1)
-
-south <- as.matrix(c(0.6,0.2))
-
-lambda <- matrix (diff, 2, 2)
-
-V12 <- as.matrix(covariates[, 3:4, drop = FALSE])
-eta <- t(apply(V12, 1, function(v) as.numeric(south + lambda %*% v)))
-colnames(eta) <- c("eta_high", "eta_low")
-
-beta <- matrix(rtruncnorm(a=0, b=1, n=600, mean = eta, sd = 0.05), nrow = 300, ncol = 2)
-colnames(beta) <- c("beta_high", "beta_low")
-
-covariates <- cbind(covariates, eta, beta)
-
-outcome <- rowSums(covariates[, 1:2] * covariates[, 7:8])
+outcome <- rowSums(x[, 1:2] * x[, 6:7])
 
 total <- rep(1,300)
 
-synthetic_dataset <- as.data.frame(cbind(covariates, outcome, total))
+synthetic_dataset <- as.data.frame(cbind(x, outcome, total))
 
 #I try and run the regressions on our synthetic dataset
 
@@ -67,12 +43,12 @@ tab <- xtable(
   naive_coef,
   caption = "Naive OLS regression summary",
   digits = 3,
-  label = "tab:naive-regression"
+  label = "tab:naive-regression-exp"
 )
 
 print(
   tab,
-  file = "../Paper/Images/naive_regression_summary.tex",
+  file = "../Paper/Images/naive_regression_summary_exp.tex",
   include.rownames = TRUE,
   sanitize.text.function = identity
 )
@@ -83,7 +59,7 @@ synthspec <- ei_spec(
   predictors = high_income:low_income,
   outcome = outcome,
   total = total,
-  covariates = c(area_North,area_Centre)
+  covariates = c(zeta)
 )
 
 print(synthspec)
@@ -107,12 +83,12 @@ tab <- xtable(
   ei_estimates_df,
   caption = "Semiparametric ecological inference estimates",
   digits = 3,
-  label = "tab:ei-estimates"
+  label = "tab:ei-estimates-exp"
 )
 
 print(
   tab,
-  file = "../Paper/Images/ei_estimates_summary.tex",
+  file = "../Paper/Images/ei_estimates_summary_exp.tex",
   include.rownames = FALSE,
   sanitize.text.function = identity
 )

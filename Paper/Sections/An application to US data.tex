@@ -1,7 +1,20 @@
 After having showed the differential performance of \texttt{seine} and naive methods in a simple synthetic example of electoral competition, I moved to an application to real data.
 
-In particular, I applied the semiparametric estimation to the 2020 US presidential election, using the electoral precincts as the geographical units.
+In particular, I applied the semiparametric estimation to the 2020 US presidential election in Texas, using the electoral precincts as the geographical units.
 %and then I will complete the sentence with the partition of the population that I will present in the end
 
 
 \subsection{Construction of the dataset}
+
+Analogously to the synthetic example of previous Section, the goal of the estimation is to understand the propensity of different categories of the population to vote for a given candidate.
+
+The dataset to perform the analysis should include, at the most granular level possible, the share of votes received by the candidate ($\overline{Y}_g$), a partition of the voting population in categories of interest (e.g, ethnic categories, which represent $\overline{X}_g$) and covariates at that same geographical level ($Z_g$).
+
+The most granular level for electoral results in the United States is the electoral precinct, whose dimension is typically in the order of hundreds of a couple of thousands of voters.
+
+Census data, instead, are collected at different geographical levels, with geographical levels varying with the variables of interest.
+
+
+
+
+%Electoral data at precinct level for 2020 US elections have been collected and made available by \citet{vest2020precinct}.

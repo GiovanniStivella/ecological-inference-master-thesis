@@ -105,6 +105,8 @@ In our case, $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = z_g ]  = \beta_g$ is just sl
 
 \subsection{Comparison of results}
 
+\subsubsection{OLS estimates}
+
 As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
 
 In our case, we have that $\beta_H = 0.503$ and $\beta_L = 0.343$.
@@ -117,7 +119,7 @@ As $\overline{X}_g^H$ and $\overline{X_g^L}$ are perfectly collinear($\overline{
 \\& = \beta_L + (\beta_H - \beta_L)*\overline{X}_g^H + \epsilon_g.
 \end{align*}
 
-Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta_L$ is estimated to be 0.21, while $\beta_H$ is estimated to be 0.21+0.42 = 0.63.
+Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta_L$ is estimated to be 0.213, while $\beta_H$ is estimated to be 0.213+0.419 = 0.632.
 
 \input{Images/naive_regression_summary.tex}
 
@@ -125,17 +127,58 @@ That means that the naive OLS regression overestimates the propensity of high-in
 
 That can be explained by the fact that the naive OLS attributes higher percentages of votes in favour in Northern precincts only to their higher share of high-income voters, while in reality the higher percentages of votes in favour are also driven by the fact that low-income voters in Northern precincts have a higher propensity to vote in favour of the reform than low-income voters in other regions.
 
-%Another estimate can be obtained by including the region of each precinct as a covariate in the regression, therefore allowing for different intercepts across regions. In this case, we estimate the following regression.
+\subsubsection{\texttt{seine} estimates}
 
-%In that case, we can use Southern low-income voters as reference category and we estimate the following regression:
-%\begin{align*}
-%\overline{Y_g} & = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L + \gamma_{North}*Z_{g}^{North} + \gamma_{Centre}*Z_{g}^{Centre} + \epsilon_g.
-%\end{align*}
-
-%\input{Images/covariate_regression_summary.tex}
-
-
+When we move to semiparametric estimation performed by \texttt{seine}, we obtain the results presented in Tab. \ref{tab:ei-estimates}, which are much closer to the true values.
 
 \input{Images/ei_estimates_summary.tex}
 
 
+%I may note that in this case, f(Z) was linear: 
+
+%$f(Z_g) = 
+%\begin{pmatrix}
+%    0 & -0.3 \\
+%    0.5 & 0.1
+%\end{pmatrix} Z_g' + \begin{pmatrix}
+%    0.6 \\
+%    0.2
+%\end{pmatrix}$
+
+%Therefore, if we had correctly specified the model, we would have obtained the same results with a parametric estimation.
+
+%In fact, $\beta_H = 0.6 + \begin{pmatrix}
+%   0 & -0.3
+%\end{pmatrix} Z_g'$ and $\beta_L = 0.2 + \begin{pmatrix}
+%   0.5 & -0.1
+%\end{pmatrix} Z_g'$.
+
+%With 0.6, 0.2, 0, -0.3, 0.5, -0.1 quantities to be estimated that can be denoted by $\gamma_0^H$, $\gamma_0^L$, $\gamma_1^H$, $\gamma_1^L$, $\gamma_2^H$, $\gamma_2^L$.
+
+%$\overline{Y_g}  = (\gamma_0^H+\gamma_1^H*Z^{North}+\gamma_2^H*Z^{Centre})*\overline{X}_g^H + (\gamma_0^L+\gamma_1^L*Z^{North}+\gamma_2^L*Z^{Centre})*\overline{X}_g^L + \epsilon_g$
+
+%We do not know if \texttt{seine} has directly understood and exploited this linear structure, but we know that its estimates were as good as it had correctly understood the relationship.
+
+%In the Appendix I can show another example:
+%I might suppose that Z_g is a continous variable, for example the share of immigrants within a precinct.
+%Therefore, there exist no regional distinction, precincts differ by their shares of immigrants.
+%However, we have a relationship, even if loose, between the share of immigrants and \overline{X}_g.
+%We should procede as follows:
+%extract \overline{X_g} for each geography from a random distribution (e.g. \overline{X_g} & \sim \text{TruncNormal}(a=0, b=1, \mu=0.5, \sigma=0.2))
+%that means that precincts differ for their percentage of high-income and low-income voters.
+%Z_g & \sim TruncNormal(a=0, b=1, \mu=1-\overline{X}_g, \sigma=0.2)
+%that means that there is a loose association between share of high-income voters and share of immigrants (interpretation: immigrants are more likely to live in low-income areas)
+
+%Then, we might assume that 
+%\begin{align*}
+%\beta_{gr}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{H}, \sigma=0.05), \\
+%\beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{L}, \sigma=0.05).
+%\end{align*}
+
+%\begin{align*}
+%\eta_{gr}^{H} = e^{Z_g-1}, \quad & \eta_{gr}^{L} = 2^{Z_g-1}, \\
+%\end{align*}
+
+%interpretation: both high-income and low-income voters tend to favor the reform more as the share of immigrants in their precinct increases, but the effect is stronger for low-income voters and the relationship is non-linear
+
+%we should observe that a linear estimator is not apt, while \texttt{seine} is able to capture the non-linear relationship and provide good estimates of $\beta_H$ and $\beta_L$
