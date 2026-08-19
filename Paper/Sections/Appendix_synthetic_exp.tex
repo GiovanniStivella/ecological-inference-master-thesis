@@ -1,0 +1,30 @@
+I might suppose that $Z_g$ is a continuous variable, for example the share of immigrants within a precinct.
+Therefore, there exist no regional distinction, precincts differ by their shares of immigrants.
+However, we have a relationship, even if loose, between the share of immigrants and $\overline{X}_g$.
+
+We should proceed as follows:
+
+extract $\overline{X}_g$ for each geography from a random distribution 
+
+(e.g. $\overline{X}_g \sim \text{TruncNormal}(a=0, b=1, \mu=0.5, \sigma=0.2)$)
+
+that means that precincts differ for their percentage of high-income and low-income voters.
+
+$Z_g \sim \text{TruncNormal}(a=0, b=1, \mu=1-\overline{X}_g, \sigma=0.2)$
+
+that means that there is a loose association between share of high-income voters and share of immigrants (interpretation: immigrants are more likely to live in low-income areas).
+
+Then, we might assume that
+
+\begin{align*}
+\beta_{gr}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{H}, \sigma=0.05), \\
+\beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{L}, \sigma=0.05).
+\end{align*}
+
+\begin{align*}
+\eta_{gr}^{H} = 10^{Z_g-1}, \quad & \eta_{gr}^{L} = e^{Z_g-1}, \\
+\end{align*}
+
+interpretation: both high-income and low-income voters tend to favor the reform more as the share of immigrants in their precinct increases, but the effect is stronger for low-income voters and the relationship is non-linear
+
+we should observe that a linear estimator is not apt, while \texttt{seine} is able to capture the non-linear relationship and provide good estimates of $\beta_H$ and $\beta_L$

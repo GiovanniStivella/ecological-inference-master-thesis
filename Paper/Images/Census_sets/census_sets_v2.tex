@@ -28,11 +28,11 @@
 % ------------------------------------------------------------------
 \draw[cbgAcol, thick, fill=cbgAcol!14, rounded corners=15pt]
   (-1.6,1.65) rectangle (1.6,2.25);                 % CBG A (top)
-\draw[cbgBcol, thick, fill=cbgBcol!14, rounded corners=15pt]
+\draw[cbgAcol, thick, fill=cbgAcol!14, rounded corners=15pt]
   (-2.8,0.35) rectangle (2.8,0.95);                 % CBG B (upper-middle)
-\draw[cbgCcol, thick, fill=cbgCcol!14, rounded corners=15pt]
+\draw[cbgAcol, thick, fill=cbgAcol!14, rounded corners=15pt]
   (-2.8,-0.95) rectangle (2.8,-0.35);                % CBG C (lower-middle)
-\draw[cbgDcol, thick, fill=cbgDcol!14, rounded corners=15pt]
+\draw[cbgAcol, thick, fill=cbgAcol!14, rounded corners=15pt]
   (-1.6,-2.25) rectangle (1.6,-1.65);                % CBG D (bottom)
 
 % ------------------------------------------------------------------
@@ -63,32 +63,32 @@
 % Labels (opaque backdrop keeps them readable over any crossing line)
 % ------------------------------------------------------------------
 \lbl{tractcol}{-3.0}{3.15}{Census Tract}
-\lbl{black}{0}{2.62}{CBG A \,=\, VTD 1}
-\lbl{black}{0}{-2.62}{CBG D \,=\, VTD 4}
-\lbl{cbgBcol}{-3.75}{0.65}{CBG B}
-\lbl{cbgCcol}{-3.75}{-0.65}{CBG C}
+\lbl{teal!70!black}{0}{2.62}{CBG A \,=\, VTD 1}
+\lbl{teal!70!black}{0}{-2.62}{CBG D \,=\, VTD 4}
+\lbl{black}{-3.75}{0.65}{CBG B}
+\lbl{black}{-3.75}{-0.65}{CBG C}
 \lbl{vtdcol}{-1.2}{0}{VTD 2}
 \lbl{vtdcol}{1.6}{0}{VTD 3}
 
 % ------------------------------------------------------------------
 % Legend
 % ------------------------------------------------------------------
-\begin{scope}[shift={(0,-4.0)}, font=\small]
+\begin{scope}[shift={(1.8,-4.0)}, font=\small]
   \fill[black] (-5.6,0) circle (2.6pt);
   \node[anchor=west] at (-5.35,0) {Census block};
 
-  \draw[cbgBcol, thick, fill=cbgBcol!14] (-2.9,-0.18) rectangle (-2.3,0.18);
-  \node[anchor=west] at (-2.15,0) {CBG (one partition)};
+  \draw[cbgAcol, thick, fill=cbgAcol!14] (-2.6,-0.18) rectangle (-2.0,0.18);
+  \node[anchor=west] at (-1.95,0) {CBGs};
 
   \draw[vtdcol, ultra thick, dashed] (1.3,-0.18) -- (1.9,-0.18) -- (1.9,0.18) -- (1.3,0.18) -- cycle;
-  \node[anchor=west] at (2.05,0) {VTD (a different partition)};
+  \node[anchor=west] at (2.05,0) {VTDs};
 \end{scope}
 
 \node[align=center, font=\scriptsize, text width=12.5cm] at (0, -4.9)
-  {Census blocks are the atomic units. CBGs and VTDs are two independent ways
-   of grouping the same blocks: VTD~1 and VTD~4 happen to coincide exactly
-   with CBG~A and CBG~D, while VTD~2 and VTD~3 cut across CBG~B and CBG~C.
-   Both partitions are entirely contained within the census tract.};
+  {Census blocks are the atomic units.
+  CBGs and VTDs are two independent partitions of the same census tract, using census blocks as atomic units. \\
+  VTD~1 and VTD~4 coincide exactly with CBG~A and CBG~D, while VTD~2 and VTD~3 cut across CBG~B and CBG~C.
+  Both partitions are entirely contained within the census tract.};
 
 \end{tikzpicture}
 \end{document}

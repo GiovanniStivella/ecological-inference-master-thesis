@@ -243,6 +243,33 @@
     \field{year}{2020}
   \endentry
 
+  \entry{census2021baf}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=U}{%
+         family={{U.S. Census Bureau}},
+         familyi={U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{U1}
+    \strng{fullhash}{U1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{note}{Page last revised October 8, 2021}
+    \field{title}{Block {A}ssignment {F}iles}
+    \verb{url}
+    \verb https://www.census.gov/geographies/reference-files/time-series/geo/bl
+    \verb ock-assignment-files.html
+    \endverb
+    \field{year}{2021}
+    \field{urlday}{19}
+    \field{urlmonth}{06}
+    \field{urlyear}{2026}
+  \endentry
+
   \entry{vest2020precinct}{misc}{}{}
     \name{author}{1}{}{%
       {{hash=V}{%
