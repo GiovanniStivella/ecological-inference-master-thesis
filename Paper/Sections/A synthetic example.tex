@@ -1,7 +1,7 @@
 In this section I will show a synthetic example that helps explaining why the problem is relevant and shows the difference perfomance between naive methods and the semiparametric estimation proposed by \citet{mccartan2025identificationsemiparametricestimationconditional} and embedded in R package \texttt{seine} (\citet{seine}).
 
 In the synthetic example we are the ones who generate the data and therefore we know the exact model of the reality.
-We show that, if we generate the data and then we try to estimate with different methods we obtain different results and the naive methods do not work well.
+I will show that, estimating the quantities of interest with different methods, we obtain different results and the naive methods do not work well.
 
 \subsection{Italian constitutional referendum: a motivating example}
 
@@ -15,7 +15,7 @@ However, once we look at data at municipal level, we find that, within the regio
 
 That divergence makes us think that if we were able to observe results at individual level, we could find even different relationships between income and voting behavior.
 
-Therefore, we can now generate a synthetic dataset that presents a structure that resembles some stylized facts that we observe in the constitutional referendum results and other notions that we have about electoral behaviors in Italy.
+Therefore, we can now generate a synthetic dataset that presents a structure that resembles some stylized facts that we observe in the constitutional referendum results and other notions about electoral behaviors in Italy.
 
 \subsection{The synthetic experiment}
 
@@ -38,8 +38,6 @@ At the same time, we impose that the percentage of high-income voters is highest
 
 \subsubsection{Data generating process}
 
-We generate the data as follows. 
-
 For each region $r \in \{\text{North}, \text{Centre}, \text{South}\}$ and for each of the 100 precincts in that region, we draw the share of high-income voters from a truncated normal distribution,
 
 \begin{equation*}
@@ -57,11 +55,11 @@ Subsequently, I assign to each precinct a propensity to vote in favour of the re
 $\beta_g^H$ and $\beta_g^L$ are extracted again from truncated normal distributions with different means depending on the region.
 
 \begin{align*}
-\beta_{gr}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{H}, \sigma=0.05), \\
-\beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{L}, \sigma=0.05).
+\beta_{gr}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{r}^{H}, \sigma=0.05), \\
+\beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{r}^{L}, \sigma=0.05).
 \end{align*}
 
-with means $\eta_{gr}^{H}$ and $\eta_{gr}^{L}$ defined as follows:
+with means $\eta_{r}^{H}$ and $\eta_{r}^{L}$ defined as follows:
 \begin{align*}
 \eta_{\text{North}}^{H} = 0.6, \quad & \eta_{\text{North}}^{L} = 0.7, \\
 \eta_{\text{Centre}}^{H} = 0.3, \quad & \eta_{\text{Centre}}^{L} = 0.3, \\
@@ -76,22 +74,22 @@ Finally, the observed precinct-level outcome is generated as the weighted averag
 Y_{g}=\overline{X}_{g}^{H}\beta_{g}^{H}+\overline{X}_{g}^{L}\beta_{g}^{L}.
 \end{equation*}
 
-In the end, we have a dataset that for each electoral precinct $g$ contains the following information: the share of high-income voters $\overline{X}_{g}^{H}$, the share of low-income voters $\overline{X}_{g}^{L}$, the observed outcome $Y_{g}$, the location of the precinct (North, Centre or South), the expected propensity to vote in favour of the reform for high-income voters $\eta_{g}^{H}$ and for low-income voters $\eta_{g}^{L}$ (equal across geographies of the same region), and the actual propensities $\beta_{g}^{H}$ and $\beta_{g}^{L}$ (specific of each geography).
+In the end, we have a dataset that for each electoral precinct $g$ contains the following information: the share of high-income voters $\overline{X}_{g}^{H}$, the share of low-income voters $\overline{X}_{g}^{L}$, the observed outcome $Y_{g}$, the location of the precinct (North, Centre or South), the expected propensity to vote in favour of the reform for high-income voters $\eta_{r}^{H}$ and for low-income voters $\eta_{r}^{L}$ (equal across geographies of the same region), and the actual propensities $\beta_{g}^{H}$ and $\beta_{g}^{L}$ (specific of each geography).
 
 \subsubsection{From DGP to the model}
 
-The generated dataset strictly satisfies the assumptions stated in previous Sections.
+The generated dataset strictly satisfies the assumptions stated in previous sections.
 
 The response variable $Y_i$ is a binary variable $Y_i \in \{0,1\}$ and it is observed only at geography level as a share $\overline{Y}_g \in [0,1]$.
 
 Population is partitioned across geographies and within each geography, it is partitioned into two groups (high-income and low-income voters), so that for each geography $g$ we observe $\overline{X}_g = \begin{pmatrix}
     \overline{X}_g^H \\
     \overline{X}_g^L
-\end{pmatrix}$ with $\overline{X}_g^L = 1- \overline{X}_g^H$.
+\end{pmatrix}$ with $\overline{X}_g^H + \overline{X}_g^L = 1$.
 
-Moreover, we can interpret the region of each precinct as a covariate $Z_g = \{0,1\}^3$, which in this case does not arise from individual characteristics.
+Moreover, we can interpret the region of each precinct as a covariate $Z_g = \{0,1\}^3$, which in this case does not arise from individual characteristics but rather from the geographical location.
 
-$\overline{Y}_g$, $\overline{X}_g$ and $Z_g$ are observed, while $\beta_g$ (and their corresponding $\eta_g$) are unobserved and are the goals of the semiparametric estimation.
+$\overline{Y}_g$, $\overline{X}_g$ and $Z_g$ are observed, while $\beta_g$ (and their corresponding $\eta_r$) are unobserved and are the goals of the semiparametric estimation.
 
 Bounded N is satisfied as $N_g$ is equal across different geographies.
 
@@ -101,25 +99,25 @@ Finally, CAR-IND is almost completely satisfied, thanks to the fact that $\beta_
 
 In fact, a complete adherence to CAR-IND would require $\beta_g$ to be equal across geographies of the same region, but I have allowed for some variability in order to make the example more realistic and more responding to the expected ability of the covariates to explain the variation in the propensitities.
 
-In our case, $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = z_g ]  = \beta_g$ is just slightly different from $E[Y_i | X_i = x_i, Z_{G_i} = z_g ] = \eta_{gr}$.
+In our case, $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = Z_g ]  = \beta_g$ is just slightly different from $E[Y_i | X_i = x_i, Z_{G_i} = Z_g ] = \eta_{r}$.
 
 \subsection{Comparison of results}
 
+As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
+
+In our case, we have that $\beta^H = 0.503$ and $\beta^L = 0.343$.
+
 \subsubsection{OLS estimates}
 
-As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
-
-In our case, we have that $\beta_H = 0.503$ and $\beta_L = 0.343$.
-
-The naive OLS specification, implicitly assuming CCAR, would rely on the following regression: $\overline{Y_g} = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L+\epsilon_g$.
+The naive OLS specification, implicitly assuming CCAR, would rely on the following regression: $\overline{Y_g} = \beta^H*\overline{X}_g^H + \beta^L*\overline{X}_g^L+\epsilon_g$.
 As $\overline{X}_g^H$ and $\overline{X_g^L}$ are perfectly collinear($\overline{X}_g^H + \overline{X}_g^L = 1$), we use $\overline{X}_g^L$ as reference category and we estimate the following regression: 
 \begin{align*}
-\overline{Y_g} & = \beta_H*\overline{X}_g^H + \beta_L*\overline{X}_g^L+\epsilon_g 
-\\& = \beta_H*\overline{X}_g^H + \beta_L*(1-\overline{X}_g^H)+\epsilon_g
-\\& = \beta_L + (\beta_H - \beta_L)*\overline{X}_g^H + \epsilon_g.
+\overline{Y_g} & = \beta^H*\overline{X}_g^H + \beta^L*\overline{X}_g^L+\epsilon_g 
+\\& = \beta^H*\overline{X}_g^H + \beta^L*(1-\overline{X}_g^H)+\epsilon_g
+\\& = \beta^L + (\beta^H - \beta^L)*\overline{X}_g^H + \epsilon_g.
 \end{align*}
 
-Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta_L$ is estimated to be 0.213, while $\beta_H$ is estimated to be 0.213+0.419 = 0.632.
+Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta^L$ is estimated to be 0.213, while $\beta^H$ is estimated to be 0.213+0.419 = 0.632.
 
 \input{Images/naive_regression_summary.tex}
 
