@@ -176,9 +176,6 @@ acs_tables <- list(
   )
 )
 
-
-
-
 vtd_tables <- lapply(acs_tables, build_vtd_table)
 merged_tables <- reduce(vtd_tables, ~ left_join(.x, .y, by = "VTDST20GEOID"))
 merged_with_texas <- merge_with_texas(merged_tables)
