@@ -1,81 +1,114 @@
-We consider a population of $N$ individuals, that we denote by $i \in [1,N]$.
+We consider a population of $N$ individuals, denoted by $i \in [1,N]$.
 
-Each individual $i$ is characterized by a set of variables, which we can divide into a response variable $Y_i$ and a categorical variable $X_i$.
+Each individual $i$ is characterized by a set of variables.
+Among them, we consider a response variable $Y_i$ and a categorical variable $X_i$.
 
-The response variable can be either quantitative or categorical, and it will be denoted consequently.
-In case of a quantitative variable, we will denote it by a scalar $Y_i \in \mathbb{R}$.
-In case of a categorical variable, we will denote it by a vector $Y_i \in \{0,1\}^p$, where $p$ is the number of possible categories: that is, $Y_i$ is a vector with all entries equal to $0$ except for the entry corresponding to the value of the categorical variable for individual $i$, which is equal to $1$.
+The response variable can be either quantitative or categorical, and it will be denoted accordingly.
+In the quantitative case, we write $Y_i \in \mathbb{R}$.
+In the categorical case, we write $Y_i \in \{0,1\}^P$, where $P$ is the number of possible categories. That is, $Y_i$ is a vector whose entries are all equal to $0$, except for the entry corresponding to the category of individual $i$, which equals $1$.
 
-That means that $Y_i = (1, 0, 0, ..., 0)$ if the response variable is the first category, $Y_i = (0,1,0, ..., 0)$ if the response variable is the second category, and so on...
+Thus, for example, $Y_i = (1, 0, 0, \ldots, 0)$ if the response variable takes the first category, $Y_i = (0,1,0, \ldots, 0)$ if it takes the second category, and so on.
 
-The categorical variable $X_i$, instead, is consequently denoted by $X_i \in \{0,1\}^d$, where $d$ is the number of possible categories, and it encodes which is the category to which individual $i$ belongs.
-We shall denote the categories with $k \in [1,d]$.
+The categorical variable $X_i$, instead, is denoted by $X_i \in \{0,1\}^K$, where $K$ is the number of possible categories. It encodes the category to which individual $i$ belongs.
+We shall denote the categories by $k \in [1,K]$.
 
-The total population is partitioned into $G$ geographies, which we denote by $g \in [1,G]$: each individual belongs to one and only one geography, which we denote by $G_i$.
+The total population is partitioned into $G$ geographies, denoted by $g \in [1,G]$. Each individual $i$ belongs to one and only one geography, which we denote by $G_i$.
 
-Geographies are what we previously referred to as units of observation, therefore we are never able to observe $Y_i$ and $X_i$, but we only observe variables at geography level.
+Geographies are what we previously referred to as units of observation.
+This means that we are never able to observe $Y_i$ and $X_i$ directly; rather, we only observe variables at geography level.
 
-For each geography $g$, we have population $N_g = \sum_i \{1|G_i=g\}$.
+For each geography $g$, the population is $N_g = \sum_i \{1 \mid G_i = g\}$.
 
-Moreover, we have, $\overline{Y}_g = \frac{1}{N_g}\sum_i \{Y_i|G_i=g\}$ and $\overline{X}_g = \frac{1}{N_g}\sum_i \{X_i|G_i=g\}$. 
+Moreover, $\overline{Y}_g = \frac{1}{N_g}\sum_i \{Y_i|G_i=g\}$ and $\overline{X}_g = \frac{1}{N_g}\sum_i \{X_i|G_i=g\}$. 
 
-$\overline{Y_g}$ can be either a scalar, if the response variable is quantitative, or a vector of shares $\overline{Y_g} \in [0,1]^d$, if the response variable is categorical; in this second case, each entry of the vector would represent the share of the respective category and the sum of entries would be 1 as the categories are a partition of the population.
+$\overline{Y}_g$ can be either a scalar, if the response variable is quantitative, or a vector of shares $\overline{Y}_g \in [0,1]^P$, if the response variable is categorical.
+In the latter case, each entry of the vector represents the share of the corresponding category, and the identity $\sum_{p=1}^P \overline{Y}_{gp} = 1$ follows from the categorical nature of the response variable.
 
-$\overline{X}_g$, instead, is a vector of shares $\overline{X}_g \in [0,1]^d$.
+$\overline{X}_g$ is a vector of shares $\overline{X}_g \in [0,1]^K$, given the categorical nature of $X_i$.
 
 \subsection{Global and local estimands}
 
-In general, we are interested in the average of $Y_i$ conditional on the belonging to category $k \in [1,d]$.
+In general, we are interested in the average value of $Y_i$ conditional on belonging to category $k \in [1,K]$.
 
-We shall denote this quantity by $\beta_k = \frac{\sum_i \{Y_i|i \in I_k\}}{N_k}$, where $I_k$ is the subset of people belonging to category $k$, while $N_k$ is the cardinality of $I_k$.
+We shall denote this quantity by $\beta_k = \frac{\sum_i \{Y_i|i \in I_k\}}{N_k}$, where $I_k$ is the subset of people belonging to category $k$, and $N_k$ is the cardinality of $I_k$.
 
-As before, $\beta_k$ is a scalar if the response variable is quantitative and a vector of shares if the response variable is categorical.
+As before, $\beta_k$ is a scalar if the response variable is quantitative and a vector of shares of dimension $P$ if the response variable is categorical.
 
-When we consider all different categories $k \in [1,d]$ we end up either with a vector $\beta \in \mathbb{R}^d$ or a matrix $\beta \in [0,1]^{p\times d}$.
+When we consider all categories $k \in [1,K]$, we obtain either a vector $\beta \in \mathbb{R}^K$ or a matrix $\beta \in [0,1]^{P\times K}$.
 
 We shall call $\beta$ the global estimand.
 
-However, as always, we do not observe individuals and therefore it is useful to recover quantities and definitions at geographical level.
+Since we do not observe individuals, it is useful to define analogous quantities at the geography level.
 
 The local estimand for category $k$ and geography $g$ is defined as $\beta_{gk} = \frac{\sum_i \{Y_i|i \in I_{gk}\}}{N_{gk}}$, where $I_{gk}$ is the subset of people belonging to category $k$ and geography $g$ and $N_{gk}$ is its cardinality.
 
-Analogously, we can collect all $\beta_{gk}$ pertaining to the same geography $g$ but to different categories $k$ within $\beta_g$ of dimension $d$ or $p \times d$.
+Analogously, we can collect all $\beta_{gk}$ corresponding to the same geography $g$ but different categories $k$ into $\beta_g$, a vector of dimension $K$ or a matrix of dimension $P \times K$.
 
-These definitions allow us to derive two accounting identitities.
+These definitions yield two accounting identities.
 
-The first one links global estimand to local estimands: $\beta_k = \frac{\sum_{g=1}^{G} \beta_{gk}*N_{gk}}{N_k}$, i.e. the global estimand is the weighted average of local estimands, weighted by the population of each geography.
+The first one links the global estimand to the local estimands: $\beta_k = \frac{\sum_{g=1}^{G} \beta_{gk}*N_{gk}}{N_k}$, i.e. the global estimand is the weighted average of local estimands, weighted by the population of each geography.
 
-Therefore, this identity suggests a strategy that starts from local estimands, which can also be of interest on their own, to recover the global estimand.
+This identity suggests a strategy that starts from local estimands, which may also be of interest in their own right, to recover the global estimand.
 
-The second accounting identity is at geographical level: $\overline{Y}_g = \beta_g'\overline{X}_g$.
+The second accounting identity is at the geography level: $\overline{Y}_g = \beta_g'\overline{X}_g$.
 
-One consequence of this second identity is that each observation contributes $d$ or $p \times d$ parameters, making the local problem unidentifiable.
+One consequence of this identity is that each observation contributes $P$ or $P \times K$ parameters, making the local problem unidentifiable.
 
 \subsection{Different assumptions, different strategies}
 
+\subsubsection{Common Coefficient assumption}
+
+The simplest way to escape the identification problem is to assume that $\beta_g = \beta \forall g$ and, consequently, to adopt a simple linear regression. Under this assumption, the second accounting identity becomes $\overline{Y}_g = \beta'\overline{X}_g$.
+
+This assumption, however, is particularly stringent and can be easily falsified by the data by finding two geographies with $\overline{X}_g$ and $\overline{Y}_g$ that are incompatible with the same $\beta$.
+
+A numerical example is the following.
+
+Consider two geographies $g_1$ and $g_2$ with $Y_i$ categorical and two categories (Yes and No), and $X_i$ categorical with two categories (A and B).
+
+Suppose that in geography $g_1$ we have 50\% of individuals in category A and 50\% in category B, while in geography $g_2$ we have 60\% in category A and 40\% in category B.
+
+Suppose further that in geography $g_1$, 90\% of individuals answered Yes and 10\% answered No (denoted by $\overline{Y}_{g_1} = 0.9$), while in geography $g_2$, 10\% answered Yes and 90\% answered No (denoted by $\overline{Y}_{g_2} = 0.1$).
+
+In this case, it is impossible to find a single $\beta$ that satisfies both $\overline{Y}_{g_1} = \beta'\overline{X}_{g_1}$ and $\overline{Y}_{g_2} = \beta'\overline{X}_{g_2}$.
+
+Indeed, to satisfy the first equation, we would need at least 80\% of individuals in category B in geography $g_1$ to have answered Yes (if we impose $\beta_{g_1A} = 1$ and $\beta_{g_1B} = 0.8$). The first equation requires $\beta_{g_1B} \geq 0.8$.
+
+However, this is incompatible with the second equation, which requires that at most 25\% of individuals in category B in geography $g_2$ answered Yes (if we impose $\beta_{g_2A} = 0$ and $\beta_{g_2B} = 0.25$). The second equation requires $\beta_{g_2B} \leq 0.25$.
+
 \subsubsection{CCAR assumption}
 
-The easiest way to escape the identification issue is to assume that $\beta_g = \beta, \forall g$ and, consequently, adopt a simple linear regression, as the second accounting identity becomes $\overline{Y}_g = \beta'\overline{X}_g$.
-
-This assumption, however, is particularly stringent and it can be easily falsified by data, for example by finding two geographies with same $\overline{X}_g$ but different $\overline{Y}_g$.
-
-A slightly more relaxed assumption is allowing for variations in $\beta_g$, but with the constraint that variations in $\beta_g$ are independent of $\overline{X}_g$: $E[\beta_g|\overline{X}_g] = \beta, \forall g$; or, equivalently, $E[(\beta_g-\beta)|\overline{X_g}] = 0, \forall g$.
+A slightly more relaxed assumption is allowing for variations in $\beta_g$, while imposing that the variations in $\beta_g$ are independent of $\overline{X}_g$: $E[\beta_g|\overline{X}_g] = \beta, \forall g$; or, equivalently, $E[(\beta_g-\beta)|\overline{X}_g] = 0, \forall g$.
 
 That assumption, which cannot be falsified by observable data per se, would still allow us to use linear regression.
 
-In fact, considering geographies $g$ as units of observations and $\overline{Y}_g$ and $\overline{X}_g$, it would be equivalent to a traditional linear model of the following form: $\overline{Y}_g = \beta_g*\overline{X}_g = \beta * \overline{X}_g + \epsilon_g$, with $\epsilon_g \equiv (\beta_g-\beta)*\overline{X}_g$.
+Indeed, treating geographies $g$ as units of observation and considering $\overline{Y}_g$ and $\overline{X}_g$, the model is equivalent to a standard linear model of the form
+\[
+\overline{Y}_g = \beta_g \overline{X}_g = \beta \overline{X}_g + \epsilon_g,
+\qquad
+\epsilon_g \equiv (\beta_g - \beta)\overline{X}_g.
+\]
 
-Thanks to the assumption that $E[(\beta_g-\beta)|\overline{X_g}] = 0$, we would have $E[\epsilon_g|\overline{X}_g] = E[(\beta_g-\beta)*\overline{X}_g|\overline{X}_g] = E[(\beta_g-\beta)|\overline{X_g}]* \overline{X_g} = 0$ and linear regression could be used.
+Under the assumption that $E[(\beta_g - \beta) \mid \overline{X}_g] = 0$, we have
+\[
+E[\epsilon_g \mid \overline{X}_g]
+= E[(\beta_g - \beta)\overline{X}_g \mid \overline{X}_g]
+= E[(\beta_g - \beta) \mid \overline{X}_g]\overline{X}_g = 0,
+\]
+so linear regression can be used.
 
-As underlined by \citet{kuriwaki2026roleconfounderslinearityecological}, that is what \citet{Goodman1953} described, even if with a more primitive notation, when discussing conditions that would allow to exploit linear regressions in ecological inference, overcoming \citet{Robinson1950}'s worries.
+As emphasized by \citet{kuriwaki2026roleconfounderslinearityecological}, this is essentially what \citet{Goodman1953} described, albeit with a more primitive notation, when discussing conditions under which linear regressions could be used in ecological inference, thereby overcoming \citet{Robinson1950}'s concerns.
 
-This assumption is called Coarsening Completely At Random (CCAR), as it is equivalent to think that the way in which individuals are divided into geographies is independent of other characteristics of the geography: literate and illiterate White people, cheaper and more expensive older consumers, segregationist and non-segregationist White voters are randomly assigned to counties, retail stores and electoral precincts.
+This assumption is called Coarsening Completely At Random (CCAR), because it is equivalent to assuming that the way in which individuals are divided into geographies is independent of other characteristics of the geography: literate and illiterate White people, cheaper and more expensive older consumers, and segregationist and non-segregationist White voters are randomly assigned to counties, retail stores, and electoral precincts.
 
-Equivalently to linear regression, CCAR would allow the following identification: $\beta = E[\overline{X}\overline{X}']^{-1}E[\overline{X}'\overline{Y}]$.
+Equivalently, CCAR would allow the following identification:
+\[
+\beta = E[\overline{X}\overline{X}']^{-1} E[\overline{X}'\overline{Y}].
+\]
 
-In any case, when performing ecological regression, it is hardly the case that this assumption holds true: in the examples presented in the Introduction, that would mean that White and non-migrants people shared the same average illiteracy rates ($\beta_g$) independently on the percentage of Black and migrant people in their county ($\overline{X}_g$), that older consumers shared spending habits ($\beta_g$) independently on the share of young people in their areas ($\overline{X}_g$) and that White shared the same voting behaviors ($\beta_g$) independently on the percentage of Black people in their precinct ($\overline{X}_g$).
+In any case, when performing ecological regression, it is rarely the case that this assumption holds: in the examples discussed in the Introduction, it would imply that White and non-migrant individuals share the same average illiteracy rates ($\beta_g$), regardless of the percentage of Black and migrant individuals in their county ($\overline{X}_g$); that older consumers share the same spending habits ($\beta_g$), regardless of the share of young people in their area ($\overline{X}_g$); and that White voters share the same voting behavior ($\beta_g$), regardless of the percentage of Black voters in their precinct ($\overline{X}_g$).
 
-\citet{kuriwaki2026roleconfounderslinearityecological} put that in the following way: 
+\citet{kuriwaki2026roleconfounderslinearityecological} express this point as follows: 
 \begin{quotation}
     Is coarsening completely at random plausible in practice? Consider again the 1968 election example.
     In this case, CCAR means that the preference of White voters for Wallace is unrelated to the proportion of Black voters in a county or the population of the county. For instance, this means that all of the following groups support Wallace to the same extent in North Carolina in expectation: White voters in rural lowland counties with a higher proportion of Black voters,White voters in urban counties, and White voters in mountainous counties with few racial minorities. CCAR is implausible in this setting, and is incompatible with the social scientist’s interest in how different individuals sort into different coarsened geographies.
@@ -83,41 +116,58 @@ In any case, when performing ecological regression, it is hardly the case that t
 
 \subsubsection{Adding covariates: CAR assumption}
 
-What we have not discussed so far is the possibility of adding covariates to the model, which would allow to relax the CCAR assumption.
+So far, we have not discussed the possibility of adding covariates to the model, which would allow us to relax the CCAR assumption.
 
-We shall now introduce a set of covariates $Z_g$ at geography level. 
-As geographies are our units of observation, covariates can either derive from aggregation of individual characteristics or be characteristics of the geography itself: this distinction is not relevant for our purposes, and we will later see examples of both types.
-A consequence on notation is that we denote covariates as $Z_g$ without the overline, as they are not necessarily averages of individual characteristics.
+We now introduce a set of covariates $Z_g$ at the geography level. Since geographies are our units of observation, these covariates may either be aggregates of individual characteristics or characteristics of the geography itself. This distinction is not relevant here, and we will later provide examples of both types.
+A consequence for notation is that we denote covariates as $Z_g$ without an overline, because they are not necessarily averages of individual characteristics.
 
-%Io ancora non ho capito perché CAR comprenda la popolazione, forse dovrei mettercela per non errare
-Thanks to covariates, we are now able to relax the CCAR assumption and considers the following assumption instead: $E[\beta_g|\overline{X}_g, Z_g, N_g] = E[\beta_g|Z_g]$.
+Thanks to covariates, we can relax the CCAR assumption and instead consider the following condition:
+\[
+E[\beta_g \mid \overline{X}_g, Z_g, N_g] = E[\beta_g \mid Z_g].
+\]
 
-This assumption is called Coarsening At Random (CAR) and it is equivalent to think that the way in which individuals are divided into geographies is independent of other characteristics of the geography, conditional on covariates: literate and illiterate White people, cheaper and more expensive older consumers, segregationist and non-segregationist White voters are randomly assigned to counties, retail stores and electoral precincts, conditional on covariates.
+This assumption is called Coarsening At Random (CAR). It is equivalent to assuming that the way in which individuals are divided into geographies is independent of other characteristics of the geography, conditional on covariates: once we account for adequate covariates, literate and illiterate White people, cheaper and more expensive older consumers, and segregationist and non-segregationist White voters are randomly assigned to counties, retail stores, and electoral precincts.
 
-As a consequence, geographies may have different $\beta_g$ and, contrary to CCAR, $\overline{X}_g$ can affect $\beta_g$, but we assume that there exist covariates $Z_g$ which are able to capture the effect of $\overline{X}_g$ on $\beta_g$.
+As a consequence, geographies may have different $\beta_g$, and, contrary to CCAR, $\overline{X}_g$ can affect $\beta_g$. However, we assume that there exist covariates $Z_g$ that capture the effect of $\overline{X}_g$ on $\beta_g$.
 
-Therefore, we are able to write $\beta_g$ as a function of the covariates: $\beta_g = E[\beta_g|\overline{X}_g, Z_g, N_g] + \epsilon_g = E[\beta_g|Z_g] + \epsilon_g$, with $E[\epsilon_g|\overline{X}_g] = 0$.
+Therefore, we can write $\beta_g$ as a function of the covariates:
+\[
+\beta_g = E[\beta_g \mid \overline{X}_g, Z_g, N_g] + \epsilon_g = E[\beta_g \mid Z_g] + \epsilon_g,
+\qquad E[\epsilon_g \mid \overline{X}_g] = 0.
+\]
 
-Without loss of generality, we can express $E[\beta_g|Z_g]$ with a vector-valued function: $E[\beta_g|Z_g] = f(Z_g)$.
+Without loss of generality, we can express $E[\beta_g \mid Z_g]$ as a vector-valued function:
+\[
+E[\beta_g \mid Z_g] = f(Z_g).
+\]
 
-Then, thanks to the second accounting identity, we have a model that links $\overline{Y}_g$ to $\overline{X}_g$ and $Z_g$: $\overline{Y}_g = \beta_g' \overline{X}_g = f(Z_g)'\overline{X}_g + \epsilon_g'\overline{X}_g$.
+Then, using the second accounting identity, we obtain a model linking $\overline{Y}_g$ to $\overline{X}_g$ and $Z_g$:
+\[
+\overline{Y}_g = \beta_g'\overline{X}_g = f(Z_g)'\overline{X}_g + \epsilon_g'\overline{X}_g.
+\]
 
-Taking the conditional expectations on both sides, we have $E[\overline{Y}_G|\overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X_g}$.
+Taking conditional expectations on both sides, we obtain
+\[
+E[\overline{Y}_g \mid \overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X}_g.
+\]
 
-That allows to make the problem identifiable: we do not have to estimate a different set of parameters $\beta_g$ for each observation as it was suggested by the second accounting identity, but a single functional form $f(Z_g)$ that links geographical covariates and unobserved $\beta_g$.
+This makes the problem identifiable: instead of estimating a different set of parameters $\beta_g$ for each observation, as suggested by the second accounting identity, we estimate a single functional form $f(Z_g)$ that links geographical covariates to the unobserved $\beta_g$.
 
-The easiest way to perform estimation would be to impose a linear functional form for $f(Z_g)$ ($f(Z_g) = \gamma' Z_g$), making the whole model linear and therefore estimable with linear regression: $E[\overline{Y}_G|\overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X_g} = (\gamma' Z_g)' \overline{X_g} = Z_g' \gamma \overline{X}_g$.
+The simplest estimation strategy would be to impose a linear functional form for $f(Z_g)$: $f(Z_g)=\gamma' Z_g$. This would make the whole model linear and therefore estimable by linear regression:
+\[
+E[\overline{Y}_g \mid \overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X}_g = (\gamma' Z_g)'\overline{X}_g = Z_g'\gamma \overline{X}_g.
+\]
 
-As discussed in \citet{mccartan2025identificationsemiparametricestimationconditional}, this condition would be quite stringent, but it is not necessary.
+As discussed by \citet{mccartan2025identificationsemiparametricestimationconditional}, this condition is stringent but not necessary.
 
-In fact, \citet{mccartan2025identificationsemiparametricestimationconditional}'s methodology is a form of semiparametric estimation which uses the linear relationship of the second accounting identity ($\overline{Y}_g = \beta_g' \overline{X}_g$) and then allows for nonparametric form of $f(Z_g)$, requiring only two additional assumptions.
+In fact, \citet{mccartan2025identificationsemiparametricestimationconditional}'s methodology is a form of semiparametric estimation that uses the linear structure of the second accounting identity, $\overline{Y}_g = \beta_g'\overline{X}_g$, while allowing for a nonparametric form of $f(Z_g)$. It requires only two additional assumptions.
 
-These assumptions are defined as positivity and bounded N. 
+These assumptions are referred to as positivity and bounded $N$.
 
-The first additional assumption requires sufficient variation in $\overline{X}_g$ after controlling for $Z_g$, and it is analogous to the overlap assumption in causal inference: for each value of $Z_g$, there is a non-zero probability of observing each value of $\overline{X}_g$.
+The first additional assumption requires sufficient variation in $\overline{X}_g$ after controlling for $Z_g$, and it is analogous to the overlap assumption in causal inference: for each value of $Z_g$, there must be a non-zero probability of observing each value of $\overline{X}_g$.
 
-In absence of this assumption, it would be impossible to disentangle the effect of $\overline{X}_g$ on $\beta_g$ from the effect of $Z_g$ on $\beta_g$, and therefore the problem would still be unidentified.
+Without this assumption, it would be impossible to disentangle the effect of $\overline{X}_g$ on $\beta_g$ from the effect of $Z_g$ on $\beta_g$, and the problem would remain unidentified.
 
-The second additional assumption requires that there is not an overwhelmingly large geography whose effect dominates the effect of other geographies.
+The second additional assumption requires that there is no overwhelmingly large geography whose effect dominates that of other geographies.
 
-In the next Section I will present the model for electoral competitions, and I will discuss how it satisfies these assumptions.
+In the next section, I will present the model for electoral competitions and discuss how it satisfies these assumptions.

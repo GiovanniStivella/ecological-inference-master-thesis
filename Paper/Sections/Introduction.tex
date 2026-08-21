@@ -2,71 +2,75 @@
 
 Ecological inference fallacy is the problem that arises when we are interested in relationships between variables at the individual level but we only observe data at the aggregate level.
 
-This problem is relevant in all situations in which data are reported at the aggregate level, but we are interested in relationships at the individual level.
+A famous example of that problem is the one presented by \citet{Robinson1950} for the relationship between illiteracy and race, and illiteracy and migration in the United States. In that case, the author observed that areas with a higher proportion of Black population, as well as areas with a higher proportion of migrants, had lower illiteracy rates. However, at the individual level, Black people and migrants were more likely to be illiterate than White and non-migrant people. The explanation for this apparent paradox is that Black and migrant people were more likely to live in or move to areas with lower illiteracy rates, and therefore the aggregate data masked the individual-level relationship.
 
-A famous example of that problem is the one presented by \citet{Robinson1950} for the relationship between illiteracy and race, and illiteracy and migration in the United States. In that case, the author observed that areas with higher proportion of Black population, as well as areas with higher proportion of migrants, had lower illiteracy rates. However, when looking at the individual level, Black people and migrants were more likely to be illiterate than White and non-migrant people. The explanation of this apparent paradox is that Black and migrant people were more likely to live or move to areas with lower illiteracy rates, and therefore the aggregate data masked the individual-level relationship.
+We can also think of economic examples.
 
-We can think also at economic examples.
-Consider, for instance, a retail store chain that wants to investigate consumers' habits of young people observing data about sells in different stores.
-The retail store chain might know quantities of goods sold in different stores and, at the same time, demographic data about consumers in different areas covered by different stores.
-The naive researcher, therefore, would link the percentage of young people and the quantities of different goods sold, suggesting that goods sold in stores with younger consumers are sold to young consumers.
-However, that is a clear example of ecological fallacy and it could lead to false findings. In fact, when we consider data about cities, it might well be that stores with greater share of young consumers are located in central areas near universities, where richer people also usually live. Therefore, even if young people might be cheaper consumers, their habits would be masked by their neighbours'habits.
+Consider, for instance, a retail store chain that wants to investigate the consumption habits of young people by observing sales data from different stores.
+The retail store chain might know the quantities of goods sold in different stores and, at the same time, demographic data about consumers in the different areas served by those stores.
+Therefore, it would be tempting to link the percentage of young people to the quantities of different goods sold, suggesting that goods that sell more in stores with younger consumers are purchased by young consumers.
+
+However, that could lead to false findings. In fact, when we consider data on cities, it might well be that stores with a greater share of young consumers are located in central areas near universities, where richer people also usually live. Therefore, even if young people might be more price-sensitive consumers, their habits would be masked by their neighbors' habits.
 % (often times, these problems are overcome by including covariates, fixed effects or instrumental variables, but these solutions are not always apt to solve problems of ecological inference, where the problem is that we do not observe individual-level data, and therefore we cannot control for individual-level confounders)
 
-In any case, the most obvious case of ecological inference is in electoral behavior, where we are interested in the relationship between individual-level characteristics and individual voting behavior, but obviously (and luckily!) we are not able to observe individual-level voting behavior, and sometimes we are not able to observe individual-level characteristics either. 
-In these cases, we are forced to rely on aggregate data, possibly choosing the most granular level of aggregation possible.
-Unfortunately, however, even choosing the most granular level of aggregation possible, individual-level relationships may be severely masked.
-That, of course, is higly relevant for political economists, who often times deal with the relationships between demographic characteristics, electoral results and public policies.
+In any case, the most obvious application of ecological inference concerns electoral behavior. We are interested in the relationship between individual-level characteristics and voting behavior, but, obviously (and fortunately!), we cannot observe how individuals vote. We are therefore unable to link voting behavior directly to individual-level characteristics.
+In these cases, we are forced to rely on aggregate data, ideally at the most granular level of aggregation available.
+However, even at the most granular level of aggregation, individual-level relationships may be severely masked.
 
-\citet{kuriwaki2026roleconfounderslinearityecological} present a particularly convincing example of that problem, citing 1968 US presidential elections, where, in addition to the Republican and Democratic candidates Richard Nixon and Hubert Humphrey, there was also a relevant third-party candidate, George Wallace, who lead the segregationist American Independent Party.
-George Wallace had his strongest results in the Southern States, where the proportion of Black population was generally higher than in the rest of the nation. Therefore, a very naive analysis of the aggregate data would suggest that Black people were more likely to vote for George Wallace, whose platform was segregationist and overtly racist.
-\citet{kuriwaki2026roleconfounderslinearityecological} go on to show that, even at more granular levels of aggregation, such as the county level, the relationship between proportion of Black population and proportion of votes for George Wallace would still be positive considering all counties in the nation; not only that, but even restricting the analysis to some specific States, such as North Carolina, we would still observe a positive relationship: the higher the proportion of Black population, the higher the proportion of votes for George Wallace.
+This issue is particularly relevant for political economists, who often study the relationships between voters' characteristics, electoral outcomes, and public policies.
 
-The key here is that, while Black people were a quite homogenous group in terms of voting behavior (generally favoring the Democratic candidate and certainly not voting for George Wallace), White people were a much more heterogeneous group, and in particular, White people with segregationist views were also more likely to live in areas with higher proportion of Black population.
+\citet{kuriwaki2026roleconfounderslinearityecological} present a particularly convincing example of this problem using the 1968 US presidential election. In addition to the Republican and Democratic candidates, Richard Nixon and Hubert Humphrey, respectively, there was a relevant third-party candidate, George Wallace, who led the segregationist American Independent Party.
+George Wallace performed best in the Southern states, where the proportion of the Black population was generally higher than in the rest of the country. Therefore, a naive analysis of the aggregate data might suggest that Black people were more likely to vote for George Wallace, since states with larger Black populations also had higher proportions of votes for him.
+That would, of course, be a false conclusion: Black people certainly did not favor George Wallace, whose platform was segregationist and overtly racist.
 
-In fact, that same mechanism is at work in the retail store example: while young consumers might be quite homogenously cheap in their habits, the prevalent majority of older people has different habits and it drives overall difference.
+\citet{kuriwaki2026roleconfounderslinearityecological} go on to show that, even at more granular levels of aggregation, such as the county level, the relationship between the proportion of the Black population and the proportion of votes for George Wallace remains positive when considering all counties in the nation. Moreover, even when restricting the analysis to specific states, such as North Carolina, we still observe a positive relationship: the higher the proportion of the Black population in a county, the higher the proportion of votes for George Wallace.
+
+The key is that, while Black voters were relatively homogeneous in their voting behavior—generally favoring the Democratic candidate and certainly not voting for George Wallace—White voters were much more heterogeneous. In particular, White people with segregationist views were more likely to live in areas with a higher proportion of Black residents.
+
+The same mechanism is at work in the retail-store example: while young consumers might be relatively homogeneous in their spending habits, the larger group of older consumers may have different habits and drive the aggregate relationship.
 
 
-\citet{Robinson1950} came to the conclusion that ecological fallacy would constitute an inextricable problem and he concluded his paper telling that he was 
+\citet{Robinson1950}, who raised the issue of ecological fallacy with the illiteracy example, came to the conclusion that ecological fallacy would constitute an inextricable problem and he concluded his paper telling that he was 
 \begin{quotation} ... aware that this conclusion has serious consequences, and that its effect appears wholly negative because it throws serious doubt upon the validity of a number of important studies made in recent years. The purpose of this paper will have been accomplished, however, if it prevents the future computation of meaningless correlations and stimulates the study of similar problems with the use of meaningful correlations between the properties of individuals.
 \end{quotation}
 
-Econometrics in 1950, however, had considerably fewer instruments than it has now and we might think that some of these techniques could be successfully deployed in confronting ecological inference fallacy.
+Econometrics in 1950, however, had considerably fewer tools than it does today, and we might therefore think that some of these techniques could be successfully deployed to address the ecological fallacy.
 
-In particular, we could be tempted to argue that the issue could be solved by using covariates.
+In particular, we might be tempted to argue that the problem could be solved by including covariates.
 
 That, however, is not necessarily sufficient.
-In fact, when \citet{kuriwaki2026roleconfounderslinearityecological} look at results in presidential elections in North Carolina, they are implicitly adding a covariate for the State and interacting it with the proportion of Black voters.
-Indeed, the estimate they present can be thought as the coefficient associated to the share of Black voters, given the covariate of the county being in North Carolina.
+In fact, when \citet{kuriwaki2026roleconfounderslinearityecological} examine the results of presidential elections in North Carolina, they are implicitly including a state indicator and interacting it with the proportion of Black voters.
+Indeed, their estimate can be interpreted as the coefficient on the share of Black voters, conditional on the county being located in North Carolina.
 
-Analogously, we might include each possible interaction between variables and functional forms, for example imposing a non-linear relationship between Black voters' share and electoral results; that could result in a positive relationship between Black voters' share and segregationist votes for relatively small shares of Black voters that would later reverse when Black voters become majority.
+Analogously, we might include every possible interaction between variables and functional form, or impose a nonlinear relationship between the share of Black voters and electoral outcomes. This could produce a positive relationship between the share of Black voters and segregationist votes at relatively low levels of Black population, which would reverse once Black voters became the majority.
 
-Another method that we could possibly consider is the inclusion of fixed effects.
-However, fixed effects require repeated observations of the same unit, which is not the case for our examples.
+Another method we might consider is the inclusion of fixed effects.
+However, fixed effects require repeated observations of the same unit, which are not available in our examples.
 
-All these examples highlight the common problem in adopting traditional econometric techniques to address ecological inference, which is the difference between the unit of observation and the quantity that we want to estimate.
+All these examples highlight the common problem with using traditional econometric techniques to address ecological inference: the discrepancy between the unit of observation and the quantity we seek to estimate.
 
-In fact, we can think of each possible technique to better identify the relationship between variables at the level of unit of observation, but that would not solve the ecological fallacy of composition.
+Indeed, each of these techniques may help identify relationships between variables at the level of the unit of observation, but none would solve the ecological fallacy of composition.
 
-Indeed, even our naivest estimates might be correct in explaining relationships at the level of units of observations.
-It can be true that counties with more migrants have lower illiteracy rates even accounting for other variables or other effects, or that consumers in areas with younger people spend more in expensive goods, or that precincts with higher shares of Black voters favor segregationist candidates.
+Even our most naive estimates may correctly describe relationships at the level of the units of observation.
+It may be true that counties with more migrants have lower illiteracy rates, even after accounting for other variables or effects; that consumers in areas with younger populations spend more on expensive goods; or that precincts with higher shares of Black voters favor segregationist candidates.
 
-What these data can't tell us is whether migrants have lower or higher illiteracy rates, younger consumers spend more or less in expensive goods, or how Black people vote.
+What these estimates cannot tell us is whether migrants have lower or higher illiteracy rates, whether younger consumers spend more or less on expensive goods, or how Black people vote.
 
-In order to answer these questions, we have to recover a notation that explicitly accounts for the aggregate nature of our units of observation and to impose a set of assumptions.
+To answer these questions, we must introduce notation that explicitly accounts for the aggregate nature of our units of observation and impose a set of assumptions.
 
-Only that will allow us to move from the agnostic conclusion of \citet{Robinson1950} to ecological estimates.
+Only then can we move from the agnostic conclusion of \citet{Robinson1950} to ecological estimates.
 
-In the next Section, I will introduce a general notation for ecological inference problems and I will briefly present some of the methods employed to address ecological inference and the set of assumptions they rely on.
+In the next section, I will introduce a general notation for ecological inference problems and show how different assumptions about the distribution of individual-level characteristics within geographical units of observation can lead to different ecological inference methods.
 
-In the following Section, I will present a more specific model for electoral analysis.
+In the following section, I will present a more specific model for electoral analysis.
 
-Both of these Sections will be heavily dependent on \citet{kuriwaki2026roleconfounderslinearityecological}, where the authors focus on theassessment of ecological inference methods, and \citet{mccartan2025identificationsemiparametricestimationconditional}, where the authors present the semiparametric method called seine.
-In any case, the notation that I will present is slightly different and more apt to describe the issues that we will face in this dissertation.
+Both sections draw heavily on \citet{kuriwaki2026roleconfounderslinearityecological}, which reviews ecological inference methods, and on \citet{mccartan2025identificationsemiparametricestimationconditional}, which presents the semiparametric method for ecological inference implemented in the R package \texttt{seine} (\citet{seine}) and used in this dissertation.
 
-Once the model is presented, I will present a synthetic example to show how the method works and to assess its performance in a controlled environment.
+The notation I present is nevertheless slightly different and better suited to describing the issues considered in this dissertation.
 
-Finally, I will present an application to real data about US presidential elections and I will conclude with some comments and conclusions.
+After presenting the model, I will use synthetic examples to illustrate how the method works and assess its performance in a controlled environment.
+
+Finally, I will apply the method to real data from the 2020 US presidential election in Texas.
 
 %In particular, the inclusion of covariates or fixed effects or instrumental variables
 

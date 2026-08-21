@@ -1,33 +1,34 @@
-Electoral competitions can be thought of situations where each voter $i$ chooses a candidate over $p$ possible candidates so that the response variable $Y_i$ is a $p$-dimensional vector $Y_i \in \{0,1\}^p$.
+Electoral competitions can be viewed as situations in which each voter $i$ chooses among $P$ possible candidates, so that the response variable $Y_i$ is a $P$-dimensional vector with $Y_i \in \{0,1\}^P$.
 
-However, both in the synthetic example and in the application on US electoral data, I will consider $Y_i$ as a binary choice: in the synthetic example that is a consequence of referendum rules, where only two choices (vote Yes or vote No) are possible, while in the empirical application that is a consequence of the American two-party system, where two parties dominate the political landscape and the other parties are not relevant in the analysis.
+However, in both the synthetic example and the application to U.S. electoral data, I will treat $Y_i$ as a binary choice. In the synthetic example, this is a consequence of the referendum rule, where only two options are available (vote Yes or vote No). In the empirical application, it follows from the American two-party system, where two parties dominate the political landscape and the remaining parties are not relevant for the analysis.
 
-Therefore, we can select one of the two possible votes and denote $Y_i$ by a simple binary indicator ($Y_i \in \{0,1\}$) which takes value 1 if the vote is cast in favor of that choice, and 0 otherwise.
+Hence, we can focus on one of the two possible votes and denote $Y_i$ by a binary indicator $Y_i \in \{0,1\}$, which takes value $1$ if the vote is cast in favor of the reference choice and $0$ otherwise.
 
-Electoral precincts are the geographical units in which votes are aggregated, and they are the units of observation in our analysis. Therefore, we can denote by $g$ a generic electoral precinct and by $G$ the set of all electoral precincts.
+Electoral precincts are the geographical units in which votes are aggregated, and they are the units of observation in the analysis. Therefore, we denote by $g$ a generic electoral precinct and by $G$ the number of electoral precincts.
 
-As a consequence, the observed variable $\overline{Y}_g$ is a scalar $\overline{Y}_g \in [0,1]$ that represents the share of the reference choice in the electoral precinct $g$.
+As a consequence, the observed variable $\overline{Y}_g$ is a scalar with $\overline{Y}_g \in [0,1]$ that represents the share of the reference choice in precinct $g$.
 
-We then consider a partition of individuals into $d$ mutually exclusive and exhaustive categories, which are the categories of the variable $X_i \in \{0,1\}^d$. One of such partitions could be the partition of voters into mutually exclusive and exhaustive income classes, or the partition of voters into mutually exclusive and exhaustive racial groups.
+We then consider a partition of individuals into $K$ mutually exclusive and exhaustive categories, which are the categories of the variable $X_i \in \{0,1\}^K$. Examples of such partitions could be the partition of voters into mutually exclusive and exhaustive income classes, or the partition of voters into mutually exclusive and exhaustive racial groups.
 
-Finally, each electoral precinct $g$ is characterized by a vector of covariates $Z_g \in \mathbb{R}^k$, which can either be characteristics of the geography itself (e.g., their location in a particular region) or arise as aggregation of individual-level covariates (e.g., the education level of the voters in that precinct).
+Finally, each electoral precinct $g$ is characterized by a vector of covariates $Z_g \in \mathbb{R}^d$, which may either describe geographic features (e.g., the location of the precinct in a particular region) or arise as aggregates of individual-level covariates (e.g., the education level of the voters in that precinct).
 
-It is now necessary to introduce the assumptions that allow to identify the model and to estimate the parameters of interest.
+It is now necessary to introduce the assumptions that allow us to identify the model and estimate the parameters of interest.
 
-The positivity assumption depends on the choice of covariates $Z_g$ and on the absence of collinearity between them and $\overline{X}_g$ in order to make the model identifiable.
+The positivity assumption depends on the choice of covariates $Z_g$ and on the absence of collinearity between them and $\overline{X}_g$, so that the model is identifiable.
 
-The bounded N assumption can be verified by verifying that there are no overwhelmingly large electoral precincts.
+The bounded N assumption can be verified by verifying that no electoral precincts are too large.
 
-Finally, we can assume Coarsening At Random (CAR) assumption through an individual-level assumption, which, following \citet{mccartan2025identificationsemiparametricestimationconditional}, we can call CAR-IND.
+Finally, we can impose a Coarsening At Random (CAR) assumption through an individual-level condition, which, following \citet{mccartan2025identificationsemiparametricestimationconditional}, we may call CAR-IND.
 
-CAR-IND states that the individual-level response variable $Y_i$ is independent of the geography $g$ conditional on the individual-level covariates $X_i$ and the geography-level covariates $Z_g$.
-This can be stated as $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = z_g] = E[Y_i | X_i = x_i, Z_{G_i} = z_g]$.
+CAR-IND states that the individual-level response variable $Y_i$ is independent of the geography $g$, conditional on the individual-level covariates $X_i$ and the geography-level covariates $Z_g$. Formally, this can be expressed as follows:
+\[
+E[Y_i \mid G_i = g, X_i = x_i, Z_{G_i} = z_g] = E[Y_i \mid X_i = x_i, Z_{G_i} = z_g].
+\]
 
-From a practical point of view, this assumption implies that the covariates are able to capture all the effects of the geography on the individual-level response variable $Y_i$.
-Going back to the electoral example presented in previous Sections, this assumption implies that White voters in a precinct $g$ with certain characteristics $Z_g$ have the same probability of voting for segregationist candidate as White voters in a different precinct $g'$ with the same characteristics $Z_{g'} = Z_g$.
+From a practical point of view, this assumption implies that the covariates capture all the effects of geography on the individual-level response variable $Y_i$. In the electoral example, this means that White voters in precinct $g$ with characteristics $Z_g$ have the same probability of voting for the segregationist candidate as White voters in a different precinct $g'$ with the same characteristics $Z_{g'} = Z_g$.
 
-Moreover, as $f(Z_g)$ is not necessarily injective, it is possible that two different electoral precincts $g$ and $g'$, even with different characteristics $Z_g \neq Z_{g'}$, have the same value of $f(Z_g) = f(Z_{g'})$, and therefore the same expected value of $\beta_g = \beta_{g'}$.
+Moreover, because $f(Z_g)$ is not necessarily injective, it is possible that two different electoral precincts $g$ and $g'$, even with different characteristics $Z_g \neq Z_{g'}$, have the same value $f(Z_g) = f(Z_{g'})$, and therefore the same expected value $\beta_g = \beta_{g'}$.
 
-\citet{mccartan2025identificationsemiparametricestimationconditional} prove that CAR-IND implies CAR.
+\citet{mccartan2025identificationsemiparametricestimationconditional} show that CAR-IND implies CAR.
 
-Therefore, in order to perform semiparametric estimation of the model, we need to check for bounded N and later select covariates $Z_g$ which can satisfy the testable positivity assumption and the untestable CAR-IND assumption.
+Therefore, to perform semiparametric estimation of the model, we need to check bounded $N$ and then select covariates $Z_g$ that satisfy the testable positivity assumption and the untestable CAR-IND assumption.
