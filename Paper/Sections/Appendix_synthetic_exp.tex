@@ -1,18 +1,26 @@
-I might suppose that $Z_g$ is a continuous variable, for example the share of immigrants within a precinct.
-Therefore, there exist no regional distinction, precincts differ by their shares of immigrants.
-However, we have a relationship, even if loose, between the share of immigrants and $\overline{X}_g$.
+In this Appendix, I present a synthetic example where the relationship between covariates $Z_g$ and the group-specific propensities $\beta_g$ is non-linear. The purpose of this example is to show that the semiparametric estimator \texttt{seine} is able to capture non-linear relationships between covariates and group-specific propensities, while a linear estimator would fail to do so.
 
-We should proceed as follows:
+\subsection{Data generating process}
 
-extract $\overline{X}_g$ for each geography from a random distribution 
+The setup is similar to the one presented in section \ref{sec:A synthetic example}, with the difference that now we do not have a regional distinction, but rather a continuous covariate $Z_g$.
 
-(e.g. $\overline{X}_g \sim \text{TruncNormal}(a=0, b=1, \mu=0.5, \sigma=0.2)$)
+Let us suppose that $Z_g$ represents the share of migrants within a precinct, which implies $Z_g$ continuous and $Z_g\in [0,1]$.
 
-that means that precincts differ for their percentage of high-income and low-income voters.
+The data generating process is the following.
 
-$Z_g \sim \text{TruncNormal}(a=0, b=1, \mu=1-\overline{X}_g, \sigma=0.2)$
+Precincts differ for their percentage of high-income and low-income voters: the percentages of high-income voters $\overline{X}_g^H$ are extracted from a truncated normal distribution (truncated at 0 and 1) with mean 0.5 and standard deviation 0.2:
 
-that means that there is a loose association between share of high-income voters and share of immigrants (interpretation: immigrants are more likely to live in low-income areas).
+\[
+\overline{X}_g^H \sim \text{TruncNormal}(a=0, b=1, \mu=0.5, \sigma=0.2).
+\]
+
+We assume that the share of immigrants $Z_g$ has a loose negative association with the share of high-income voters $\overline{X}_g^H$ (migrants are more likely to live in low-income areas), creating possible identification issues.
+
+We can model this association by assuming that the share of immigrants is extracted from a truncated normal distribution with mean $1-\overline{X}_g^H$ and standard deviation 0.2:
+
+\[
+Z_g \sim \text{TruncNormal}(a=0, b=1, \mu=1-\overline{X}_g^H, \sigma=0.2).
+\]
 
 Then, we might assume that
 
@@ -21,10 +29,40 @@ Then, we might assume that
 \beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{L}, \sigma=0.05).
 \end{align*}
 
+The crucial difference with previous setup arises when we set means to be non-linear functions of $Z_g$:
+
 \begin{align*}
-\eta_{gr}^{H} = 10^{Z_g-1}, \quad & \eta_{gr}^{L} = e^{Z_g-1}, \\
+\eta_{gr}^{H} = 10^{Z_g-1}, \quad & \eta_{gr}^{L} = e^{Z_g-1}.
 \end{align*}
 
-interpretation: both high-income and low-income voters tend to favor the reform more as the share of immigrants in their precinct increases, but the effect is stronger for low-income voters and the relationship is non-linear
+The interpretation of this condition is that both high-income and low-income voters tend to favor the reform more as the share of immigrants in their precinct increases, but the effect is stronger for low-income voters and the relationship is non-linear.
 
-we should observe that a linear estimator is not apt, while \texttt{seine} is able to capture the non-linear relationship and provide good estimates of $\beta_H$ and $\beta_L$
+Finally, the observed precinct-level outcome ($\overline{Y}_{g}$, i.e., the share of voters in favour of the reform in precinct $g$) is generated as the weighted average of these two group-specific propensities:
+\[
+\overline{Y}_{g}=\overline{X}_{g}^{H}\beta_{g}^{H}+\overline{X}_{g}^{L}\beta_{g}^{L}.
+\]
+
+\subsection{Comparison of results}
+
+The true values of the group-specific propensities are $\beta_{gr}^{H} = 0.324$ and $\beta_{gr}^{L} = 0.660$.
+
+\subsubsection{OLS}
+
+\input{Images/naive_regression_summary_exp.tex}
+
+OLS estimates are $\hat{\beta}_{gr}^{H} = 0.917$ and $\hat{\beta}_{gr}^{L} = 0.917-0.845 = 0.072$.
+
+\subsubsection{\texttt{seine}}
+
+\input{Images/ei_estimates_summary_exp.tex}
+
+\subsubsection{Interaction between $\overline{X}_g$ and $Z_g$}
+
+\input{Images/interaction_regression_summary_exp.tex}
+
+In this case, the functional form of the relationship between $Z_g$ and $\beta_g$ is estimated to be linear, which is not the case in the data generating process. In particular, it is estimated that $E[\beta_g^L | Z_g] = \gamma_0^L + \gamma_1^L*Z_g$, while $E[\beta_g^H | Z_g] = \gamma_0^H + \gamma_1^H*Z_g$.
+
+The estimates are $\hat{\beta}_{gr}^{L} = 0.176 + (0.869)*Z_g$ and $\hat{\beta}_{gr}^{H} = (0.176-0.082) + (0.869-0.357)*Z_g$.
+
+If we plug in the observed values of $Z_g$ and $\overline{X}$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
+The weighted average of these estimates across precincts is $\hat{\beta}_{gr}^{H} = 0.382$ and $\hat{\beta}_{gr}^{L} = 0.664$, which are closer to the true values of $\beta_{gr}^{H}$ and $\beta_{gr}^{L}$ than the OLS estimates, but still not as close as the \texttt{seine} estimates because the interaction model is not perfectly able to capture the true non-linear relationship but quite able to approximate it.

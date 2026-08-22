@@ -1,17 +1,17 @@
-In this section I will show a synthetic example that helps explaining why the problem is relevant and shows the difference perfomance between naive methods and the semiparametric estimation proposed by \citet{mccartan2025identificationsemiparametricestimationconditional} and embedded in R package \texttt{seine} (\citet{seine}).
+In this section I will present a synthetic example that helps explaining why the problem is relevant and shows the difference performance between naive OLS and the semiparametric estimation proposed by \citet{mccartan2025identificationsemiparametricestimationconditional} and embedded in R package \texttt{seine} (\citet{seine}).
 
 In the synthetic example we are the ones who generate the data and therefore we know the exact model of the reality.
-I will show that, estimating the quantities of interest with different methods, we obtain different results and the naive methods do not work well.
+I will show that, estimating the quantities of interest with different methods, we obtain different results and OLS provides biased estimates.
 
 \subsection{Italian constitutional referendum: a motivating example}
 
-In particular, we can exploit the constitutional referendum in Italy to show a possible way in which the naive estimators could not work and therefore we can generate a dataset that encompasses the problem.
+We can exploit the constitutional referendum in Italy in March 2026 to show a possible way in which the assumptions behind OLS are violated, and therefore we can generate a dataset that encompasses the problem.
 
-The problem is the following: we want to estimate how did voters with different levels of income vote.
+Let us suppose that we want to estimate how did voters with different levels of income vote.
 
 If we look at data at regional level, we would be tempted to say that richest people voted more in favour of the government proposal. In fact, the only three regions where the votes in favour were more than the votes in contrast (Lombardy, Veneto and Friuli-Venezia Giulia) are among the richest regions in Italy. On the contrary, the regions were No got more than 60\% are among the poorest regions of Italy (Basilicata, Campania, Sicily).
 
-However, once we look at data at municipal level, we find that, within the regions, the relationship is nearly inverse: No votes were more frequent in urban areas and other municipalities where income is relatively higher.
+However, once we look at data at municipal level, we find that, within the regions, the relationship is nearly inverse: No votes were more frequent in urban areas and municipalities where income is relatively higher.
 
 That divergence makes us think that if we were able to observe results at individual level, we could find even different relationships between income and voting behavior.
 
@@ -27,7 +27,7 @@ Each region is divided in 100 precincts, so that in the end we observe 300 preci
 
 Each precinct has the same voting population $N_g$, which is then normalised to 1.
 
-For each electoral precinct, we observe the percentage of high-income and low-income voters ($\overline{X}_g$) and the electoral results ($Y_g$).
+For each electoral precinct, we observe the percentage of high-income and low-income voters ($\overline{X}_g$) and the electoral results ($\overline{Y}_g$).
 
 Within each income category, there is high variability in their electoral behaviour across different precincts.
 
@@ -59,7 +59,7 @@ $\beta_g^H$ and $\beta_g^L$ are extracted again from truncated normal distributi
 \beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{r}^{L}, \sigma=0.05).
 \end{align*}
 
-with means $\eta_{r}^{H}$ and $\eta_{r}^{L}$ defined as follows:
+Means $\eta_{r}^{H}$ and $\eta_{r}^{L}$ are set as follows:
 \begin{align*}
 \eta_{\text{North}}^{H} = 0.6, \quad & \eta_{\text{North}}^{L} = 0.7, \\
 \eta_{\text{Centre}}^{H} = 0.3, \quad & \eta_{\text{Centre}}^{L} = 0.3, \\
@@ -68,13 +68,13 @@ with means $\eta_{r}^{H}$ and $\eta_{r}^{L}$ defined as follows:
 
 The key feature of this design is that the income-specific propensities are heterogeneous within each group and also vary across regions. High-income voters in the North and South have a strong tendency to support the reform, while in the Centre the same group is much less favourable. Low-income voters have a relatively high propensity to support the reform in the North, but not in the Centre or South.
 
-Finally, the observed precinct-level outcome is generated as the weighted average of these two group-specific propensities:
+Finally, the observed precinct-level outcome ($\overline{Y}_{g}$, i.e., the share of voters in favour of the reform in precinct $g$) is generated as the weighted average of these two group-specific propensities:
 
 \begin{equation*}
-Y_{g}=\overline{X}_{g}^{H}\beta_{g}^{H}+\overline{X}_{g}^{L}\beta_{g}^{L}.
+\overline{Y}_{g}=\overline{X}_{g}^{H}\beta_{g}^{H}+\overline{X}_{g}^{L}\beta_{g}^{L}.
 \end{equation*}
 
-In the end, we have a dataset that for each electoral precinct $g$ contains the following information: the share of high-income voters $\overline{X}_{g}^{H}$, the share of low-income voters $\overline{X}_{g}^{L}$, the observed outcome $Y_{g}$, the location of the precinct (North, Centre or South), the expected propensity to vote in favour of the reform for high-income voters $\eta_{r}^{H}$ and for low-income voters $\eta_{r}^{L}$ (equal across geographies of the same region), and the actual propensities $\beta_{g}^{H}$ and $\beta_{g}^{L}$ (specific of each geography).
+In the end, we have a dataset that for each electoral precinct $g$ contains the following information: the share of high-income voters $\overline{X}_{g}^{H}$, the share of low-income voters $\overline{X}_{g}^{L}$, the observed outcome $\overline{Y}_{g}$, the location of the precinct (North, Centre or South), the expected propensity to vote in favour of the reform for high-income voters $\eta_{r}^{H}$ and for low-income voters $\eta_{r}^{L}$ (equal across geographies of the same region), and the actual propensities $\beta_{g}^{H}$ and $\beta_{g}^{L}$ (specific of each geography).
 
 \subsubsection{From DGP to the model}
 
@@ -101,6 +101,12 @@ In fact, a complete adherence to CAR-IND would require $\beta_g$ to be equal acr
 
 In our case, $E[Y_i | G_i = g, X_i = x_i, Z_{G_i} = Z_g ]  = \beta_g$ is just slightly different from $E[Y_i | X_i = x_i, Z_{G_i} = Z_g ] = \eta_{r}$.
 
+The independence assumption can be stated also at aggregate level, which in fact is the identifying assumption of the semiparamtric estimation, without explicit dependence on CAR-IND.
+\[
+E[\beta_g | \overline{X}_g, Z_g, N_g] = E[\beta_g | Z_g]
+\]
+Although we have allowed for some variability in $\beta_g$ across geographies of the same region, the expected value of $\beta_g$ is equal to $\eta_r$ and therefore it depends only on $Z_g$.
+
 \subsection{Comparison of results}
 
 As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
@@ -110,7 +116,7 @@ In our case, we have that $\beta^H = 0.503$ and $\beta^L = 0.343$.
 \subsubsection{OLS estimates}
 
 The naive OLS specification, implicitly assuming CCAR, would rely on the following regression: $\overline{Y_g} = \beta^H*\overline{X}_g^H + \beta^L*\overline{X}_g^L+\epsilon_g$.
-As $\overline{X}_g^H$ and $\overline{X_g^L}$ are perfectly collinear($\overline{X}_g^H + \overline{X}_g^L = 1$), we use $\overline{X}_g^L$ as reference category and we estimate the following regression: 
+As $\overline{X}_g^H$ and $\overline{X}_g^L$ are perfectly collinear($\overline{X}_g^H + \overline{X}_g^L = 1$), we use $\overline{X}_g^L$ as reference category and we estimate the following regression: 
 \begin{align*}
 \overline{Y_g} & = \beta^H*\overline{X}_g^H + \beta^L*\overline{X}_g^L+\epsilon_g 
 \\& = \beta^H*\overline{X}_g^H + \beta^L*(1-\overline{X}_g^H)+\epsilon_g
@@ -123,7 +129,7 @@ Results are presented in Tab. \ref{tab:naive-regression} and show that $\beta^L$
 
 That means that the naive OLS regression overestimates the propensity of high-income voters to vote in favour of the reform and underestimates the propensity of low-income voters to vote in favour of the reform, showing a more polarized distribution of votes conditional on income. 
 
-That can be explained by the fact that the naive OLS attributes higher percentages of votes in favour in Northern precincts only to their higher share of high-income voters, while in reality the higher percentages of votes in favour are also driven by the fact that low-income voters in Northern precincts have a higher propensity to vote in favour of the reform than low-income voters in other regions.
+That is explained by how OLS attributes higher percentages of votes in favour of the reform: the estimation attributes higher percentages in Northern precincts only to their higher share of high-income voters, while in reality the higher percentages of votes in favour are also driven by the fact that low-income voters in Northern precincts have a higher propensity to vote in favour of the reform than low-income voters in other regions.
 
 \subsubsection{\texttt{seine} estimates}
 
@@ -131,17 +137,30 @@ When we move to semiparametric estimation performed by \texttt{seine}, we obtain
 
 \input{Images/ei_estimates_summary.tex}
 
+\subsubsection{Interaction between $\overline{X}_g$ and $Z_g$}
 
-%I may note that in this case, f(Z) was linear: 
+It can be noted that in this case, the relationship between $E[\beta_g]$ and $Z_g$ is linear.
 
-%$f(Z_g) = 
-%\begin{pmatrix}
-%    0 & -0.3 \\
-%    0.5 & 0.1
-%\end{pmatrix} Z_g' + \begin{pmatrix}
-%    0.6 \\
-%    0.2
-%\end{pmatrix}$
+In fact, if we consider South as the reference category, and we denote with $Z_g = \begin{pmatrix}
+    1 \\
+    0
+\end{pmatrix}$ the covariate for Northern precincts, with $Z_g = \begin{pmatrix}
+    0 \\
+    1
+\end{pmatrix}$ the covariate for Central precincts, and with $Z_g = \begin{pmatrix}
+    0 \\
+    0
+\end{pmatrix}$ the covariate for Southern precincts, we can express $\eta_r$ as a linear function of $Z_g$:
+\begin{align*}
+E[\beta_g|Z_g] = \eta_{r} = f(Z_g) =  \begin{pmatrix}
+    0.6 \\
+    0.2
+    \end{pmatrix} +
+    \begin{pmatrix}
+    0 & -0.3\\ 
+    0.5 & 0.1
+\end{pmatrix} Z_g'.
+\end{align*}
 
 %Therefore, if we had correctly specified the model, we would have obtained the same results with a parametric estimation.
 
@@ -152,6 +171,34 @@ When we move to semiparametric estimation performed by \texttt{seine}, we obtain
 %\end{pmatrix} Z_g'$.
 
 %With 0.6, 0.2, 0, -0.3, 0.5, -0.1 quantities to be estimated that can be denoted by $\gamma_0^H$, $\gamma_0^L$, $\gamma_1^H$, $\gamma_1^L$, $\gamma_2^H$, $\gamma_2^L$.
+
+Therefore, we can express the model as a linear regression with interaction between $\overline{X}_g$ and $Z_g$:
+\begin{align*}
+\overline{Y_g}  & = f(Z_g)*\overline{X}_g \\
+& = (\gamma_0^H+\gamma_1^H*Z^{North} + \gamma_2^H*Z^{Centre})*\overline{X}_g^H \\
+& + (\gamma_0^L+\gamma_1^L*Z^{North}+\gamma_2^L*Z^{Centre})*\overline{X}_g^L + \epsilon_g
+\end{align*}
+
+with $\gamma_0^H$ representing the propensity of voting in favor of the reform for high-income voters in Southern precincts, $\gamma_1^H$ representing the difference in propensity for high-income voters between Northern and Southern precincts, $\gamma_2^H$ representing the difference in propensity for high-income voters between Central and Southern precincts, and analogously for low-income voters with $\gamma_0^L$, $\gamma_1^L$ and $\gamma_2^L$: their true values are $\gamma_0^H = 0.6$, $\gamma_1^H = 0$, $\gamma_2^H = -0.3$, $\gamma_0^L = 0.2$, $\gamma_1^L = 0.5$ and $\gamma_2^L = 0.1$.
+
+As $\overline{X}_g^L = 1 - \overline{X}_g^H$, we can rewrite the model as a linear regression with interaction between $\overline{X}_g$ and $Z_g$ and with $\overline{X}_g^H$ as reference category:
+
+\begin{align*}
+\overline{Y_g}  & = \gamma_0^L + (\gamma_0^H-\gamma_0^L)*\overline{X}_g^H + \gamma_1^L*Z^{North} + \gamma_2^L*Z^{Centre} +  \\
+& + (\gamma_1^H-\gamma_1^L)*Z^{North}*\overline{X}_g^H + (\gamma_2^H-\gamma_2^L)*Z^{Centre}*\overline{X}_g^H + \epsilon_g
+\end{align*}
+
+\input{Images/interaction_regression_summary.tex}
+
+We can observe that the estimates are very close to the true values, giving us a good approximation of $f(Z_g)$.
+Through the estimated $f(Z_g)$, we could then obtain estimates of $\beta^H$ and $\beta^L$ through previously exposed relationships.
+
+In any case, it is important to note that in order to obtain the same results with a parametric estimation, we had to correctly specify a linear model for $f(Z_g)$.
+
+That is not always possible, and it is relevant that \texttt{seine} was able to provide good estimates of $\beta^H$ and $\beta^L$ without any previous assumption on the functional form of $f(Z_g)$.
+
+In the Appendix A, I show another example where the relationship between $E[\beta_g]$ and $Z_g$ is non-linear, and therefore a parametric estimation would not be able to provide good estimates of $\beta^H$ and $\beta^L$, while \texttt{seine} is still able to provide good estimates.
+
 
 %$\overline{Y_g}  = (\gamma_0^H+\gamma_1^H*Z^{North}+\gamma_2^H*Z^{Centre})*\overline{X}_g^H + (\gamma_0^L+\gamma_1^L*Z^{North}+\gamma_2^L*Z^{Centre})*\overline{X}_g^L + \epsilon_g$
 

@@ -1,6 +1,6 @@
-The dataset to perform the analysis should include, at the most granular level possible, the share of votes received by the candidate ($\overline{Y}_g$), a partition of the voting population in categories of interest (e.g, ethnic categories, which represent $\overline{X}_g$) and covariates at that same geographical level ($Z_g$).
+The dataset to perform the analysis should include, at the most granular level possible, the share of votes received by the candidate ($\overline{Y}_g$), a partition of the voting population in categories of interest (e.g, ethnic groups, which represent $\overline{X}_g$) and covariates at that same geographical level ($Z_g$).
 
-The most granular level for electoral results in the United States is the electoral precinct, whose dimension is typically in the order of hundreds of a couple of thousands of voters.
+The most granular level for electoral results in the United States is the electoral precinct, whose dimension is typically in the order of hundreds or a couple of thousands of voters.
 
 Census data, instead, are collected at different geographical levels, with geographical levels varying with the variables of interest.
 
@@ -38,15 +38,15 @@ ACS data are easily accessible through the \texttt{tidycensus} package in R \cit
 
 The following passage involved exploiting \citet{census2021baf}'s files, which provide the mapping of census blocks to CBGs and VTDs, to aggregate the socio-economic characteristics collected at the CBG level in ACS surveys to the VTD level.
 
-As in Fig. \ref{fig:census-geographical-units}, we can think of three scenarios: VTDs that perfectly align with one CBG, VTDs that aling with exactly two or more CBGs, and VTDs that cross the boundaries of CBGs.
+As in Fig. \ref{fig:census-geographical-units}, we can think of three scenarios: VTDs that perfectly align with one CBG, VTDs that align with exactly two or more CBGs, and VTDs that cross the boundaries of CBGs.
 
 For the first scenario, the aggregation of socio-economic characteristics from CBGs to VTDs is straightforward: the characteristics of the VTD are simply the same as those of the corresponding CBG.
 
 The second scenario is also straightforward: the socio-economic characteristics of the VTD are simply the either the sum (in case of counts, e.g, population or the number of people with a college degree) or the average (in case of other quantities, e.g. median income) of the socio-economic characteristics of the CBGs that compose it.
 
-The third scenario is a bit more complicated and required a procedure to apportion the socio-economic characteristics of the CBGs that are crossed by the VTD boundaries.
+The third scenario is a bit more complicated and requires a procedure to apportion the socio-economic characteristics of the CBGs that are crossed by the VTD boundaries.
 
-The procedure rested on the assumption that that differences in the apportionment of census blocks in the construction of the VTDs and CBGs are independent of the socio-economic characteristics of the population.
+The procedure rests on the assumption that differences in the apportionment of census blocks in the construction of the VTDs and CBGs are independent of the socio-economic characteristics of the population.
 
 That assumption is partly disputable, because the electoral authorities in the United States have been known to engage in gerrymandering, which is the practice of drawing electoral district boundaries in a way that favors a particular political party or group.
 However, gerrymandering is typically done at the level of congressional districts, without particular interventions at the level of VTDs.
@@ -62,6 +62,4 @@ Finally, I have aggregated the fictitious populations of the census blocks to th
 Obviously, these estimates are subject to some error, partly arising from the sampling errors in the original ACS data, and partly from the apportionment procedure.
 
 
-However, this procedure is easily implementable and can be applied to any variable of interest that is collected at the CBG level.
-
-%Electoral data at precinct level for 2020 US elections have been collected and made available by \citet{vest2020precinct}.
+This procedure is easily implementable and can be applied to any variable of interest that is collected at the CBG level.

@@ -1,21 +1,38 @@
 After having showed the differential performance of \texttt{seine} and naive methods in a simple synthetic example of electoral competition, I moved to an application to real data.
 
 In particular, I applied the semiparametric estimation to the 2020 US presidential election in Texas, using the electoral precincts as the geographical units.
-%and then I will complete the sentence with the partition of the population that I will present in the end
 
 
 \subsection{Construction of the dataset}
 
-The construction of the dataset is explained in detail in Appendix A (Section \ref{sec:Appendix_dataset}).
+The dataset is constructed by combining electoral results at the electoral precinct level (also referred to as voting districts or VTDs) with demographic data of 2020 US census, with the goal of obtaining, for each precinct, a response variable ($\overline{Y}_g$), a partition of the population in categories ($\overline{X}_g$) and a set of covariates ($Z_g$).
 
-In particular, I exploited three sources:
+In the construction of the dataset, I exploited three sources:
 \begin{itemize}
-    \item ALARM dataset by \citet{t._kenny2021}, which combines electoral results at the VTD level previously collected by \citet{vest2020precinct} with demographic data of 2020 US census collected by \citet{uscensus2020}
-    \item ACS surveys, which provide socio-economic characteristics of the population and can be called through the \texttt{tidycensus} package in R \citep{tidycensus}
+    \item ALARM dataset by \citet{t._kenny2021}, which combines electoral results at the electoral precinct level (also referred to as voting districts or VTDs) previously collected by \citet{vest2020precinct} with demographic data of 2020 US census collected by \citet{uscensus2020}
+    \item American Community Survey (ACS) by the U.S. Census Bureau, which provide socio-economic characteristics of the population and can be called through the \texttt{tidycensus} package in R \citep{tidycensus}
     \item \citet{census2021baf}'s files, which provide the mapping of census blocks to CBGs and VTDs, which is necessary to aggregate the socio-economic characteristics collected at the CBG level in ACS surveys to the VTD level.
 \end{itemize}
 
+
+The construction of the dataset is explained in detail in Appendix B (Section \ref{sec:Appendix_dataset}).
+
+
 \subsection{Choice of variables and validity of the assumptions}
+
+The goal of this application is to estimate the support for the Democratic and Republican candidates in the 2020 US presidential election in Texas among different ethnic groups.
+
+The response variable $\overline{Y}_g$ is the share of votes received by the Democratic candidate in precinct $g$.
+
+The partition of the population $\overline{X}_g$ is the share of voters in precinct $g$ that belong to each of the four ethnic groups considered in the analysis: White, Black, Hispanic and Other.
+
+Finally, the covariate $Z_g$ is the share of 25 years old or older voters in precinct $g$ that have a college degree, which is collected at the CBG level in ACS surveys and then aggregated to the VTD level as explained in Appendix B (Section \ref{sec:Appendix_dataset}).
+
+The assumption of bounded $N$ is satisfied by the distribution of the number of voters across precincts being bounded.
+
+The assumption of positivity is satisfied by the distribution of the share of voters in each ethnic group across precincts with varying levels of college degree holders.
+
+Finally, the assumption of CAR cannot be directly tested, but it is driven by the fact that shares of college degree holders in a precinct are likely to capture many of the unobserved characteristics that affect the voting behavior of different ethnic groups in that precinct, such as location of the county (urban vs rural), income, and other socio-economic characteristics.
 
 \subsection{Results of the estimation}
 

@@ -48,6 +48,18 @@ elec_2020 <- ei_proportions(elec_2020, no_college:college, .total = B15003_001)
 #elec_2020 <- ei_proportions(elec_2020, B16004_001:B16004_067, .total = B16004_001)
 elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_001)
 
+#Tests for bounded N
+hist(elec_2020$pres_total)
+summary(elec_2020$pres_total)
+print(sort(elec_2020$pres_total, decreasing = TRUE))
+
+#Test for positivity assumption
+plot(elec_2020$vap_hisp, elec_2020$college)
+plot(elec_2020$vap_white, elec_2020$college)
+plot(elec_2020$vap_black, elec_2020$college)
+plot(elec_2020$other_ethnicity, elec_2020$college)
+
+#CAR is untestable
 
 experiment <- ei_spec(
   elec_2020, 

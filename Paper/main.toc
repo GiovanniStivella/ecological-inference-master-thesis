@@ -1,24 +1,31 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{\footnotesize {\sffamily {3}}}{section.1}%
-\contentsline {section}{\numberline {2}Notation for ecological inference}{\footnotesize {\sffamily {8}}}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Global and local estimands}{\footnotesize {\sffamily {9}}}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Different assumptions, different strategies}{\footnotesize {\sffamily {10}}}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Common Coefficient assumption}{\footnotesize {\sffamily {10}}}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}CCAR assumption}{\footnotesize {\sffamily {11}}}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Adding covariates: CAR assumption}{\footnotesize {\sffamily {13}}}{subsubsection.2.2.3}%
-\contentsline {section}{\numberline {3}A model for electoral competitions}{\footnotesize {\sffamily {16}}}{section.3}%
-\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {19}}}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Italian constitutional referendum: a motivating example}{\footnotesize {\sffamily {19}}}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The synthetic experiment}{\footnotesize {\sffamily {20}}}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Data generating process}{\footnotesize {\sffamily {21}}}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}From DGP to the model}{\footnotesize {\sffamily {22}}}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison of results}{\footnotesize {\sffamily {24}}}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}OLS estimates}{\footnotesize {\sffamily {24}}}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}\texttt {seine} estimates}{\footnotesize {\sffamily {25}}}{subsubsection.4.3.2}%
-\contentsline {section}{\numberline {5}An application to Texas electoral data}{\footnotesize {\sffamily {26}}}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Construction of the dataset}{\footnotesize {\sffamily {26}}}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Choice of variables and validity of the assumptions}{\footnotesize {\sffamily {27}}}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results of the estimation}{\footnotesize {\sffamily {27}}}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {28}}}{section.6}%
-\contentsline {section}{\numberline {7}Appendix A: Construction of the dataset}{\footnotesize {\sffamily {31}}}{section.7}%
-\contentsline {section}{\numberline {8}Appendix B: A non-linear synthetic example}{\footnotesize {\sffamily {37}}}{section.8}%
+\contentsline {section}{\numberline {1}Introduction}{\footnotesize {\sffamily {4}}}{section.1}%
+\contentsline {section}{\numberline {2}Notation for ecological inference}{\footnotesize {\sffamily {9}}}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Global and local estimands}{\footnotesize {\sffamily {10}}}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Different assumptions, different strategies}{\footnotesize {\sffamily {11}}}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Common Coefficient assumption}{\footnotesize {\sffamily {11}}}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}CCAR assumption}{\footnotesize {\sffamily {12}}}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Adding covariates: CAR assumption}{\footnotesize {\sffamily {14}}}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}A model for electoral competitions}{\footnotesize {\sffamily {17}}}{section.3}%
+\contentsline {section}{\numberline {4}A synthetic example}{\footnotesize {\sffamily {20}}}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Italian constitutional referendum: a motivating example}{\footnotesize {\sffamily {20}}}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The synthetic experiment}{\footnotesize {\sffamily {21}}}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Data generating process}{\footnotesize {\sffamily {22}}}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}From DGP to the model}{\footnotesize {\sffamily {23}}}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison of results}{\footnotesize {\sffamily {25}}}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}OLS estimates}{\footnotesize {\sffamily {25}}}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}\texttt {seine} estimates}{\footnotesize {\sffamily {26}}}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {26}}}{subsubsection.4.3.3}%
+\contentsline {section}{\numberline {5}An application to Texas electoral data}{\footnotesize {\sffamily {29}}}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Construction of the dataset}{\footnotesize {\sffamily {29}}}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Choice of variables and validity of the assumptions}{\footnotesize {\sffamily {30}}}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results of the estimation}{\footnotesize {\sffamily {31}}}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {32}}}{section.6}%
+\contentsline {section}{\numberline {7}Appendix A: A non-linear synthetic example}{\footnotesize {\sffamily {35}}}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Data generating process}{\footnotesize {\sffamily {35}}}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Comparison of results}{\footnotesize {\sffamily {37}}}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}OLS}{\footnotesize {\sffamily {37}}}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}\texttt {seine}}{\footnotesize {\sffamily {37}}}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {37}}}{subsubsection.7.2.3}%
+\contentsline {section}{\numberline {8}Appendix B: Construction of the dataset}{\footnotesize {\sffamily {39}}}{section.8}%
+\contentsline {section}{\numberline {9}Code}{\footnotesize {\sffamily {45}}}{section.9}%
