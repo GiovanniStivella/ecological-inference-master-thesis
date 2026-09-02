@@ -82,14 +82,14 @@ The generated dataset strictly satisfies the assumptions stated in previous sect
 
 The response variable $Y_i$ is a binary variable $Y_i \in \{0,1\}$ and it is observed only at geography level as a share $\overline{Y}_g \in [0,1]$.
 
-Population is partitioned across geographies and within each geography, it is partitioned into two groups (high-income and low-income voters), so that for each geography $g$ we observe $\overline{X}_g = \begin{pmatrix}
+Population is partitioned across geographies and, within each geography, is partitioned into two groups (high-income and low-income voters), so that for each geography $g$ we observe $\overline{X}_g = \begin{pmatrix}
     \overline{X}_g^H \\
     \overline{X}_g^L
 \end{pmatrix}$ with $\overline{X}_g^H + \overline{X}_g^L = 1$.
 
 Moreover, we can interpret the region of each precinct as a covariate $Z_g = \{0,1\}^3$, which in this case does not arise from individual characteristics but rather from the geographical location.
 
-$\overline{Y}_g$, $\overline{X}_g$ and $Z_g$ are observed, while $\beta_g$ (and their corresponding $\eta_r$) are unobserved and are the goals of the semiparametric estimation.
+$\overline{Y}_g$, $\overline{X}_g$ and $Z_g$ are observed, while $\beta_g$ (and their corresponding $\eta_r$) are unobserved and are the goals of the estimation.
 
 Bounded N is satisfied as $N_g$ is equal across different geographies.
 
@@ -109,7 +109,7 @@ Although we have allowed for some variability in $\beta_g$ across geographies of
 
 \subsection{Comparison of results}
 
-As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
+As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
 
 In our case, we have that $\beta^H = 0.503$ and $\beta^L = 0.343$.
 
