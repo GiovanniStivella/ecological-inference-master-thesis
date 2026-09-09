@@ -1,3 +1,58 @@
+%In questa tesi abbiamo mostrato come funziona il problema dell'inferenza ecologica
+
+%L'aspetto più importante della tesi è stato mostrare che il problema richiede di essere formulato con una notazione specifica che considera il modo in cui avviene l'aggregrazione
+
+%In particolare, ho presentato il problema dell'inferenza ecologica in cui la popolazione è partizionata in gruppi e si vogliono stimare i beta group-specifici
+
+%Abbiamo visto che dobbiamo bilanciare l'esigenza di lasciare che i beta varino tra diverse geografie con la necessità di imporre della struttura alle variazioni dei beta per permettere un metodo di stima
+
+%mccartankuriwaki mostrano una strada promettente, ovvero l'utilizzo di covariate
+
+%le covariate devono permettere che vengano rispettate le condizioni di indipendenza e positività
+
+%in particolare, c'è una condizione di indipendenza facilmente interpretabile da un practitioner che è la CAR-IND
+
+%mccartankuriwaki mostrano che CAR-IND implica CAR e quindi possiamo scrivere il problema come $E[Y_g] = f(Z_g)'\overline{X_g}$.
+
+%questa mi sembra essere la chiave interpretativa dell'inferenza ecologica con covariate, che mi sembra un ottimo modo di porre il problema e cercarne una soluzione
+
+%dopodiché mccartankuriwaki costruiscono un algoritmo semiparametrico per stimare f(Z) il cui funzionamento però non abbiamo studiato davvero
+
+%noi abbiamo però provato anche delle stime lineari
+
+%in tutti i casi abbiamo visto che le stime lineari restituivano risultati pressoché identici a quelli di mccartankuriwaki, nel bene e nel male
+
+%nel bene, perché con i dataset sintetici entrambi i metodi funzionavano bene
+
+%nel male, perché quando siamo passati ad un dataset reale, non siamo riusciti a produrre stime ragionevoli
+
+%però dobbiamo fare alcune considerazioni riguardo questo ultimo passaggio
+
+%innanzitutto i dati erano pessimi, quindi una direzione futura sarebbe cercare di ricostruire il dataset
+
+%per quanto riguarda le covariate, abbiamo fatto alcuni tentativi diversi che non abbiamo riportato, ma in tutti i casi i risultati non erano bounded
+
+%quindi, rispetto a questo lavoro, di sicuro potremmo ricostruire un dataset elettorale; 
+
+%in secondo luogo, dovremmo capire in quali situazioni il metodo semiparametrico funziona davvero meglio di quello lineare, perché i nostri esperimenti non ci suggeriscono nulla in questo senso
+%a questo proposito, non basta aggiungere tante covariate perché rischia di portare a una caduta della positivity assumption e a un problema di identificabilità
+%a quanto pare, il metodo per come è fatto tende a riportare f(Z) a una relazione lineare, perché la somiglianza con i risultati che vengono imponendo f(Z) lineare è spaventosa
+%ci sentiamo di dire che dovremmo aspettare nuovi sviluppi nello sviluppo del software \texttt{seine}, che effettivamente è stato pubblicato solo pochi mesi fa, e sarebbe interessante capire se con nuove evoluzioni sarà possibile permettere che la ricerca della forma funzionale sia più ampia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %The problem of ecological inference requires an adequate description: it requires to consider that the relationship between individual characteristics and individual response variable can be masked by the aggregation of data
 
 %Therefore, it is necessary to use a notation that allows to consider geographic aggregation

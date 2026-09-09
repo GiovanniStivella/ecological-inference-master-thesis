@@ -5,6 +5,7 @@ set.seed(123)
 library(truncnorm)
 library(seine)
 library(xtable)
+library(dplyr)
 
 high_income_North <- matrix(rtruncnorm(100, a=0, b=1, mean = 0.7, sd = 0.2))
 
@@ -58,6 +59,21 @@ high <- sum(synthetic_dataset$high_income*synthetic_dataset$beta_high)/sum(synth
 
 low <- sum(synthetic_dataset$low_income*synthetic_dataset$beta_low)/sum(synthetic_dataset$low_income)
 
+true_val <- cbind(high, low)
+
+true_tab <- xtable(
+  true_val,
+  caption = "True coefficients up to approximation",
+  digits = 3,
+  label = "tab:true-syn-beta"
+)
+
+print(
+  true_tab,
+  file = "../Paper/Images/true_synth_beta.tex",
+  include.rownames = FALSE,
+  sanitize.text.function = identity
+)
 
 #The first idea is to run a linear regression
 
@@ -147,5 +163,30 @@ print(
   tab,
   file = "../Paper/Images/interaction_regression_summary.tex",
   include.rownames = TRUE,
+  sanitize.text.function = identity
+)
+
+#Compute the resulting beta
+
+beta_fitted_low <- interaction_coef[1]+interaction_coef[3]*area_North+interaction_coef[4]*area_Centre
+beta_fitted_high <- interaction_coef[1]+interaction_coef[2]+(interaction_coef[3]+interaction_coef[5])*area_North+(interaction_coef[4]+interaction_coef[6])*area_Centre
+
+beta_low_hat <- sum(synthetic_dataset$low_income*beta_fitted_low)/sum(synthetic_dataset$low_income)
+beta_high_hat <- sum(synthetic_dataset$high_income*beta_fitted_high)/sum(synthetic_dataset$high_income)
+
+interacted <- cbind(beta_high_hat, beta_low_hat)
+colnames(interacted) <- gsub("_", "\\_", colnames(interacted), fixed = TRUE)
+
+inter <- xtable(
+  interacted,
+  caption = "Estimates with covariates",
+  digits = 3,
+  label = "tab:int-syn-beta"
+)
+
+print(
+  inter,
+  file = "../Paper/Images/int_synth_beta.tex",
+  include.rownames = FALSE,
   sanitize.text.function = identity
 )

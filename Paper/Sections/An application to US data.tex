@@ -55,3 +55,46 @@ That, of course, should cast doubt on the reliability of the estimates in genera
 In fact, \citet{mccartan2025identificationsemiparametricestimationconditional} explain that, even if the software \texttt{seine} allows to exploit boundedness of response variable in the estimation, it does not guarantee that the estimates will be within the [0,1] interval.
 
 
+\subsection{Results of linear estimation}
+
+Previous section and Appendix A have shown that, in our synthetic examples, \texttt{seine} package has returned results almost identical to the ones obtained imposing a linear form for $f(Z_g)$.
+
+In order to verify whether that holds also in a true dataset, I have repeated the procedure to estimate $\beta$ with the following linear specification:
+
+
+\begin{align*}
+    \overline{Y_g} & = \gamma_0^{other}*\overline{X}_g \\
+    & +(\gamma_0^{hisp}-\gamma_0^{other})*\overline{X}_g^{hisp}+(\gamma_0^{white}-\gamma_0^{other})*\overline{X}_g^{white}+(\gamma_0^{black}-\gamma_0^{other})*\overline{X}_g^{black} \\
+    & +\gamma_1^{other}*Z_g*\overline{X}_g^{other}+(\gamma_1^{hisp}-\gamma_1^{other})*Z_g*\overline{X}_g^{hisp}\\
+    & +(\gamma_1^{white}-\gamma_1^{other})*Z_g*\overline{X}_g^{white}+(\gamma_1^{black}-\gamma_1^{other})*Z_g*\overline{X}_g^{black}+\epsilon_g
+\end{align*}
+
+where $Z_g$ represents the share of people over 25 with a college degree.
+
+Therefore estimates $\hat{\beta_g}$ can be obtained as follows:
+
+\begin{align*}
+    \hat{\beta_g}=\begin{pmatrix}
+        \hat{\gamma_0}^{other}\\
+        \hat{\gamma_0}^{hisp}\\
+        \hat{\gamma_0}^{white}\\
+        \hat{\gamma_0}^{black}
+        \end{pmatrix} +
+        \begin{pmatrix}
+        \hat{\gamma_1}^{other}\\
+        \hat{\gamma_1}^{hisp}\\
+        \hat{\gamma_1}^{white}\\
+        \hat{\gamma_1}^{black}
+    \end{pmatrix} Z_g.
+\end{align*}
+
+The results are presented in Table \ref{tab:interaction-regression-texas}.
+
+\input{Images/interaction_regression_summary_texas.tex}
+
+Finally, we can move from local to global estimates, obtaining the results presented in Table \ref{tab:int-tex-beta}.
+
+\input{Images/int_texas_beta.tex}
+
+
+Interestingly enough, the results are almost identical to the ones obtained with \texttt{seine}.

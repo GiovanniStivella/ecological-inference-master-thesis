@@ -34,6 +34,23 @@ high <- sum(synthetic_dataset$high_income*synthetic_dataset$beta_high)/sum(synth
 
 low <- sum(synthetic_dataset$low_income*synthetic_dataset$beta_low)/sum(synthetic_dataset$low_income)
 
+true_val <- cbind(high, low)
+
+true_tab <- xtable(
+  true_val,
+  caption = "True coefficients up to approximation",
+  digits = 3,
+  label = "tab:true-syn-exp-beta"
+)
+
+print(
+  true_tab,
+  file = "../Paper/Images/true_synth_exp_beta.tex",
+  include.rownames = FALSE,
+  sanitize.text.function = identity
+)
+
+
 #The first idea is to run a linear regression
 
 naive <- lm(outcome~high_income, data = synthetic_dataset)
@@ -105,17 +122,6 @@ interaction <- lm(outcome~high_income*zeta, data = synthetic_dataset)
 
 summary(interaction)
 
-#Here I should recover the estimate of beta
-interaction_coef <- summary(interaction)$coefficients
-beta_fitted_low <- interaction_coef[1]+interaction_coef[3]*zeta
-beta_fitted_high <- interaction_coef[1]+interaction_coef[2]+(interaction_coef[3]+interaction_coef[4])*zeta
-
-estimation_dataset <- cbind(synthetic_dataset, beta_fitted_high, beta_fitted_low)
-
-beta_low_int <- sum(estimation_dataset$low_income*estimation_dataset$beta_fitted_low)/sum(estimation_dataset$low_income)
-
-beta_high_int <- sum(estimation_dataset$low_income*estimation_dataset$beta_fitted_high)/sum(estimation_dataset$low_income)
-
 # Save a compact, readable regression summary
 interaction_coef <- summary(interaction)$coefficients
 rownames(interaction_coef) <- gsub("_", "\\_", rownames(interaction_coef), fixed = TRUE)
@@ -131,5 +137,31 @@ print(
   tab,
   file = "../Paper/Images/interaction_regression_summary_exp.tex",
   include.rownames = TRUE,
+  sanitize.text.function = identity
+)
+
+#Here I should recover the estimate of beta
+interaction_coef <- summary(interaction)$coefficients
+beta_fitted_low <- interaction_coef[1]+interaction_coef[3]*zeta
+beta_fitted_high <- interaction_coef[1]+interaction_coef[2]+(interaction_coef[3]+interaction_coef[4])*zeta
+
+beta_low_hat <- sum(synthetic_dataset$low_income*beta_fitted_low)/sum(synthetic_dataset$low_income)
+
+beta_high_hat <- sum(synthetic_dataset$high_income*beta_fitted_high)/sum(synthetic_dataset$high_income)
+
+interacted <- cbind(beta_high_hat, beta_low_hat)
+colnames(interacted) <- gsub("_", "\\_", colnames(interacted), fixed = TRUE)
+
+inter <- xtable(
+  interacted,
+  caption = "Estimates with covariates",
+  digits = 3,
+  label = "tab:int-syn-exp-beta"
+)
+
+print(
+  inter,
+  file = "../Paper/Images/int_synth_exp_beta.tex",
+  include.rownames = FALSE,
   sanitize.text.function = identity
 )

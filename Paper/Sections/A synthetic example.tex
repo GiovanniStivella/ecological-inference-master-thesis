@@ -113,6 +113,8 @@ As previously mentioned, in our dataset we know the true values of $\beta_g$ for
 
 In our case, we have that $\beta^H = 0.503$ and $\beta^L = 0.343$.
 
+\input{Images/true_synth_beta.tex}
+
 \subsubsection{OLS estimates}
 
 The naive OLS specification, implicitly assuming CCAR, would rely on the following regression: $\overline{Y_g} = \beta^H*\overline{X}_g^H + \beta^L*\overline{X}_g^L+\epsilon_g$.
@@ -193,11 +195,34 @@ As $\overline{X}_g^L = 1 - \overline{X}_g^H$, we can rewrite the model as a line
 We can observe that the estimates are very close to the true values, giving us a good approximation of $f(Z_g)$.
 Through the estimated $f(Z_g)$, we could then obtain estimates of $\beta^H$ and $\beta^L$ through previously exposed relationships.
 
+That means that, for each geography, we can compute the relative $\hat{\beta^H_g}$ and $\hat{\beta^L_g}$ as a function of covariates.
+
+In our example, that corresponds to
+
+\begin{align*}
+    \hat{\beta_g}=\begin{pmatrix}
+        0.194+0.425 \\
+        0.194
+        \end{pmatrix} +
+        \begin{pmatrix}
+        0.504-0.528 & 0.118-0.437\\ 
+        0.504 & 0.118
+    \end{pmatrix} Z_g'
+\end{align*}
+
+The next passage is to exploit the relationships that link local estimands to global estimands and we get the following global estimates: $\hat{\beta^H} = \frac{\sum_{g=1}^G \hat{\beta^H_g}*N^H_g}{\sum_g N^H_g}$ and $\hat{\beta^L} = \frac{\sum_{g=1}^G \hat{\beta_g}*N_g^L}{\sum_g N_g^L}$.
+
+In our case, as a result of a quite good estimation of $\hat{\beta_g}$, we get good global estimates, which correspond to the estimates of \texttt{seine}: $\hat{\beta^H} = 0.504$ and $\hat{\beta^L}=0.341$.
+
+\input{Images/int_synth_beta.tex}
+
 In any case, it is important to note that in order to obtain the same results with a parametric estimation, we had to correctly specify a linear model for $f(Z_g)$.
 
 That is not always possible, and it is relevant that \texttt{seine} was able to provide good estimates of $\beta^H$ and $\beta^L$ without any previous assumption on the functional form of $f(Z_g)$.
 
 In the Appendix A, I show another example where the relationship between $E[\beta_g]$ and $Z_g$ is non-linear, even if quite simple.
+
+The example presented in Appendix A shows that a simple linear estimator can approximate a non-linear relationship with good precision. Moreover, the results of the estimates obtained with the linear estimator are almost identical to the ones obtained with the \texttt{seine} package.
 
 %$\overline{Y_g}  = (\gamma_0^H+\gamma_1^H*Z^{North}+\gamma_2^H*Z^{Centre})*\overline{X}_g^H + (\gamma_0^L+\gamma_1^L*Z^{North}+\gamma_2^L*Z^{Centre})*\overline{X}_g^L + \epsilon_g$
 

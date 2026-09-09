@@ -145,15 +145,16 @@ ei_est(regr = m, riesz = rr, data = experiment3, conf_level = 0.95)
 
 ei_estimates3 <- ei_est(regr = m, riesz = rr, data = experiment3, conf_level = 0.95)
 
+
 ###
 
 
 experiment4 <- ei_spec(
   elec_2020_refined, 
-  predictors = c(vap_hisp:vap_black, other_ethnicity),
+  predictors = college:no_college,
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
-  covariates = no_college:college
+  covariates = c(vap_hisp:vap_black, other_ethnicity)
 )
 
 m <- ei_ridge(experiment4)
@@ -163,24 +164,8 @@ ei_est(regr = m, riesz = rr, data = experiment4, conf_level = 0.95)
 
 ei_estimates4 <- ei_est(regr = m, riesz = rr, data = experiment4, conf_level = 0.95)
 
-###
 
-
-experiment5 <- ei_spec(
-  elec_2020_refined, 
-  predictors = college:no_college,
-  outcome = pre_20_rep_tru:pre_20_dem_bid, 
-  total = pres_total,
-  covariates = c(vap_hisp:vap_black, other_ethnicity)
-)
-
-m <- ei_ridge(experiment5)
-rr <- ei_riesz(experiment5, penalty = m$penalty)
-
-ei_est(regr = m, riesz = rr, data = experiment5, conf_level = 0.95)
-
-ei_estimates5 <- ei_est(regr = m, riesz = rr, data = experiment5, conf_level = 0.95)
-
+###Let's move to linear estimations with covariates
 
 ###
 
@@ -188,6 +173,24 @@ linearexperiment <- lm(pre_20_rep_tru~(vap_hisp+vap_white+vap_black)*college, da
 summary(linearexperiment)
 
 lincoef <- summary(linearexperiment)$coefficients
+
+
+rownames(lincoef) <- gsub("_", "\\_", rownames(lincoef), fixed = TRUE)
+
+tab <- xtable(
+  lincoef,
+  caption = "Parametric estimation with covariates for the 2020 presidential election in Texas (Republican share as outcome)",
+  digits = 3,
+  label = "tab:interaction-regression-texas"
+)
+
+print(
+  tab,
+  file = "../Paper/Images/interaction_regression_summary_texas.tex",
+  include.rownames = TRUE,
+  sanitize.text.function = identity
+)
+
 
 beta_fitted_hisp <- lincoef[1]+lincoef[2]+(lincoef[5]+lincoef[6])*elec_2020_refined$college
 beta_fitted_white <- lincoef[1]+lincoef[3]+(lincoef[5]+lincoef[7])*elec_2020_refined$college
@@ -200,4 +203,35 @@ beta_white <- sum(elec_2020_refined$vap_white*elec_2020_refined$pres_total*beta_
 
 beta_black <- sum(elec_2020_refined$vap_black*elec_2020_refined$pres_total*beta_fitted_black)/sum(elec_2020_refined$vap_black*elec_2020_refined$pres_total)
 
-beta_other <- sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total*beta_fitted_black)/sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total)
+beta_other <- sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total*beta_fitted_other)/sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total)
+
+
+beta_texas <- rbind (beta_hisp, beta_white, beta_black, beta_other)
+rownames(beta_texas) <- gsub("_", "\\_", rownames(beta_texas), fixed = TRUE)
+
+inter <- xtable(
+  beta_texas,
+  caption = "Parametric group-specific estimates with Texas data",
+  digits = 3,
+  label = "tab:int-tex-beta"
+)
+
+print(
+  inter,
+  file = "../Paper/Images/int_texas_beta.tex",
+  include.rownames = TRUE,
+  include.colnames = FALSE,
+  sanitize.text.function = identity
+)
+
+
+###
+
+
+beta_fitted_college <- lincoef[1]+lincoef[5]+((lincoef[2]+lincoef[6])*elec_2020_refined$vap_hisp+(lincoef[3]+lincoef[7])*elec_2020_refined$vap_white+(lincoef[4]+lincoef[8])*elec_2020_refined$vap_black)
+beta_fitted_no_college <- lincoef[1]+(lincoef[2]*elec_2020_refined$vap_hisp+lincoef[3]*elec_2020_refined$vap_white+lincoef[4]*elec_2020_refined$vap_black)
+
+
+beta_college <- sum(elec_2020_refined$college*elec_2020_refined$pres_total*beta_fitted_college)/sum(elec_2020_refined$college*elec_2020_refined$pres_total)
+
+beta_no_college <- sum(elec_2020_refined$no_college*elec_2020_refined$pres_total*beta_fitted_no_college)/sum(elec_2020_refined$no_college*elec_2020_refined$pres_total)

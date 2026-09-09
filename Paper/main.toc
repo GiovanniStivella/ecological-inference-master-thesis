@@ -15,17 +15,18 @@
 \contentsline {subsection}{\numberline {4.3}Comparison of results}{\footnotesize {\sffamily {25}}}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}OLS estimates}{\footnotesize {\sffamily {25}}}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}\texttt {seine} estimates}{\footnotesize {\sffamily {26}}}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {26}}}{subsubsection.4.3.3}%
-\contentsline {section}{\numberline {5}An application to Texas electoral data}{\footnotesize {\sffamily {29}}}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Construction of the dataset}{\footnotesize {\sffamily {29}}}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Choice of variables and validity of the assumptions}{\footnotesize {\sffamily {30}}}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results of the estimation}{\footnotesize {\sffamily {31}}}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {33}}}{section.6}%
-\contentsline {section}{\numberline {7}Appendix A: A non-linear synthetic example}{\footnotesize {\sffamily {36}}}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Data generating process}{\footnotesize {\sffamily {36}}}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Comparison of results}{\footnotesize {\sffamily {38}}}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}OLS}{\footnotesize {\sffamily {38}}}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}\texttt {seine}}{\footnotesize {\sffamily {38}}}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {39}}}{subsubsection.7.2.3}%
-\contentsline {section}{\numberline {8}Appendix B: Construction of the dataset}{\footnotesize {\sffamily {40}}}{section.8}%
-\contentsline {section}{\numberline {9}Code}{\footnotesize {\sffamily {46}}}{section.9}%
+\contentsline {subsubsection}{\numberline {4.3.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {27}}}{subsubsection.4.3.3}%
+\contentsline {section}{\numberline {5}An application to Texas electoral data}{\footnotesize {\sffamily {30}}}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Construction of the dataset}{\footnotesize {\sffamily {30}}}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Choice of variables and validity of the assumptions}{\footnotesize {\sffamily {31}}}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results of the estimation}{\footnotesize {\sffamily {32}}}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Results of linear estimation}{\footnotesize {\sffamily {33}}}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {36}}}{section.6}%
+\contentsline {section}{\numberline {7}Appendix A: A non-linear synthetic example}{\footnotesize {\sffamily {39}}}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Data generating process}{\footnotesize {\sffamily {39}}}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Comparison of results}{\footnotesize {\sffamily {41}}}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}OLS}{\footnotesize {\sffamily {41}}}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}\texttt {seine}}{\footnotesize {\sffamily {41}}}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {42}}}{subsubsection.7.2.3}%
+\contentsline {section}{\numberline {8}Appendix B: Construction of the dataset}{\footnotesize {\sffamily {44}}}{section.8}%
+\contentsline {section}{\numberline {9}Code}{\footnotesize {\sffamily {50}}}{section.9}%

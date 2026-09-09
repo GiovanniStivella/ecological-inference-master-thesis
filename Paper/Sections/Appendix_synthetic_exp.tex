@@ -27,14 +27,14 @@ Z_g \sim \text{TruncNormal}(a=0, b=1, \mu=1-\overline{X}_g^H, \sigma=0.2).
 Then, we might assume that
 
 \begin{align*}
-\beta_{gr}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{H}, \sigma=0.05), \\
-\beta_{gr}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{gr}^{L}, \sigma=0.05).
+\beta_{g}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{g}^{H}, \sigma=0.05), \\
+\beta_{g}^{L} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{g}^{L}, \sigma=0.05).
 \end{align*}
 
 The crucial difference with previous setup arises when we set means to be non-linear functions of $Z_g$:
 
 \begin{align*}
-\eta_{gr}^{H} = 10^{Z_g-1}, \quad & \eta_{gr}^{L} = e^{Z_g-1}.
+\eta_{g}^{H} = 10^{Z_g-1}, \quad & \eta_{g}^{L} = e^{Z_g-1}.
 \end{align*}
 
 The interpretation of this condition is that both high-income and low-income voters tend to favor the reform more as the share of immigrants in their precinct increases, but the effect is stronger for low-income voters and the relationship is non-linear.
@@ -46,13 +46,15 @@ Finally, the observed precinct-level outcome ($\overline{Y}_{g}$, i.e., the shar
 
 \subsection{Comparison of results}
 
-The true values of the group-specific propensities are $\beta_{gr}^{H} = 0.324$ and $\beta_{gr}^{L} = 0.660$.
+The true values of the group-specific propensities are $\beta_{g}^{H} = 0.324$ and $\beta_{g}^{L} = 0.660$.
+
+\input{Images/true_synth_exp_beta.tex}
 
 \subsubsection{OLS}
 
 \input{Images/naive_regression_summary_exp.tex}
 
-OLS estimates are $\hat{\beta}_{gr}^{H} = 0.917$ and $\hat{\beta}_{gr}^{L} = 0.917-0.845 = 0.072$.
+OLS estimates are $\hat{\beta}_{g}^{H} = 0.917$ and $\hat{\beta}_{g}^{L} = 0.917-0.845 = 0.072$.
 
 As we could expect, these estimates are far from the true values as they do not take into account the effect of the covariate $Z_g$ on the group-specific propensities $\beta_g$.
 
@@ -68,9 +70,13 @@ As in the example presented in Section \ref{sec:A synthetic example}, \texttt{se
 
 In this case, the functional form of the relationship between $Z_g$ and $\beta_g$ is estimated to be linear, which is not the case in the data generating process. In particular, it is estimated that $E[\beta_g^L | Z_g] = \gamma_0^L + \gamma_1^L*Z_g$, while $E[\beta_g^H | Z_g] = \gamma_0^H + \gamma_1^H*Z_g$.
 
-The estimates are $\hat{\beta}_{gr}^{L} = 0.176 + (0.869)*Z_g$ and $\hat{\beta}_{gr}^{H} = (0.176-0.082) + (0.869-0.357)*Z_g$.
+The estimates are $\hat{\beta}_{g}^{L} = 0.176 + (0.869)*Z_g$ and $\hat{\beta}_{g}^{H} = (0.176-0.082) + (0.869-0.357)*Z_g$.
 
-If we plug in the observed values of $Z_g$ and $\overline{X}$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
-The weighted average of these estimates across precincts is $\hat{\beta}_{gr}^{H} = 0.382$ and $\hat{\beta}_{gr}^{L} = 0.664$, which are in fact quite close to the true values of $\beta_{gr}^{H}$ and $\beta_{gr}^{L}$.
+Then, we can adopt the same strategy presented in Section 4 to produce global estimates.
 
-The conclusion that we can draw from this example is that, even if the relationship between $Z_g$ and $\beta_g$ is non-linear, a linear approximation of this relationship can still provide good estimates of the group-specific propensities $\beta_g$, as far as it chooses the relevant covariates.
+If we plug in the observed values of $Z_g$ and $\overline{X_g}$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
+The weighted average of these estimates across precincts is $\hat{\beta}^{H} = 0.321$ and $\hat{\beta}^{L} = 0.664$, which are in fact quite close to the true values of $\beta^{H}$ and $\beta^{L}$ and correspond to estimates performed with \texttt{seine}.
+
+\input{Images/int_synth_exp_beta.tex}
+
+The conclusion that we can draw from this example is that, even if the relationship between $Z_g$ and $\beta_g$ is non-linear, a linear approximation of this relationship can still provide good estimates of the group-specific propensities $\beta_g$, as far as the relevant covariates are used.
