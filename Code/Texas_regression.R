@@ -48,21 +48,37 @@ elec_2020 <- ei_proportions(elec_2020, no_college:college, .total = B15003_001)
 #elec_2020 <- ei_proportions(elec_2020, B16004_001:B16004_067, .total = B16004_001)
 elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_001)
 
+
+#I will drop all the precincts where the total number of votes is less than 10: these data are probably due to errors; even the ones which are not the result of errors will not affect the estimates too much;
+#Moreover, I will also drop the precincts where reported voting age population is less than 10
+#Finally, I will drop also the precincts where there are more reported votes than voting age population, which is obviously erroneous
+
+elec_2020_refined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_total)
+
+attach(elec_2020_refined)
+
+plot(vap, pres_total)
+#We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
+
+elec_2020_refined <- elec_2020_refined%>%filter(pres_total>vap/3)
+
+attach(elec_2020_refined)
+
 #Tests for bounded N
-hist(elec_2020$pres_total)
-summary(elec_2020$pres_total)
-print(sort(elec_2020$pres_total, decreasing = TRUE))
+hist(elec_2020_refined$pres_total)
+summary(elec_2020_refined$pres_total)
+print(sort(elec_2020_refined$pres_total, decreasing = TRUE))
 
 #Test for positivity assumption
-plot(elec_2020$vap_hisp, elec_2020$college)
-plot(elec_2020$vap_white, elec_2020$college)
-plot(elec_2020$vap_black, elec_2020$college)
-plot(elec_2020$other_ethnicity, elec_2020$college)
+plot(elec_2020_refined$vap_hisp, elec_2020_refined$college)
+plot(elec_2020_refined$vap_white, elec_2020_refined$college)
+plot(elec_2020_refined$vap_black, elec_2020_refined$college)
+plot(elec_2020_refined$other_ethnicity, elec_2020_refined$college)
 
 #CAR is untestable
 
 experiment <- ei_spec(
-  elec_2020, 
+  elec_2020_refined, 
   predictors = c(vap_hisp:vap_black, other_ethnicity),
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
@@ -97,7 +113,7 @@ print(results_table,
 #I also have one code for each county (there are 254 counties), we might add this as covariate but we might risk losing identifiability
 
 experiment <- ei_spec(
-  elec_2020, 
+  elec_2020_refined, 
   predictors = vap_hisp:vap_two,
   outcome = pre_20_rep_tru:pre_20_dem_bid,
   total = pres_total,
@@ -112,7 +128,7 @@ ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
 ###
 
 experiment <- ei_spec(
-  elec_2020, 
+  elec_2020_refined, 
   predictors = vap_hisp:vap_two,
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
@@ -128,7 +144,7 @@ ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
 
 
 experiment <- ei_spec(
-  elec_2020, 
+  elec_2020_refined, 
   predictors = vap_hisp:vap_two,
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
@@ -144,7 +160,7 @@ ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
 
 
 experiment <- ei_spec(
-  elec_2020, 
+  elec_2020_refined, 
   predictors = college:no_college,
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
