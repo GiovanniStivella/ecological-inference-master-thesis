@@ -186,3 +186,18 @@ ei_estimates5 <- ei_est(regr = m, riesz = rr, data = experiment5, conf_level = 0
 
 linearexperiment <- lm(pre_20_rep_tru~(vap_hisp+vap_white+vap_black)*college, data = elec_2020_refined)
 summary(linearexperiment)
+
+lincoef <- summary(linearexperiment)$coefficients
+
+beta_fitted_hisp <- lincoef[1]+lincoef[2]+(lincoef[5]+lincoef[6])*elec_2020_refined$college
+beta_fitted_white <- lincoef[1]+lincoef[3]+(lincoef[5]+lincoef[7])*elec_2020_refined$college
+beta_fitted_black <- lincoef[1]+lincoef[4]+(lincoef[5]+lincoef[8])*elec_2020_refined$college
+beta_fitted_other <- lincoef[1]+lincoef[5]*elec_2020_refined$college
+
+beta_hisp <- sum(elec_2020_refined$vap_hisp*elec_2020_refined$pres_total*beta_fitted_hisp)/sum(elec_2020_refined$vap_hisp*elec_2020_refined$pres_total)
+
+beta_white <- sum(elec_2020_refined$vap_white*elec_2020_refined$pres_total*beta_fitted_white)/sum(elec_2020_refined$vap_white*elec_2020_refined$pres_total)
+
+beta_black <- sum(elec_2020_refined$vap_black*elec_2020_refined$pres_total*beta_fitted_black)/sum(elec_2020_refined$vap_black*elec_2020_refined$pres_total)
+
+beta_other <- sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total*beta_fitted_black)/sum(elec_2020_refined$other_ethnicity*elec_2020_refined$pres_total)
