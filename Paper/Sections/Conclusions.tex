@@ -1,1 +1,20 @@
-Conclusions
+%The problem of ecological inference requires an adequate description: it requires to consider that the relationship between individual characteristics and individual response variable can be masked by the aggregation of data
+
+%Therefore, it is necessary to use a notation that allows to consider geographic aggregation
+
+%In particular, we have considered the problem of partitioning the population into groups with shares represented by $\overline{X}_g$
+
+%The fundamental accounting identity is $\overline{Y_g} = \beta_g'\overline{X}_g$.
+
+%But the key passage is to consider that the group-specific propensities $\beta_g$ are a random function of the covariates $Z_g$ so that the problem becomes $Y_g = f(Z_g)'X_g+\zeta_g'\overline{X_g}$ with $E[\zeta_g|\overline{X}_g] = 0$.
+
+%As shown by \citet{mccartan2025identificationsemiparametricestimationconditional}, the CAR-IND assumption is sufficient to write the problem as stated above and then to have $E[Y_g|\overline{X}_g, Z_g, N_g] = f(Z_g)'X_g$.
+
+%CAR-IND requires the practitioner to consider covariates $Z_g$ that explain variations in the group-specific propensities. On the other side, $Z_g$ should be independent of the shares $\overline{X}_g$ to avoid identification issues.
+
+%Once the problem is written in this way, \citet{mccartan2025identificationsemiparametricestimationconditional} propose a semiparametric estimator that is able to estimate the function $f(Z_g)$ and then to provide estimates of the group-specific propensities $\beta_g$. While the performance of this estimator appears to be good in the synthetic examples, we had issues in the application to the Texas electoral data, even when trying different specifications of the model which I have not reported in this paper.
+%In particular, the estimates could be outside the [0,1] interval, an issue that is present also in the documentation of the \texttt{seine} package
+
+%At the same time, using synthetic data, we have shown that a linear approximation of the relationship between $Z_g$ and $\beta_g$ can provide good estimates of the group-specific propensities $\beta_g$, even if the true relationship is non-linear, as far as it chooses the relevant covariates.
+
+%In the end, the fundamental procedure that is required is to find a way to write E[Y_g|\overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X}_g$ 

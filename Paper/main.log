@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  9 SEP 2026 10:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  9 SEP 2026 12:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1486,15 +1486,17 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [29]
 
 [30] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_texas_summary.tex
-Overfull \hbox (39.90617pt too wide) in paragraph at lines 5--19
+Overfull \hbox (22.03117pt too wide) in paragraph at lines 5--19
  [][] 
  []
 
-))
+)
 
-[31] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
+[31])
 
-[32]
+[32] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex)
+
+[33]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1510,71 +1512,71 @@ Overfull \hbox (1.23001pt too wide) in paragraph at lines 145--145
 
 
 
-[33]
+[34]
 
-[34] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_synthetic_exp.tex
+[35] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_synthetic_exp.tex
 
-[35]
+[36]
 
-[36] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary_exp.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary_exp.tex)
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 59.
-
+[37] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary_exp.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary_exp.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@overline' on input line 59.
+(hyperref)                removing `math shift' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 59.
+(hyperref)                removing `\@@overline' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 59.
+(hyperref)                removing `subscript' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 59.
+(hyperref)                removing `math shift' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 59.
+(hyperref)                removing `math shift' on input line 65.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 59.
+(hyperref)                removing `subscript' on input line 65.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 65.
 
 (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/interaction_regression_summary_exp.tex)
 
-[37])
+[38])
 
-[38] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_dataset.tex
+[39] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_dataset.tex
 
-[39]
-<Images/Census_sets/census_sets_v2.pdf, id=434, 378.32541pt x 268.57538pt>
+[40]
+<Images/Census_sets/census_sets_v2.pdf, id=442, 378.32541pt x 268.57538pt>
 File: Images/Census_sets/census_sets_v2.pdf Graphic file (type pdf)
 <use Images/Census_sets/census_sets_v2.pdf>
 Package pdftex.def Info: Images/Census_sets/census_sets_v2.pdf  used on input line 25.
 (pdftex.def)             Requested size: 398.3386pt x 282.7911pt.
 
 
-[40]
+[41]
 
-[41 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Census_sets/census_sets_v2.pdf>]
+[42 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Census_sets/census_sets_v2.pdf>]
 
-[42]
+[43]
 
-[43])
+[44])
 
-[44]
+[45]
 Overfull \hbox (34.83835pt too wide) in paragraph at lines 157--159
 \T1/lmtt/m/n/12 / / github . com / GiovanniStivella / ecological-[]inference-[]master-[]thesis/$[]\T1/lmr/m/n/12 (-20) . 
  []
 
 
 
-[45] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
+[46] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1586,18 +1588,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53838 strings out of 473190
- 1271360 string characters out of 5715799
- 2063307 words of memory out of 5000000
- 75864 multiletter control sequences out of 15000+600000
+ 53841 strings out of 473190
+ 1271389 string characters out of 5715799
+ 2063317 words of memory out of 5000000
+ 75866 multiletter control sequences out of 15000+600000
  670754 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,13n,106p,2007b,2887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (46 pages, 616027 bytes).
+Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (47 pages, 618589 bytes).
 PDF statistics:
- 618 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 626 PDF objects out of 1000 (max. 8388607)
+ 512 compressed objects within 6 object streams
+ 99 named destinations out of 1000 (max. 500000)
  64780 words of extra memory for PDF output out of 74296 (max. 10000000)
 

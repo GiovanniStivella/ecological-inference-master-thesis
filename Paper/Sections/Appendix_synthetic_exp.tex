@@ -1,4 +1,6 @@
-In this Appendix, I present a synthetic example where the relationship between covariates $Z_g$ and the group-specific propensities $\beta_g$ is non-linear. The purpose of this example is to show that the semiparametric estimator \texttt{seine} is able to capture non-linear relationships between covariates and group-specific propensities, while a linear estimator would fail to do so.
+In this Appendix, I present a synthetic example where the relationship between covariates $Z_g$ and the group-specific propensities $\beta_g$ is non-linear. 
+
+The purpose of this example is to look at the differential performance of \texttt{seine}, which is explicitly designed to capture non-linear relationships, and a linear estimator, in estimating non-linear relationships and, finally, the associated group-specific propensities.
 
 \subsection{Data generating process}
 
@@ -52,9 +54,13 @@ The true values of the group-specific propensities are $\beta_{gr}^{H} = 0.324$ 
 
 OLS estimates are $\hat{\beta}_{gr}^{H} = 0.917$ and $\hat{\beta}_{gr}^{L} = 0.917-0.845 = 0.072$.
 
+As we could expect, these estimates are far from the true values as they do not take into account the effect of the covariate $Z_g$ on the group-specific propensities $\beta_g$.
+
 \subsubsection{\texttt{seine}}
 
 \input{Images/ei_estimates_summary_exp.tex}
+
+As in the example presented in Section \ref{sec:A synthetic example}, \texttt{seine} is able to provide good estimates of the group-specific propensities.
 
 \subsubsection{Interaction between $\overline{X}_g$ and $Z_g$}
 
@@ -65,4 +71,6 @@ In this case, the functional form of the relationship between $Z_g$ and $\beta_g
 The estimates are $\hat{\beta}_{gr}^{L} = 0.176 + (0.869)*Z_g$ and $\hat{\beta}_{gr}^{H} = (0.176-0.082) + (0.869-0.357)*Z_g$.
 
 If we plug in the observed values of $Z_g$ and $\overline{X}$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
-The weighted average of these estimates across precincts is $\hat{\beta}_{gr}^{H} = 0.382$ and $\hat{\beta}_{gr}^{L} = 0.664$, which are closer to the true values of $\beta_{gr}^{H}$ and $\beta_{gr}^{L}$ than the OLS estimates, but still not as close as the \texttt{seine} estimates because the interaction model is not perfectly able to capture the true non-linear relationship but quite able to approximate it.
+The weighted average of these estimates across precincts is $\hat{\beta}_{gr}^{H} = 0.382$ and $\hat{\beta}_{gr}^{L} = 0.664$, which are in fact quite close to the true values of $\beta_{gr}^{H}$ and $\beta_{gr}^{L}$.
+
+The conclusion that we can draw from this example is that, even if the relationship between $Z_g$ and $\beta_g$ is non-linear, a linear approximation of this relationship can still provide good estimates of the group-specific propensities $\beta_g$, as far as it chooses the relevant covariates.

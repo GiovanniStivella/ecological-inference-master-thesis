@@ -17,6 +17,14 @@ In the construction of the dataset, I exploited three sources:
 
 The construction of the dataset is explained in detail in Appendix B (Section \ref{sec:Appendix_dataset}).
 
+An important note, however, must be made regarding the quality of the data.
+
+In particular, the ALARM dataset by \citet{t._kenny2021} contains a number of precincts with missing electoral results, even if they have relevant voting age population.
+At the same time, other precints have a number of votes cast that is higher than the voting age population, which constitutes a clear data error.
+
+In order to overcome these issues, I removed from the dataset all the precincts with less than 10 votes cast (which are either the result of errors or not too relevant for the analysis), and all the precincts with more votes cast than voting age population.
+Furthermore, I removed also the precincts where the number of votes cast is less than one fifth of the voting age population, as they looked to be outliers in the distribution of the share of votes cast over voting age population.
+
 
 \subsection{Choice of variables and validity of the assumptions}
 
@@ -36,4 +44,14 @@ Finally, the assumption of CAR cannot be directly tested, but it is driven by th
 
 \subsection{Results of the estimation}
 
+The results of the estimation are summarized in Table \ref{tab:ei-estimates-texas}, which shows the estimated support for the Democratic (Joe Biden) and Republican (Donald Trump) candidates among each ethnic group, along with the 95\% credible intervals.
+
+
 \input{Images/ei_estimates_texas_summary.tex}
+
+An evident shortcoming of the results is that the estimates for the support of the candidates among Black voters are not within the [0,1] interval.
+That, of course, should cast doubt on the reliability of the estimates in general, but also on the validity of the methodology, at least with regard to this specific application.
+
+In fact, \citet{mccartan2025identificationsemiparametricestimationconditional} explain that, even if the software \texttt{seine} allows to exploit boundedness of response variable in the estimation, it does not guarantee that the estimates will be within the [0,1] interval.
+
+

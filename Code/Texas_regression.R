@@ -53,16 +53,17 @@ elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_00
 #Moreover, I will also drop the precincts where reported voting age population is less than 10
 #Finally, I will drop also the precincts where there are more reported votes than voting age population, which is obviously erroneous
 
-elec_2020_refined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_total)
+elec_2020_prerefined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_total)
+
+
+plot(elec_2020_prerefined$vap, elec_2020_prerefined$pres_total)
+#We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
+
+elec_2020_refined <- elec_2020_prerefined%>%filter(pres_total>vap/5)
 
 attach(elec_2020_refined)
 
 plot(vap, pres_total)
-#We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
-
-elec_2020_refined <- elec_2020_refined%>%filter(pres_total>vap/3)
-
-attach(elec_2020_refined)
 
 #Tests for bounded N
 hist(elec_2020_refined$pres_total)
@@ -103,7 +104,7 @@ results_table <- xtable(
 
 print(results_table,
       file = "../Paper/Images/ei_estimates_texas_summary.tex",
-      include.rownames = TRUE,
+      include.rownames = FALSE,
       sanitize.text.function = identity
 )
 
@@ -112,62 +113,76 @@ print(results_table,
 
 #I also have one code for each county (there are 254 counties), we might add this as covariate but we might risk losing identifiability
 
-experiment <- ei_spec(
+experiment2 <- ei_spec(
   elec_2020_refined, 
-  predictors = vap_hisp:vap_two,
+  predictors = c(vap_hisp:vap_black, other_ethnicity),
   outcome = pre_20_rep_tru:pre_20_dem_bid,
   total = pres_total,
   covariates = c(B15003_002:B15003_025, B23025_004:B23025_007, county)
 )
 
-m <- ei_ridge(experiment)
-rr <- ei_riesz(experiment, penalty = m$penalty)
+m <- ei_ridge(experiment2)
+rr <- ei_riesz(experiment2, penalty = m$penalty)
 
-ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
+ei_est(regr = m, riesz = rr, data = experiment2, conf_level = 0.95)
+
+ei_estimates2 <- ei_est(regr = m, riesz = rr, data = experiment2, conf_level = 0.95)
 
 ###
 
-experiment <- ei_spec(
+experiment3 <- ei_spec(
   elec_2020_refined, 
-  predictors = vap_hisp:vap_two,
+  predictors = c(vap_hisp:vap_black, other_ethnicity),
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
   covariates = c(B15003_002:B15003_025, county)
 )
 
-m <- ei_ridge(experiment)
-rr <- ei_riesz(experiment, penalty = m$penalty)
+m <- ei_ridge(experiment3)
+rr <- ei_riesz(experiment3, penalty = m$penalty)
 
-ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
+ei_est(regr = m, riesz = rr, data = experiment3, conf_level = 0.95)
+
+ei_estimates3 <- ei_est(regr = m, riesz = rr, data = experiment3, conf_level = 0.95)
 
 ###
 
 
-experiment <- ei_spec(
+experiment4 <- ei_spec(
   elec_2020_refined, 
-  predictors = vap_hisp:vap_two,
+  predictors = c(vap_hisp:vap_black, other_ethnicity),
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
   covariates = no_college:college
 )
 
-m <- ei_ridge(experiment)
-rr <- ei_riesz(experiment, penalty = m$penalty)
+m <- ei_ridge(experiment4)
+rr <- ei_riesz(experiment4, penalty = m$penalty)
 
-ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
+ei_est(regr = m, riesz = rr, data = experiment4, conf_level = 0.95)
+
+ei_estimates4 <- ei_est(regr = m, riesz = rr, data = experiment4, conf_level = 0.95)
 
 ###
 
 
-experiment <- ei_spec(
+experiment5 <- ei_spec(
   elec_2020_refined, 
   predictors = college:no_college,
   outcome = pre_20_rep_tru:pre_20_dem_bid, 
   total = pres_total,
-  covariates = c(vap_hisp:vap_two)
+  covariates = c(vap_hisp:vap_black, other_ethnicity)
 )
 
-m <- ei_ridge(experiment)
-rr <- ei_riesz(experiment, penalty = m$penalty)
+m <- ei_ridge(experiment5)
+rr <- ei_riesz(experiment5, penalty = m$penalty)
 
-ei_est(regr = m, riesz = rr, data = experiment, conf_level = 0.95)
+ei_est(regr = m, riesz = rr, data = experiment5, conf_level = 0.95)
+
+ei_estimates5 <- ei_est(regr = m, riesz = rr, data = experiment5, conf_level = 0.95)
+
+
+###
+
+linearexperiment <- lm(pre_20_rep_tru~(vap_hisp+vap_white+vap_black)*college, data = elec_2020_refined)
+summary(linearexperiment)
