@@ -146,6 +146,9 @@ Then, using the second accounting identity, we obtain a model linking $\overline
 \overline{Y}_g = \beta_g'\overline{X}_g = f(Z_g)'\overline{X}_g + \zeta_g'\overline{X}_g.
 \]
 
+It is worth noting that the error terms are independent of X: in fact, $E[\zeta_g'\overline{X}_g | \overline{X}_g] = E[\zeta_g | \overline{X}_g]'\overline{X}_g = 0$.
+
+
 Taking conditional expectations on both sides, we obtain
 \[
 E[\overline{Y}_g \mid \overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X}_g.
@@ -157,6 +160,14 @@ The simplest estimation strategy would be to impose a linear functional form for
 \[
 E[\overline{Y}_g \mid \overline{X}_g, Z_g, N_g] = f(Z_g)'\overline{X}_g = (\gamma' Z_g)'\overline{X}_g = Z_g'\gamma \overline{X}_g.
 \]
+
+In fact,the structure would be the same of a classical linear regression with interactions:
+
+\[
+\overline{Y}_g = f(Z_g)’\overline{X}_g+\zeta_g’\overline{X}_g = (\gamma’Z_g)' \overline{X}_g + \zeta_g’ \overline{X}_g,
+\qquad E[\zeta’_g\overline{X}_g|\overline{X}_g]=0.
+\]
+
 
 As discussed by \citet{mccartan2025identificationsemiparametricestimationconditional}, this condition is stringent but not necessary.
 

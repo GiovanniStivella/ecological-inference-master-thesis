@@ -6,17 +6,17 @@ In particular, I have focused on situations in which the population is partition
 
 Issues in estimation arise from the need to balance two competing desires: on one hand, the desire to allow $\beta$ to vary across geographies, which is fundamental to give a meaningful interpretation of the data and to avoid the ecological fallacy; on the other hand, the need to impose some structure on the variations of $\beta$ across geographies in order to allow for a feasible estimation method.
 
-One promising approach, shown by \citet{kuriwaki2026roleconfounderslinearityecological} and \citet{mccartan2025identificationsemiparametricestimationconditional}, is to use geography-specific covariates($Z_g$) to explain the variations of $\beta$ across geographies.
+One promising approach, shown by \citet{kuriwaki2026roleconfounderslinearityecological} and \citet{mccartan2025identificationsemiparametricestimationconditional}, is to use geography-specific covariates ($Z_g$) to explain the variations of $\beta$ across geographies.
 
-In particular, \citet{mccartan2025identificationsemiparametricestimationconditional} show that there is an easily interpretable independence condition, which they call CAR-IND, that is sufficient to write the problem as $E[Y_g] = f(Z_g)'\overline{X_g}$, where $Z_g$ are covariates that explain the variations of $\beta$ across geographies: $\beta_g = f(Z_g)$.
+In particular, \citet{mccartan2025identificationsemiparametricestimationconditional} show that there is an easily interpretable independence condition, which they call CAR-IND, that is sufficient to write the problem as $E[Y_g] = f(Z_g)'\overline{X}_g$, where $Z_g$ are covariates that explain the variations of $\beta$ across geographies: $\beta_g = f(Z_g)$.
 
-The interpretation of the CAR-IND condition is that the response variable of an individual is independent of the specific geography in which the individual is aggregated, conditional on the characteristics of the geography, which are represented by the covariates $Z_g$: that means that the response of an individual does not depend on the specific geography per se, but it depends only on the characteristics of the geography captured by the covariates $Z_g$.
+The interpretation of the CAR-IND condition is that the response of an individual does not depend on the specific geography per se, but it depends only on the characteristics of the geography captured by the covariates $Z_g$.
 
-The role of the researcher, therefore, is to find covariates $Z_g$ that allow for the CAR-IND condition to hold, while, at the same time, they should be independent of the shares $\overline{X}_g$ in order to avoid identification issues.
+The role of the researcher, therefore, is to find covariates $Z_g$ that allow for the CAR-IND condition to hold, while, at the same time, satisfying the independence from the shares $\overline{X}_g$ in order to avoid identification issues.
 
 Once the problem is stated in this way, the methodological issue is to estimate the function $f(Z_g)$.
 
-\citet{mccartan2025identificationsemiparametricestimationconditional} propose a semiparametric estimator that is able to estimate the function $f(Z_g)$ without imposing any functional form, and then to provide estimates of the group-specific propensities. Their methodology is implemented in the \texttt{seine} package (\citet{seine}).
+\citet{mccartan2025identificationsemiparametricestimationconditional} propose a semiparametric estimator that is able to estimate the function $f(Z_g)$ without imposing any functional form, and then provides estimates of the group-specific propensities. Their methodology is implemented in the \texttt{seine} package (\citet{seine}).
 
 While experimenting with \texttt{seine}, I have conducted parallel experiments imposing a linear functional form for $f(Z_g)$, which allowed for a simple OLS model with interactions between the covariates and the shares $\overline{X}_g$.
 
@@ -31,7 +31,7 @@ Therefore, a possible future direction could be to reconstruct the electoral dat
 Finally, even when moving to the application to Texas electoral data, the results of the semiparametric estimator have been almost identical to those of the linear estimator. That result is quite surprising, since the Texas electoral data presents a more complex structure, with precincts differing by size and unknown relationships between covariates and group-specific propensities.
 
 That strong resemblance suggests that the semiparametric estimator, as implemented in the \texttt{seine} package, tends to return a linear relationship between covariates and group-specific propensities.
-That would mine the advantage of using a semiparametric estimator, whose advantage is to allow for more flexibility in the search for the functional form of $f(Z_g)$.
+That would mine the usefulness of the semiparametric estimator, whose advantage is to allow for more flexibility in the search for the functional form of $f(Z_g)$.
 
 In any case, it is worth noting that the methodology is very recent and the \texttt{seine} package has been released only a few months ago, so it would be interesting to repeat the experiments with future progress in the methodology and future releases of the software, which could allow for a more flexible search for the functional form of $f(Z_g)$.
 

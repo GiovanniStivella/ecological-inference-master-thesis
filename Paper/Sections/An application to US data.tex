@@ -9,7 +9,7 @@ The dataset is constructed by combining electoral results at the electoral preci
 
 In the construction of the dataset, I exploited three sources:
 \begin{itemize}
-    \item ALARM dataset by \citet{t._kenny2021}, which combines electoral results at the electoral precinct level (also referred to as voting districts or VTDs) previously collected by \citet{vest2020precinct} with demographic data of 2020 US census collected by \citet{uscensus2020}
+    \item ALARM dataset by \citet{t._kenny2021}, which combines electoral results at the electoral precinct level (also referred to as voting districts or VTDs) previously collected by \citet{vest2020precinct} with demographic data on the ethnic composition collected by \citet{uscensus2020} in the 2020 US census
     \item American Community Survey (ACS) by the U.S. Census Bureau, which provide socio-economic characteristics of the population and can be called through the \texttt{tidycensus} package in R \citep{tidycensus}
     \item \citet{census2021baf}'s files, which provide the mapping of census blocks to CBGs and VTDs, which is necessary to aggregate the socio-economic characteristics collected at the CBG level in ACS surveys to the VTD level.
 \end{itemize}
@@ -45,13 +45,15 @@ The partition of the population $\overline{X}_g$ is the share of voters in preci
 
 Finally, the covariate $Z_g$ is the share of 25 years old or older voters in precinct $g$ that have a college degree, which is collected at the CBG level in ACS surveys and then aggregated to the VTD level as explained in Appendix B (Section \ref{sec:Appendix_dataset}).
 
-The assumption of bounded $N$ is satisfied by the distribution of the number of voters across precincts being bounded.
+The assumption of bounded $N$ is satisfied by the distribution of the number of voters across precincts, which does not present clearly dominating precincts.
 
-Table \ref{tab:bounded-n} shows the number of votes cast and the voting age population in the 20 largest precincts in Texas. Figure \ref{fig:vap_vs_pres_total_texas} can also be seen as a test of the assumption of bounded $N$, as it shows that the distribution of the number of votes cast across precincts is such that no precinct clearly dominates the others.
+Table \ref{tab:bounded-n} shows the number of votes cast and the voting age population in the 20 largest precincts in Texas by number of votes cast. Figure \ref{fig:vap_vs_pres_total_texas} can also be seen as a test of the assumption of bounded $N$, as it shows that the distribution of the number of votes cast across precincts is such that no precinct clearly dominates the others.
+
+The decimal numbers in the table are due to the fact that VTDs boundaries have evolved over time, so that the votes may have been reapportioned to different VTDs.
 
 \input{Images/bounded_n.tex}
 
-The assumption of positivity is satisfied by the distribution of the share of voters in each ethnic group across precincts with varying levels of college degree holders.
+The assumption of positivity is satisfied by the varying distribution of the share of voters in each ethnic group across precincts with analogous levels of college degree holders.
 
 Figure \ref{fig:vap_ethnic_vs_college_texas} shows the distribution of the share of voters in each ethnic group across precincts with varying levels of college degree holders, showing sufficient variation in the share of voters of different ethnic groups across precincts with same levels of college degree holders.
 
@@ -66,11 +68,12 @@ Figure \ref{fig:vap_ethnic_vs_college_texas} shows the distribution of the share
 \end{figure}
 
 
-Finally, the assumption of CAR cannot be directly tested, but it is driven by the fact that shares of college degree holders in a precinct are likely to capture many of the unobserved characteristics that affect the voting behavior of different ethnic groups in that precinct, such as location of the county (urban vs rural), income, and other socio-economic characteristics.
+Finally, the assumption of CAR cannot be directly tested. In this case, I have assumed that the shares of college degree holders in a precinct are likely to capture many of the unobserved characteristics that affect the voting behavior of different ethnic groups in that precinct, such as location of the county (urban vs rural), income, and other socio-economic characteristics.
+In any case, the construction of the dataset has allowed for other specifications, which I have not presented in the paper but are available in the repository.
 
 \subsection{Results of the estimation}
 
-The results of the estimation are summarized in Table \ref{tab:ei-estimates-texas}, which shows the estimated support for the Democratic (Joe Biden) and Republican (Donald Trump) candidates among each ethnic group, along with the 95\% credible intervals.
+The results of the estimation are summarized in Table \ref{tab:ei-estimates-texas}, which shows the estimated support for the Democratic (Joe Biden) and Republican (Donald Trump) candidates among each ethnic group, along with the 95\% confidence intervals.
 
 
 \input{Images/ei_estimates_texas_summary.tex}
@@ -78,20 +81,20 @@ The results of the estimation are summarized in Table \ref{tab:ei-estimates-texa
 An evident shortcoming of the results is that the estimates for the support of the candidates among Black voters are not within the [0,1] interval.
 That, of course, should cast doubt on the reliability of the estimates in general, but also on the validity of the methodology, at least with regard to this specific application.
 
-In fact, \citet{mccartan2025identificationsemiparametricestimationconditional} explain that, even if the software \texttt{seine} allows to exploit boundedness of response variable in the estimation, it does not guarantee that the estimates will be within the [0,1] interval.
+In fact, \citet{mccartan2025identificationsemiparametricestimationconditional} explain that, even if the software \texttt{seine} allows to exploit boundedness of response variable in the estimation algorithm, it does not guarantee that the estimates are within the [0,1] interval.
 
 
 \subsection{Results of linear estimation}
 
 Previous section and Appendix A have shown that, in our synthetic examples, \texttt{seine} package has returned results almost identical to the ones obtained imposing a linear form for $f(Z_g)$.
 
-In order to verify whether that holds also in a true dataset, I have repeated the procedure to estimate $\beta$ with the following linear specification:
-
+In order to verify whether that holds also in a true and more complex dataset, I have repeated the procedure with a linear specification. As in previous sections, I have taken one response variable as the reference (namely, the share of the Republican candidate) and one categorical variable as the reference categorical variable (namely, the share of people with other ethnicities).
+Then, the model is estimated with the following specification:
 
 \begin{align*}
-    \overline{Y_g} & = \gamma_0^{other}*\overline{X}_g \\
+    \overline{Y_g} & = \gamma_0^{other}+\\
     & +(\gamma_0^{hisp}-\gamma_0^{other})*\overline{X}_g^{hisp}+(\gamma_0^{white}-\gamma_0^{other})*\overline{X}_g^{white}+(\gamma_0^{black}-\gamma_0^{other})*\overline{X}_g^{black} \\
-    & +\gamma_1^{other}*Z_g*\overline{X}_g^{other}+(\gamma_1^{hisp}-\gamma_1^{other})*Z_g*\overline{X}_g^{hisp}\\
+    & +\gamma_1^{other}*Z_g+(\gamma_1^{hisp}-\gamma_1^{other})*Z_g*\overline{X}_g^{hisp}\\
     & +(\gamma_1^{white}-\gamma_1^{other})*Z_g*\overline{X}_g^{white}+(\gamma_1^{black}-\gamma_1^{other})*Z_g*\overline{X}_g^{black}+\epsilon_g
 \end{align*}
 

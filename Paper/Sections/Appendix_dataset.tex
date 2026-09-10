@@ -29,7 +29,7 @@ Fig. \ref{fig:census-geographical-units} shows a schematic representation of a p
 
 Some of the variables of possible interest for the analysis are collected only at the CBG level in ACS surveys. Therefore, a procedure to aggregate the data at the VTD level was necessary.
 
-ALARM dataset by \citet{t._kenny2021} combine electoral results at the VTD level previously collected by \citet{vest2020precinct} with demographic data of 2020 US census collected by \citet{uscensus2020}.
+ALARM dataset by \citet{t._kenny2021} combine electoral results at the VTD level previously collected by \citet{vest2020precinct} with data on ethnic composition of precincts collected by \citet{uscensus2020} in the 2020 US census.
 
 That provides a dataset that includes the share of votes received by the candidates at the VTD level, as well as the total population and the voting age population at the census block level with the corresponding ethnic composition.
 
@@ -38,7 +38,7 @@ ACS data are easily accessible through the \texttt{tidycensus} package in R \cit
 
 The following passage involved exploiting \citet{census2021baf}'s files, which provide the mapping of census blocks to CBGs and VTDs, to aggregate the socio-economic characteristics collected at the CBG level in ACS surveys to the VTD level.
 
-As in Fig. \ref{fig:census-geographical-units}, we can think of three scenarios: VTDs that perfectly align with one CBG, VTDs that align with exactly two or more CBGs, and VTDs that cross the boundaries of CBGs.
+As in Figure \ref{fig:census-geographical-units}, we can think of three scenarios: VTDs that perfectly align with one CBG, VTDs that align with exactly two or more CBGs, and VTDs that cross the boundaries of CBGs.
 
 For the first scenario, the aggregation of socio-economic characteristics from CBGs to VTDs is straightforward: the characteristics of the VTD are simply the same as those of the corresponding CBG.
 

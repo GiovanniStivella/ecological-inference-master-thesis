@@ -22,7 +22,7 @@ Finally, we can impose a Coarsening At Random (CAR) assumption through an indivi
 
 CAR-IND states that the individual-level response variable $Y_i$ is independent of the geography $g$, conditional on the individual-level covariates $X_i$ and the geography-level covariates $Z_g$. Formally, this can be expressed as follows:
 \[
-E[Y_i \mid G_i = g, X_i = x_i, Z_{G_i} = z_g] = E[Y_i \mid X_i = x_i, Z_{G_i} = z_g].
+E[Y_i \mid G_i = g, X_i = x, Z_{G_i} = z_g] = E[Y_i \mid X_i = x, Z_{G_i} = z_g].
 \]
 
 From a practical point of view, this assumption implies that the covariates capture all the effects of geography on the individual-level response variable $Y_i$. In the electoral example, this means that White voters in precinct $g$ with characteristics $Z_g$ have the same probability of voting for the segregationist candidate as White voters in a different precinct $g'$ with the same characteristics $Z_{g'} = Z_g$.

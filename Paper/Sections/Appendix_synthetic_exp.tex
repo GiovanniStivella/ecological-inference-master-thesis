@@ -24,7 +24,7 @@ We can model this association by assuming that the share of immigrants is extrac
 Z_g \sim \text{TruncNormal}(a=0, b=1, \mu=1-\overline{X}_g^H, \sigma=0.2).
 \]
 
-Then, we might assume that
+Then, we might assume that the group-specific propensities vary across geographies with the following extraction.
 
 \begin{align*}
 \beta_{g}^{H} &\sim \text{TruncNormal}(a=0, b=1, \mu=\eta_{g}^{H}, \sigma=0.05), \\
@@ -54,7 +54,7 @@ The true values of the group-specific propensities are $\beta_{g}^{H} = 0.324$ a
 
 \input{Images/naive_regression_summary_exp.tex}
 
-OLS estimates are $\hat{\beta}_{g}^{H} = 0.917$ and $\hat{\beta}_{g}^{L} = 0.917-0.845 = 0.072$.
+OLS estimates are $\hat{\beta}_{g}^{L} = 0.917$ and $\hat{\beta}_{g}^{H} = 0.917-0.845 = 0.072$.
 
 As we could expect, these estimates are far from the true values as they do not take into account the effect of the covariate $Z_g$ on the group-specific propensities $\beta_g$.
 
@@ -66,16 +66,16 @@ As in the example presented in Section \ref{sec:A synthetic example}, \texttt{se
 
 \subsubsection{Interaction between $\overline{X}_g$ and $Z_g$}
 
-\input{Images/interaction_regression_summary_exp.tex}
-
 In this case, the functional form of the relationship between $Z_g$ and $\beta_g$ is estimated to be linear, which is not the case in the data generating process. In particular, it is estimated that $E[\beta_g^L | Z_g] = \gamma_0^L + \gamma_1^L*Z_g$, while $E[\beta_g^H | Z_g] = \gamma_0^H + \gamma_1^H*Z_g$.
+
+\input{Images/interaction_regression_summary_exp.tex}
 
 The estimates are $\hat{\beta}_{g}^{L} = 0.176 + (0.869)*Z_g$ and $\hat{\beta}_{g}^{H} = (0.176-0.082) + (0.869-0.357)*Z_g$.
 
 Then, we can adopt the same strategy presented in Section 4 to produce global estimates.
 
-If we plug in the observed values of $Z_g$ and $\overline{X_g}$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
-The weighted average of these estimates across precincts is $\hat{\beta}^{H} = 0.321$ and $\hat{\beta}^{L} = 0.664$, which are in fact quite close to the true values of $\beta^{H}$ and $\beta^{L}$ and correspond to estimates performed with \texttt{seine}.
+If we plug in the observed values of $Z_g$ and $\overline{X}_g$ in the above equations, we obtain estimates of $\beta_g$ for each precinct $g$.
+The weighted average of these estimates across precincts is $\hat{\beta}^{H} = 0.321$ and $\hat{\beta}^{L} = 0.664$, which are in fact quite close to the true values of $\beta^{H}$ and $\beta^{L}$ and correspond to the estimates obtained with \texttt{seine}.
 
 \input{Images/int_synth_exp_beta.tex}
 

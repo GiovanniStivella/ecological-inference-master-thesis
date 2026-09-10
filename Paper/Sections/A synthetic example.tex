@@ -1,4 +1,4 @@
-In this section I will present a synthetic example that helps explaining why the problem is relevant and shows the difference performance between naive OLS and the semiparametric estimation proposed by \citet{mccartan2025identificationsemiparametricestimationconditional} and embedded in R package \texttt{seine} (\citet{seine}).
+In this section I present a synthetic example that helps explaining why the problem is relevant and shows the different performance between naive OLS and estimations that use covariates. I experiment both with a linear functional form for $f(Z_g)$ and with the semiparametric estimation proposed by \citet{mccartan2025identificationsemiparametricestimationconditional} and embedded in R package \texttt{seine} (\citet{seine}).
 
 In the synthetic example we are the ones who generate the data and therefore we know the exact model of the reality.
 I will show that, estimating the quantities of interest with different methods, we obtain different results and OLS provides biased estimates.
@@ -95,7 +95,7 @@ Bounded N is satisfied as $N_g$ is equal across different geographies.
 
 Positivity is satisfied as we have allowed for variability in the shares of high-income and low-income voters across geographies within each region.
 
-Finally, CAR-IND is almost completely satisfied, thanks to the fact that $\beta_g$ are generated from a distribution with low variance ($\sigma = 0.05$) that depends on the covariate $Z_g$.
+Finally, CAR-IND is almost completely satisfied, thanks to the fact that $\beta_g$ are generated from a distribution that depends on the covariate $Z_g$ and has particularly low variance ($\sigma = 0.05$).
 
 In fact, a complete adherence to CAR-IND would require $\beta_g$ to be equal across geographies of the same region, but I have allowed for some variability in order to make the example more realistic and more responding to the expected ability of the covariates to explain the variation in the propensitities.
 
@@ -109,7 +109,7 @@ Although we have allowed for some variability in $\beta_g$ across geographies of
 
 \subsection{Comparison of results}
 
-As previously mentioned, in our dataset we know the true values of $\beta_g$ for each geography $g$, therefore we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$ by aggregating the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
+As previously mentioned, in the synthetic dataset we know the true values of $\beta_g$ for each geography $g$. Therefore, we are able to obtain the true values of the estimands of interest $\beta^H$ and $\beta^L$: we just need to aggregate the true values of $\beta_g$ as stated in the first accounting identity in Section 2: $\beta^H = \frac{\sum_{g=1}^G \beta^H_g*N^H_g}{\sum_g N^H_g}$ and $\beta^L = \frac{\sum_{g=1}^G \beta_g*N_g^L}{\sum_g N_g^L}$.
 
 In our case, we have that $\beta^H = 0.503$ and $\beta^L = 0.343$.
 
@@ -141,7 +141,7 @@ When we move to semiparametric estimation performed by \texttt{seine}, we obtain
 
 \subsubsection{Interaction between $\overline{X}_g$ and $Z_g$}
 
-It can be noted that in this case, the relationship between $E[\beta_g]$ and $Z_g$ is linear.
+It can be noted that in this case the relationship between $E[\beta_g]$ and $Z_g$ is linear.
 
 In fact, if we consider South as the reference category, and we denote with $Z_g = \begin{pmatrix}
     1 \\
@@ -183,7 +183,7 @@ Therefore, we can express the model as a linear regression with interaction betw
 
 with $\gamma_0^H$ representing the propensity of voting in favor of the reform for high-income voters in Southern precincts, $\gamma_1^H$ representing the difference in propensity for high-income voters between Northern and Southern precincts, $\gamma_2^H$ representing the difference in propensity for high-income voters between Central and Southern precincts, and analogously for low-income voters with $\gamma_0^L$, $\gamma_1^L$ and $\gamma_2^L$: their true values are $\gamma_0^H = 0.6$, $\gamma_1^H = 0$, $\gamma_2^H = -0.3$, $\gamma_0^L = 0.2$, $\gamma_1^L = 0.5$ and $\gamma_2^L = 0.1$.
 
-As $\overline{X}_g^L = 1 - \overline{X}_g^H$, we can rewrite the model as a linear regression with interaction between $\overline{X}_g$ and $Z_g$ and with $\overline{X}_g^H$ as reference category:
+As $\overline{X}_g^L = 1 - \overline{X}_g^H$, we can rewrite the model as a linear regression with interaction between $\overline{X}_g$ and $Z_g$. As before, $\overline{X}_g^H$ serves as reference category:
 
 \begin{align*}
 \overline{Y_g}  & = \gamma_0^L + (\gamma_0^H-\gamma_0^L)*\overline{X}_g^H + \gamma_1^L*Z^{North} + \gamma_2^L*Z^{Centre} +  \\
@@ -222,7 +222,7 @@ That is not always possible, and it is relevant that \texttt{seine} was able to 
 
 In the Appendix A, I show another example where the relationship between $E[\beta_g]$ and $Z_g$ is non-linear, even if quite simple.
 
-The example presented in Appendix A shows that a simple linear estimator can approximate a non-linear relationship with good precision. Moreover, the results of the estimates obtained with the linear estimator are almost identical to the ones obtained with the \texttt{seine} package.
+The example presented in Appendix A shows that a simple linear estimator can approximate a non-linear relationship with good precision, at least when the relationship is not particularly complex. Moreover, the results of the estimates obtained with the linear estimator are almost identical to the ones obtained with the \texttt{seine} package.
 
 %$\overline{Y_g}  = (\gamma_0^H+\gamma_1^H*Z^{North}+\gamma_2^H*Z^{Centre})*\overline{X}_g^H + (\gamma_0^L+\gamma_1^L*Z^{North}+\gamma_2^L*Z^{Centre})*\overline{X}_g^L + \epsilon_g$
 
