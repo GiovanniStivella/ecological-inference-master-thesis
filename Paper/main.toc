@@ -22,11 +22,11 @@
 \contentsline {subsection}{\numberline {5.3}Results of the estimation}{\footnotesize {\sffamily {32}}}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Results of linear estimation}{\footnotesize {\sffamily {33}}}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Conclusions}{\footnotesize {\sffamily {36}}}{section.6}%
-\contentsline {section}{\numberline {7}Appendix A: A non-linear synthetic example}{\footnotesize {\sffamily {39}}}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Data generating process}{\footnotesize {\sffamily {39}}}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Comparison of results}{\footnotesize {\sffamily {41}}}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}OLS}{\footnotesize {\sffamily {41}}}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}\texttt {seine}}{\footnotesize {\sffamily {41}}}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {42}}}{subsubsection.7.2.3}%
-\contentsline {section}{\numberline {8}Appendix B: Construction of the dataset}{\footnotesize {\sffamily {44}}}{section.8}%
-\contentsline {section}{\numberline {9}Code}{\footnotesize {\sffamily {50}}}{section.9}%
+\contentsline {section}{\numberline {7}Appendix A: A non-linear synthetic example}{\footnotesize {\sffamily {41}}}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Data generating process}{\footnotesize {\sffamily {41}}}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Comparison of results}{\footnotesize {\sffamily {43}}}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}OLS}{\footnotesize {\sffamily {43}}}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}\texttt {seine}}{\footnotesize {\sffamily {43}}}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Interaction between $\overline {X}_g$ and $Z_g$}{\footnotesize {\sffamily {44}}}{subsubsection.7.2.3}%
+\contentsline {section}{\numberline {8}Appendix B: Construction of the dataset}{\footnotesize {\sffamily {46}}}{section.8}%
+\contentsline {section}{\numberline {9}Code}{\footnotesize {\sffamily {52}}}{section.9}%
