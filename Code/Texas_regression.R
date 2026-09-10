@@ -1,12 +1,16 @@
 set.seed(123)
 
+#install.packages("here")
+
+library(here)
+
 library(dplyr)
 
 library(seine)
 
 library(xtable)
 
-data <- readRDS("/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Data/texas_with_covariates.rds")
+data <- readRDS(here("Data", "texas_with_covariates.rds"))
 
 #Let's run the following experiment:
 #I want to estimate how voters voted in 2020 presidential election based on ethnicity
@@ -48,6 +52,26 @@ elec_2020 <- ei_proportions(elec_2020, no_college:college, .total = B15003_001)
 #elec_2020 <- ei_proportions(elec_2020, B16004_001:B16004_067, .total = B16004_001)
 elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_001)
 
+jpeg(
+  filename = here("Paper/Images", "vap_vs_pres_total_texas_alldata.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  elec_2020$vap,
+  elec_2020$pres_total,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Voting age population",
+  ylab = "Presidential votes"
+)
+dev.off()
+
 
 #I will drop all the precincts where the total number of votes is less than 10: these data are probably due to errors; even the ones which are not the result of errors will not affect the estimates too much;
 #Moreover, I will also drop the precincts where reported voting age population is less than 10
@@ -57,6 +81,7 @@ elec_2020_prerefined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_tot
 
 
 plot(elec_2020_prerefined$vap, elec_2020_prerefined$pres_total)
+
 #We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
 
 elec_2020_refined <- elec_2020_prerefined%>%filter(pres_total>vap/5)
@@ -65,16 +90,142 @@ attach(elec_2020_refined)
 
 plot(vap, pres_total)
 
+jpeg(
+  filename = here("Paper/Images", "vap_vs_pres_total_texas.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  vap,
+  pres_total,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Voting age population",
+  ylab = "Presidential votes"
+)
+dev.off()
+
+
+
 #Tests for bounded N
-hist(elec_2020_refined$pres_total)
-summary(elec_2020_refined$pres_total)
+hist(pres_total)
+summary(pres_total)
 print(sort(elec_2020_refined$pres_total, decreasing = TRUE))
 
+vtdsize <- sort(elec_2020_refined$pres_total, decreasing = TRUE)
+
+top20_pres_total <- elec_2020_refined[
+  order(elec_2020_refined$pres_total, decreasing = TRUE),
+][seq_len(min(20, nrow(elec_2020_refined))), ]%>%select(VTDST20GEOID, county, vap, pres_total)
+
+colnames(top20_pres_total) <- gsub("_", "\\_", colnames(top20_pres_total), fixed = TRUE)
+
+boundedn <- xtable(
+  top20_pres_total,
+  caption = "Largest precincts by number of votes cast",
+  digits = 3,
+  label = "tab:bounded-n"
+)
+
+print(
+  boundedn,
+  file = here("Paper/Images", "bounded_n.tex"),
+  include.rownames = TRUE,
+  include.colnames = TRUE,
+  sanitize.text.function = identity
+)
+
 #Test for positivity assumption
-plot(elec_2020_refined$vap_hisp, elec_2020_refined$college)
-plot(elec_2020_refined$vap_white, elec_2020_refined$college)
-plot(elec_2020_refined$vap_black, elec_2020_refined$college)
-plot(elec_2020_refined$other_ethnicity, elec_2020_refined$college)
+plot(college, vap_hisp)
+plot(college, vap_white)
+plot(college, vap_black)
+plot(college, other_ethnicity)
+
+
+jpeg(
+  filename = here("Paper/Images", "vap_hisp_vs_college.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  college,
+  vap_hisp,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Share of college graduates",
+  ylab = "Share of Hispanic voting age population"
+)
+dev.off()
+
+jpeg(
+  filename = here("Paper/Images", "vap_white_vs_college.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  college,
+  vap_white,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Share of college graduates",
+  ylab = "Share of White voting age population"
+)
+dev.off()
+
+jpeg(
+  filename = here("Paper/Images", "vap_black_vs_college.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  college,
+  vap_black,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Share of college graduates",
+  ylab = "Share of Black voting age population"
+)
+dev.off()
+
+jpeg(
+  filename = here("Paper/Images", "other_ethnicity_vs_college.jpg"),
+  width = 2400,
+  height = 1800,
+  units = "px",
+  res = 300,
+  quality = 100,
+  pointsize = 14
+)
+plot(
+  college,
+  other_ethnicity,
+  pch = 16,
+  cex = 0.7,
+  col = grDevices::adjustcolor("black", alpha.f = 0.45),
+  xlab = "Share of college graduates",
+  ylab = "Share of voting age population of other ethnicities"
+)
+dev.off()
 
 #CAR is untestable
 
@@ -103,7 +254,7 @@ results_table <- xtable(
   label = "tab:ei-estimates-texas")
 
 print(results_table,
-      file = "../Paper/Images/ei_estimates_texas_summary.tex",
+  file = here("Paper/Images", "ei_estimates_texas_summary.tex"),
       include.rownames = FALSE,
       sanitize.text.function = identity
 )
@@ -186,7 +337,7 @@ tab <- xtable(
 
 print(
   tab,
-  file = "../Paper/Images/interaction_regression_summary_texas.tex",
+  file = here("Paper/Images", "interaction_regression_summary_texas.tex"),
   include.rownames = TRUE,
   sanitize.text.function = identity
 )
@@ -218,7 +369,7 @@ inter <- xtable(
 
 print(
   inter,
-  file = "../Paper/Images/int_texas_beta.tex",
+  file = here("Paper/Images", "int_texas_beta.tex"),
   include.rownames = TRUE,
   include.colnames = FALSE,
   sanitize.text.function = identity

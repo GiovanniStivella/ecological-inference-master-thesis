@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  10 SEP 2026 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.15)  10 SEP 2026 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1486,37 +1486,75 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [29] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/An application to US data.tex
 
 [30]
+<Images/vap_vs_pres_total_texas_alldata.jpg, id=377, 2409.0pt x 1806.75pt>
+File: Images/vap_vs_pres_total_texas_alldata.jpg Graphic file (type jpg)
+<use Images/vap_vs_pres_total_texas_alldata.jpg>
+Package pdftex.def Info: Images/vap_vs_pres_total_texas_alldata.jpg  used on input line 32.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
+<Images/vap_vs_pres_total_texas.jpg, id=378, 2409.0pt x 1806.75pt>
+File: Images/vap_vs_pres_total_texas.jpg Graphic file (type jpg)
+<use Images/vap_vs_pres_total_texas.jpg>
+Package pdftex.def Info: Images/vap_vs_pres_total_texas.jpg  used on input line 33.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
 
-[31] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_texas_summary.tex
+
+[31]
+
+[32 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/vap_vs_pres_total_texas_alldata.jpg> </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/vap_vs_pres_total_texas.jpg>] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/bounded_n.tex)
+
+[33]
+<Images/vap_hisp_vs_college.jpg, id=397, 2409.0pt x 1806.75pt>
+File: Images/vap_hisp_vs_college.jpg Graphic file (type jpg)
+<use Images/vap_hisp_vs_college.jpg>
+Package pdftex.def Info: Images/vap_hisp_vs_college.jpg  used on input line 60.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
+<Images/vap_white_vs_college.jpg, id=398, 2409.0pt x 1806.75pt>
+File: Images/vap_white_vs_college.jpg Graphic file (type jpg)
+<use Images/vap_white_vs_college.jpg>
+Package pdftex.def Info: Images/vap_white_vs_college.jpg  used on input line 61.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
+<Images/vap_black_vs_college.jpg, id=399, 2409.0pt x 1806.75pt>
+File: Images/vap_black_vs_college.jpg Graphic file (type jpg)
+<use Images/vap_black_vs_college.jpg>
+Package pdftex.def Info: Images/vap_black_vs_college.jpg  used on input line 62.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
+<Images/other_ethnicity_vs_college.jpg, id=400, 2409.0pt x 1806.75pt>
+File: Images/other_ethnicity_vs_college.jpg Graphic file (type jpg)
+<use Images/other_ethnicity_vs_college.jpg>
+Package pdftex.def Info: Images/other_ethnicity_vs_college.jpg  used on input line 63.
+(pdftex.def)             Requested size: 191.20082pt x 143.38506pt.
+
+
+[34 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/vap_hisp_vs_college.jpg> </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/vap_white_vs_college.jpg> </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/vap_black_vs_college.jpg> </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/other_ethnicity_vs_college.jpg>] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_texas_summary.tex
 Overfull \hbox (22.03117pt too wide) in paragraph at lines 5--19
  [][] 
  []
 
 )
 
-[32]
-Overfull \hbox (11.9353pt too wide) detected at line 70
+[35]
+Overfull \hbox (11.9353pt too wide) detected at line 96
 []
  []
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 70--70
+Overfull \hbox (30.0pt too wide) in paragraph at lines 96--96
 [] 
  []
 
+(/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/interaction_regression_summary_texas.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/int_texas_beta.tex)
 
+[36])
 
-[33] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/interaction_regression_summary_texas.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/int_texas_beta.tex))
+[37] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
 
-[34]
+[38
 
-[35] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Conclusions.tex
+]
 
-[36]
+[39])
 
-[37])
-
-[38]
+[40]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1532,13 +1570,13 @@ Overfull \hbox (1.23001pt too wide) in paragraph at lines 145--145
 
 
 
-[39]
+[41]
 
-[40] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_synthetic_exp.tex
+[42] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_synthetic_exp.tex
 
-[41] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/true_synth_exp_beta.tex
+[43] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/true_synth_exp_beta.tex
 
-[42]) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary_exp.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary_exp.tex)
+[44]) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/naive_regression_summary_exp.tex) (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/ei_estimates_summary_exp.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 67.
@@ -1569,36 +1607,36 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/interaction_regression_summary_exp.tex)
 
-[43] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/int_synth_exp_beta.tex))
-
-[44]
-
-[45] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_dataset.tex
+[45] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/int_synth_exp_beta.tex))
 
 [46]
-<Images/Census_sets/census_sets_v2.pdf, id=487, 378.32541pt x 268.57538pt>
+
+[47] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Sections/Appendix_dataset.tex
+
+[48]
+<Images/Census_sets/census_sets_v2.pdf, id=509, 378.32541pt x 268.57538pt>
 File: Images/Census_sets/census_sets_v2.pdf Graphic file (type pdf)
 <use Images/Census_sets/census_sets_v2.pdf>
 Package pdftex.def Info: Images/Census_sets/census_sets_v2.pdf  used on input line 25.
 (pdftex.def)             Requested size: 398.3386pt x 282.7911pt.
 
 
-[47]
-
-[48 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Census_sets/census_sets_v2.pdf>]
-
 [49]
 
-[50])
+[50 </Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images/Census_sets/census_sets_v2.pdf>]
 
 [51]
+
+[52])
+
+[53]
 Overfull \hbox (34.83835pt too wide) in paragraph at lines 157--159
 \T1/lmtt/m/n/12 / / github . com / GiovanniStivella / ecological-[]inference-[]master-[]thesis/$[]\T1/lmr/m/n/12 (-20) . 
  []
 
 
 
-[52] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
+[54] (/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1610,18 +1648,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53917 strings out of 473190
- 1274335 string characters out of 5715799
- 2062973 words of memory out of 5000000
- 75897 multiletter control sequences out of 15000+600000
- 671370 words of font info for 227 fonts, out of 8000000 for 9000
+ 53979 strings out of 473190
+ 1276603 string characters out of 5715799
+ 2062963 words of memory out of 5000000
+ 75945 multiletter control sequences out of 15000+600000
+ 671619 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,15n,106p,2007b,2887s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (53 pages, 633640 bytes).
+Output written on /Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/main.pdf (55 pages, 3347891 bytes).
 PDF statistics:
- 674 PDF objects out of 1000 (max. 8388607)
- 554 compressed objects within 6 object streams
- 112 named destinations out of 1000 (max. 500000)
- 64788 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 697 PDF objects out of 1000 (max. 8388607)
+ 569 compressed objects within 6 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 64818 words of extra memory for PDF output out of 74296 (max. 10000000)
 
