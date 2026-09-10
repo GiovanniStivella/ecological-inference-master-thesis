@@ -56,46 +56,25 @@ elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_00
 elec_2020_prerefined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_total)
 
 
-paper_images_dir <- "/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images"
-dir.create(paper_images_dir, recursive = TRUE, showWarnings = FALSE)
-pdf(file.path(paper_images_dir, "vap_vs_pres_total_prerefined.pdf"), width = 8, height = 6)
 plot(elec_2020_prerefined$vap, elec_2020_prerefined$pres_total)
-dev.off()
-
-
 #We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
 
 elec_2020_refined <- elec_2020_prerefined%>%filter(pres_total>vap/5)
 
 attach(elec_2020_refined)
 
-pdf(file.path(paper_images_dir, "vap_vs_pres_total_refined.pdf"), width = 8, height = 6)
 plot(vap, pres_total)
-dev.off()
 
 #Tests for bounded N
-pdf(file.path(paper_images_dir, "pres_total_histogram.pdf"), width = 8, height = 6)
 hist(elec_2020_refined$pres_total)
-dev.off()
 summary(elec_2020_refined$pres_total)
 print(sort(elec_2020_refined$pres_total, decreasing = TRUE))
 
 #Test for positivity assumption
-pdf(file.path(paper_images_dir, "positivity_hispanic_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_hisp, elec_2020_refined$college)
-dev.off()
-
-pdf(file.path(paper_images_dir, "positivity_white_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_white, elec_2020_refined$college)
-dev.off()
-
-pdf(file.path(paper_images_dir, "positivity_black_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_black, elec_2020_refined$college)
-dev.off()
-
-pdf(file.path(paper_images_dir, "positivity_other_ethnicity_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$other_ethnicity, elec_2020_refined$college)
-dev.off()
 
 #CAR is untestable
 
@@ -124,7 +103,7 @@ results_table <- xtable(
   label = "tab:ei-estimates-texas")
 
 print(results_table,
-      file = file.path(paper_images_dir, "ei_estimates_texas_summary.tex"),
+      file = "../Paper/Images/ei_estimates_texas_summary.tex",
       include.rownames = FALSE,
       sanitize.text.function = identity
 )
@@ -207,7 +186,7 @@ tab <- xtable(
 
 print(
   tab,
-  file = file.path(paper_images_dir, "interaction_regression_summary_texas.tex"),
+  file = "../Paper/Images/interaction_regression_summary_texas.tex",
   include.rownames = TRUE,
   sanitize.text.function = identity
 )
@@ -239,7 +218,7 @@ inter <- xtable(
 
 print(
   inter,
-  file = file.path(paper_images_dir, "int_texas_beta.tex"),
+  file = "../Paper/Images/int_texas_beta.tex",
   include.rownames = TRUE,
   include.colnames = FALSE,
   sanitize.text.function = identity
