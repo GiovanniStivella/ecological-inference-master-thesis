@@ -64,7 +64,7 @@ rownames(naive_coef) <- gsub("_", "\\_", rownames(naive_coef), fixed = TRUE)
 
 tab <- xtable(
   naive_coef,
-  caption = "Naive OLS regression summary",
+  caption = "Coefficients of naive OLS regression",
   digits = 3,
   label = "tab:naive-regression-exp"
 )
@@ -104,7 +104,7 @@ print(ei_estimates_df)
 
 tab <- xtable(
   ei_estimates_df,
-  caption = "Semiparametric ecological inference estimates",
+  caption = "Semiparametric estimates",
   digits = 3,
   label = "tab:ei-estimates-exp"
 )
@@ -128,7 +128,7 @@ rownames(interaction_coef) <- gsub("_", "\\_", rownames(interaction_coef), fixed
 
 tab <- xtable(
   interaction_coef,
-  caption = "Parametric estimation with covariates regression summary",
+  caption = "Coefficients of regression with interactions with covariates",
   digits = 3,
   label = "tab:interaction-regression-exp"
 )
@@ -154,7 +154,7 @@ colnames(interacted) <- gsub("_", "\\_", colnames(interacted), fixed = TRUE)
 
 inter <- xtable(
   interacted,
-  caption = "Estimates with covariates",
+  caption = "Estimates of linear specification with interactions",
   digits = 3,
   label = "tab:int-syn-exp-beta"
 )

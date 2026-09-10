@@ -56,25 +56,46 @@ elec_2020 <- ei_proportions(elec_2020, B23025_004:B23025_007, .total = B23025_00
 elec_2020_prerefined <- elec_2020%>%filter(pres_total>10 & vap>10 & vap>pres_total)
 
 
+paper_images_dir <- "/Users/giovannistivella/Documents/Università/UniPi/Magistrale/ecological-inference-master-thesis/Paper/Images"
+dir.create(paper_images_dir, recursive = TRUE, showWarnings = FALSE)
+pdf(file.path(paper_images_dir, "vap_vs_pres_total_prerefined.pdf"), width = 8, height = 6)
 plot(elec_2020_prerefined$vap, elec_2020_prerefined$pres_total)
+dev.off()
+
+
 #We might note that we would expect a more linear relationship, while certain precincts where vap is much greater than pres_total draw suspicion; I will further restrict
 
 elec_2020_refined <- elec_2020_prerefined%>%filter(pres_total>vap/5)
 
 attach(elec_2020_refined)
 
+pdf(file.path(paper_images_dir, "vap_vs_pres_total_refined.pdf"), width = 8, height = 6)
 plot(vap, pres_total)
+dev.off()
 
 #Tests for bounded N
+pdf(file.path(paper_images_dir, "pres_total_histogram.pdf"), width = 8, height = 6)
 hist(elec_2020_refined$pres_total)
+dev.off()
 summary(elec_2020_refined$pres_total)
 print(sort(elec_2020_refined$pres_total, decreasing = TRUE))
 
 #Test for positivity assumption
+pdf(file.path(paper_images_dir, "positivity_hispanic_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_hisp, elec_2020_refined$college)
+dev.off()
+
+pdf(file.path(paper_images_dir, "positivity_white_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_white, elec_2020_refined$college)
+dev.off()
+
+pdf(file.path(paper_images_dir, "positivity_black_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$vap_black, elec_2020_refined$college)
+dev.off()
+
+pdf(file.path(paper_images_dir, "positivity_other_ethnicity_college.pdf"), width = 8, height = 6)
 plot(elec_2020_refined$other_ethnicity, elec_2020_refined$college)
+dev.off()
 
 #CAR is untestable
 
@@ -98,12 +119,12 @@ ei_estimates_df$outcome <- gsub("_", "\\_", ei_estimates_df$outcome, fixed = TRU
 
 results_table <- xtable(
   ei_estimates_df,
-  caption = "Semiparametric ecological inference estimates for the 2020 presidential election in Texas",
+  caption = "Semiparametric estimates for the 2020 presidential election in Texas",
   digits = 3,
   label = "tab:ei-estimates-texas")
 
 print(results_table,
-      file = "../Paper/Images/ei_estimates_texas_summary.tex",
+      file = file.path(paper_images_dir, "ei_estimates_texas_summary.tex"),
       include.rownames = FALSE,
       sanitize.text.function = identity
 )
@@ -179,14 +200,14 @@ rownames(lincoef) <- gsub("_", "\\_", rownames(lincoef), fixed = TRUE)
 
 tab <- xtable(
   lincoef,
-  caption = "Parametric estimation with covariates for the 2020 presidential election in Texas (Republican share as outcome)",
+  caption = "Coefficients of regression with interactions with covariates for the 2020 presidential election in Texas (Republican share as outcome)",
   digits = 3,
   label = "tab:interaction-regression-texas"
 )
 
 print(
   tab,
-  file = "../Paper/Images/interaction_regression_summary_texas.tex",
+  file = file.path(paper_images_dir, "interaction_regression_summary_texas.tex"),
   include.rownames = TRUE,
   sanitize.text.function = identity
 )
@@ -211,14 +232,14 @@ rownames(beta_texas) <- gsub("_", "\\_", rownames(beta_texas), fixed = TRUE)
 
 inter <- xtable(
   beta_texas,
-  caption = "Parametric group-specific estimates with Texas data",
+  caption = "Estimates of linear specification with interactions for the 2020 presidential election in Texas (Republican share as outcome)",
   digits = 3,
   label = "tab:int-tex-beta"
 )
 
 print(
   inter,
-  file = "../Paper/Images/int_texas_beta.tex",
+  file = file.path(paper_images_dir, "int_texas_beta.tex"),
   include.rownames = TRUE,
   include.colnames = FALSE,
   sanitize.text.function = identity
